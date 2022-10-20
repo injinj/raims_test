@@ -1,0 +1,81 @@
+services:
+  - svc: market
+    create: 1666303523.618072126
+    pri: Cb+xtPsooUySNXmfZGSKNoe6+3YAkS/9P/v9tDVcMyACBsQtAe/8CekGahjSIG4VWbf+aw
+    pub: "/soUZgpNlzqQFCDI2x3JmAacJP2O7irQMeE4d4H/O+3V/OUDYLtiVFT4m+Pn+SCHx6bCVQ"
+parameters:
+  salt_data: ZqFLmPJe5/XC4i0Dj4juXKsEXjZMU2WbmWCWevL1pFAHQlJS8+UTH2qjt0QkSak2cb4CzGno9AxkCtvdmCb2xuqk5vQVfQjXK7e6UK8hblqlAJiBjE4Vyf81bfM8fUEyVFE0A+2XEy2D84R7HEYfVtTBdaJTzZFnWmBfiG/+gvUmF2ULVj7k4uU1t91DwP2GrsuCDJVgtxQZp2llwoTYcKIFcMcdjj/57soz+rWllsu5OaIw4jVZhDMm3ZSJfvk1G3EubUtYwJTp/xvOSuKj2f7COtU5WKg6X3V6anW2RBdVRI6UGaSrkhcXDZwEvFbRTLigbzYvBIO8Qrxc95JeZQoEJsIQrkRUYIflVjND26hktZMhEf27gQlknNzVOPEonoW8CDQ98Qcs0wNeN7tTBUixqI8FFJMUVn7f0vM5Uo90PRx53FrUWtSbo7GV/UylzE8hr3x6HYgaSGpFOMAXioJIPMMy5nGN/IbPDSR3khYP+4JvuF0m6b9ovQQo7Ga1uN+tsrY2sPLGAPWnM2Xe5Go1ZYgWbF4Y2zHiOjnj2CJMKUClP3G4hKs5COqdlpc5W4mxsPhE0PZ12sQ+B/OlB0bslDilGOGgVZ/y1r/6LmKsvKfcwg7q3iYpGTNmH2/jR4AAAycnmiiV0LMBMz6HFfsGx9MTvw5WdscvnVuJJ4eATWFWSHJY2wFbvYs83fUmilmfC1jJxp9TF6pRxOoVCt5oFCwLcNABkpf+QZnJqoJqwR4g/PydJ+SNpw7OOgYnJHel44nFhQ7Rb5KzTc92DOaBF36Zoew0735XUUMH3BblmHZ+IqxjAkgeQ4ld6O/sFwS/hH9ELPLGuBa2cZeo4Q
+  pass_data: V0hbGdH1Mljob5IokEM46oeVtNhSnOPWgYlaDql8nEc
+
+transports:
+  - tport: rvservice
+    type: rv
+    route:
+      port: 7500
+      listen: "*"
+  - tport: a_mesh
+    type: mesh
+    route:
+      port: 6000
+      listen: "*" 
+      connect: [ vxr-dev-rundecksvn, vxr-dev-qsoms, vxr-dev-procs, vxr-dev-strategy ]
+      cost: [ 100, 1000, 1000, 1000 ]
+      timeout: 0
+      noencrypt: true
+  - tport: b_mesh
+    type: mesh
+    route:
+      port: 6001
+      listen: "*" 
+      connect: [ vxr-dev-rundecksvn, vxr-dev-qsoms, vxr-dev-procs, vxr-dev-strategy ]
+      cost: [ 1000, 100, 1000, 1000 ]
+      timeout: 0
+      noencrypt: true
+  - tport: c_mesh
+    type: mesh
+    route:
+      port: 6002
+      listen: "*" 
+      connect: [ vxr-dev-rundecksvn, vxr-dev-qsoms, vxr-dev-procs, vxr-dev-strategy ]
+      cost: [ 1000, 1000, 100, 1000 ]
+      timeout: 0
+      noencrypt: true
+  - tport: d_mesh
+    type: mesh
+    route:
+      port: 6003
+      listen: "*" 
+      connect: [ vxr-dev-rundecksvn, vxr-dev-qsoms, vxr-dev-procs, vxr-dev-strategy ]
+      cost: [ 1000, 1000, 1000, 100 ]
+      timeout: 0
+      noencrypt: true
+  - tport: tcp_raicache_primary
+    type: tcp
+    route:
+      port: 6100
+      listen: "*" 
+      connect: vxr-dev-raicache01
+      cost: [ 100, 10000, 100, 10000 ]
+      timeout: 0     
+      noencrypt: true
+  - tport: tcp_raicache_secondary
+    type: tcp
+    route:
+      port: 6100
+      listen: "*" 
+      connect: vxr-dev-raicache02
+      cost: [ 10000, 100, 10000, 100 ]
+      timeout: 0   
+      noencrypt: true
+statup:
+  listen:
+    - rvservice
+    - a_mesh
+    - b_mesh
+    - c_mesh
+    - d_mesh
+  connect:
+    - a_mesh   
+    - b_mesh
+    - c_mesh
+    - d_mesh   
