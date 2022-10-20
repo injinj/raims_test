@@ -1,0 +1,204 @@
+=--=--=--=
+Fri Oct 21 00:21:28 2022
+UTC offset: 2:00 (CEST)
+PID: 1345186, ms_server version: 1.13.0-48
+=--=--=--=
+1021 00:21:28.110! a_mesh.5 listen *:6000 failed
+1021 00:21:28.110! b_mesh.6 listen *:6001 failed
+1021 00:21:28.110! c_mesh.7 listen *:6002 failed
+1021 00:21:28.110! d_mesh.8 listen *:6003 failed
+1021 00:21:28.110! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1021 00:21:28.110  ipc.0 rvservice listening on [::]:7777
+1021 00:21:28.110  a_mesh.1 a_mesh listening on [::]:6000
+1021 00:21:28.110  b_mesh.2 b_mesh listening on [::]:6001
+1021 00:21:28.110  c_mesh.3 c_mesh listening on [::]:6002
+1021 00:21:28.110  d_mesh.4 d_mesh listening on [::]:6003
+1021 00:21:28.110  a_mesh.5 add_mesh_connect tcp://vxr-dev-rundecksvn:6000 (aed57876) tcp://vxr-dev-qsoms:6000 (640ea744) tcp://vxr-dev-procs:6000 (60ad6bbb) tcp://vxr-dev-strategy:6000 (d7827bc3)
+1021 00:21:28.110  a_mesh.5 not connecting to self (tcp://vxr-dev-strategy:6000)
+1021 00:21:28.110  a_mesh.5 connect clear 10.126.5.23:6000 ev_tcp_tport_client using market.a_mesh fd 22
+1021 00:21:28.110  b_mesh.6 add_mesh_connect tcp://vxr-dev-rundecksvn:6001 (5cbefb75) tcp://vxr-dev-qsoms:6001 (96652447) tcp://vxr-dev-procs:6001 (92c6e8b8) tcp://vxr-dev-strategy:6001 (25e9f8c0)
+1021 00:21:28.110  b_mesh.6 not connecting to self (tcp://vxr-dev-strategy:6001)
+1021 00:21:28.110  b_mesh.6 connect clear 10.126.5.23:6001 ev_tcp_tport_client using market.b_mesh fd 24
+1021 00:21:28.110  c_mesh.7 add_mesh_connect tcp://vxr-dev-rundecksvn:6002 (4fee0881) tcp://vxr-dev-qsoms:6002 (8535d7b3) tcp://vxr-dev-procs:6002 (81961b4c) tcp://vxr-dev-strategy:6002 (36b90b34)
+1021 00:21:28.110  c_mesh.7 not connecting to self (tcp://vxr-dev-strategy:6002)
+1021 00:21:28.110  c_mesh.7 connect clear 10.126.5.23:6002 ev_tcp_tport_client using market.c_mesh fd 26
+1021 00:21:28.110  d_mesh.8 add_mesh_connect tcp://vxr-dev-rundecksvn:6003 (bd858b82) tcp://vxr-dev-qsoms:6003 (775e54b0) tcp://vxr-dev-procs:6003 (73fd984f) tcp://vxr-dev-strategy:6003 (c4d28837)
+1021 00:21:28.110  d_mesh.8 not connecting to self (tcp://vxr-dev-strategy:6003)
+1021 00:21:28.110  d_mesh.8 connect clear 10.126.5.23:6003 ev_tcp_tport_client using market.d_mesh fd 28
+1021 00:21:28.110  service market key pair loaded
+1021 00:21:28.110  transient user vxr-dev-strategy created
+1021 00:21:28.110  session vxr-dev-strategy.market[mtajGFDvHZ2mYtdUqV5OIw] started, start time 1666304488.86487035
+1021 00:21:28.110  pub-window-size: 4194304 bytes
+1021 00:21:28.110  sub-window-size: 4194304 bytes
+1021 00:21:28.110  pub-window-time: 10 secs
+1021 00:21:28.110  sub-window-time: 10 secs
+1021 00:21:28.110  heartbeat: 10 secs
+1021 00:21:28.110  reliability: 15 secs
+1021 00:21:28.110  d_mesh.8 disconnected 10.126.5.23:6003 (Sock error=3/ERR_BAD_WRITE, write failed fd=28 state=0 name=market.d_mesh.tcp_conn.8 peer=10.126.5.23:6003 errno=111/Connection refused)
+1021 00:21:28.110  reconnect timer running (on_shutdown)
+1021 00:21:28.110  a_mesh.5 disconnected 10.126.5.23:6000 (Sock error=3/ERR_BAD_WRITE, write failed fd=22 state=0 name=market.a_mesh.tcp_conn.5 peer=10.126.5.23:6000 errno=111/Connection refused)
+1021 00:21:28.110  reconnect timer running (on_shutdown)
+1021 00:21:28.110  c_mesh.7 disconnected 10.126.5.23:6002 (Sock error=3/ERR_BAD_WRITE, write failed fd=26 state=0 name=market.c_mesh.tcp_conn.7 peer=10.126.5.23:6002 errno=111/Connection refused)
+1021 00:21:28.110  reconnect timer running (on_shutdown)
+1021 00:21:28.110  b_mesh.6 disconnected 10.126.5.23:6001 (Sock error=3/ERR_BAD_WRITE, write failed fd=24 state=0 name=market.b_mesh.tcp_conn.6 peer=10.126.5.23:6001 errno=111/Connection refused)
+1021 00:21:28.110  reconnect timer running (on_shutdown)
+1021 00:21:28.217  d_mesh.8 connect clear 10.126.5.20:6003 ev_tcp_tport_client using market.d_mesh fd 22
+1021 00:21:28.217  a_mesh.5 connect clear 10.126.5.20:6000 ev_tcp_tport_client using market.a_mesh fd 24
+1021 00:21:28.217  c_mesh.7 connect clear 10.126.5.20:6002 ev_tcp_tport_client using market.c_mesh fd 26
+1021 00:21:28.217  b_mesh.6 connect clear 10.126.5.20:6001 ev_tcp_tport_client using market.b_mesh fd 28
+1021 00:21:28.217  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6003, tport=market.d_mesh.tport.8, hash=775e54b0 )
+1021 00:21:28.217  vxr-dev-qsoms.1 i_am false oldest true
+1021 00:21:28.229  network converges 0.008 secs, 0 uids authenticated, add_mesh
+1021 00:21:28.229  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6002, tport=market.c_mesh.tport.7, hash=8535d7b3 )
+1021 00:21:28.229  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6001, tport=market.b_mesh.tport.6, hash=96652447 )
+1021 00:21:28.229  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6000, tport=market.a_mesh.tport.5, hash=640ea744 )
+1021 00:21:28.229  vxr-dev-qsoms.1 version matches 1.13.0-48
+1021 00:21:28.229  vxr-dev-qsoms.1 auth msg verified with service market public key
+1021 00:21:28.229  vxr-dev-qsoms.1 [sL3ngXBu0BcyhZ5bOdoGkg] add authentication from hello via challenge @ market.d_mesh.tport.8, state new, count=1
+1021 00:21:28.229  vxr-dev-procs.2 [Mb3vY4RYKQFSJ6TXPIc+4w] add authentication from sync_result via vxr-dev-qsoms @ market.d_mesh.tport.8, state new, count=1
+1021 00:21:28.230  vxr-dev-qsoms.1 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_req missing inbox seqno 6 -> 8 (market.a_mesh.tport.5)
+1021 00:21:28.230  vxr-dev-qsoms.1 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_req ignoring inbox seqno replay 8 -> 7 (market.c_mesh.tport.7)
+1021 00:21:28.240  network converges 0.011 secs, 2 uids authenticated, adj_update
+1021 00:21:28.240  vxr-dev-procs.2 old primary route is tport market.d_mesh.tport.8(d=1100), using route market.a_mesh.tport.5(d=200)
+1021 00:21:28.260  d_mesh.8 add_mesh_connect tcp://vxr-dev-procs:6003 (73fd984f)
+1021 00:21:28.260  d_mesh.9 connect clear 10.126.5.22:6003 ev_tcp_tport_client using market.d_mesh.9 fd 30
+1021 00:21:28.260  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6003
+1021 00:21:28.260  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6003, tport=market.d_mesh.tport.9, hash=73fd984f )
+1021 00:21:28.270  network converges 0.015 secs, 2 uids authenticated, adj_change
+1021 00:21:28.270  vxr-dev-procs.2 old primary route is tport market.d_mesh.tport.9(d=1000), using route market.a_mesh.tport.5(d=200)
+1021 00:21:28.320  network converges 0.010 secs, 2 uids authenticated, adj_change
+1021 00:21:30.730  vxr-dev-qsoms.1 _I.mtajGFDvHZ2mYtdUqV5OIw.pong missing inbox seqno 8 -> 10 (market.a_mesh.tport.5)
+1021 00:21:38.083  vxr-dev-qsoms.1 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_req missing inbox seqno 12 -> 14 (market.a_mesh.tport.5)
+1021 00:21:38.083  vxr-dev-qsoms.1 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_req ignoring inbox seqno replay 14 -> 13 (market.c_mesh.tport.7)
+1021 00:21:38.083  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[KmtEmSCBzYqU50kPkIRIsQ] hb[G9ar+qTZ5IvGwO3YrAN2Ug] mesh pending queue is_empty=1
+1021 00:21:38.083  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[KmtEmSCBzYqU50kPkIRIsQ] hb[G9ar+qTZ5IvGwO3YrAN2Ug] mesh pending queue is_empty=1
+1021 00:21:38.083  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[KmtEmSCBzYqU50kPkIRIsQ] hb[G9ar+qTZ5IvGwO3YrAN2Ug] mesh pending queue is_empty=1
+1021 00:21:38.113  b_mesh.6 add_mesh_connect tcp://vxr-dev-procs:6001 (92c6e8b8)
+1021 00:21:38.113  b_mesh.10 connect clear 10.126.5.22:6001 ev_tcp_tport_client using market.b_mesh.a fd 32
+1021 00:21:38.113  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6001
+1021 00:21:38.113  a_mesh.5 add_mesh_connect tcp://vxr-dev-procs:6000 (60ad6bbb)
+1021 00:21:38.113  a_mesh.11 connect clear 10.126.5.22:6000 ev_tcp_tport_client using market.a_mesh.b fd 34
+1021 00:21:38.113  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6000
+1021 00:21:38.113  c_mesh.7 add_mesh_connect tcp://vxr-dev-procs:6002 (81961b4c)
+1021 00:21:38.113  c_mesh.12 connect clear 10.126.5.22:6002 ev_tcp_tport_client using market.c_mesh.c fd 36
+1021 00:21:38.113  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6002
+1021 00:21:38.113  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6002, tport=market.c_mesh.tport.12, hash=81961b4c )
+1021 00:21:38.113  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[gQAI4vQ2+RZgojqMBV04cQ] mesh pending queue is_empty=0
+1021 00:21:38.113  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6000, tport=market.a_mesh.tport.11, hash=60ad6bbb )
+1021 00:21:38.113  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[gQAI4vQ2+RZgojqMBV04cQ] mesh pending queue is_empty=0
+1021 00:21:38.113  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6001, tport=market.b_mesh.tport.10, hash=92c6e8b8 )
+1021 00:21:38.113  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[gQAI4vQ2+RZgojqMBV04cQ] mesh pending queue is_empty=0
+1021 00:21:38.113  vxr-dev-procs.2 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_req missing inbox seqno 1 -> 4 (market.a_mesh.tport.11)
+1021 00:21:38.113  vxr-dev-procs.2 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_req ignoring inbox seqno replay 4 -> 3 (market.c_mesh.tport.12)
+1021 00:21:38.113  vxr-dev-procs.2 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_req ignoring inbox seqno replay 4 -> 2 (market.b_mesh.tport.10)
+1021 00:21:38.130  network converges 0.017 secs, 2 uids authenticated, add_mesh
+1021 00:21:38.150  network converges 0.010 secs, 2 uids authenticated, adj_change
+1021 00:23:00.519  vxr-dev-rundecksvn.3 [za1++NZxVkmgFf5qfndzfw] add authentication from sync_result via vxr-dev-qsoms @ market.c_mesh.tport.7, state new, count=1
+1021 00:23:00.539  network converges 0.020 secs, 3 uids authenticated, adj_update
+1021 00:23:00.539  vxr-dev-rundecksvn.3 old primary route is tport market.c_mesh.tport.7(d=1100), using route market.a_mesh.tport.5(d=200)
+1021 00:23:00.564  d_mesh.4 connect clear 10.126.5.23:45982 ev_tcp_tport using market.d_mesh fd 37
+1021 00:23:00.564  d_mesh.13 add_mesh_accept tcp://vxr-dev-strategy:6003 from 10.126.5.23:45982
+1021 00:23:00.575  vxr-dev-rundecksvn.3 set_mesh( tcp://vxr-dev-rundecksvn:6003, tport=market.d_mesh.tport.13, hash=bd858b82 )
+1021 00:23:00.600  network converges 0.026 secs, 3 uids authenticated, add_mesh
+1021 00:23:00.600  vxr-dev-rundecksvn.3 old primary route is tport market.d_mesh.tport.13(d=1000), using route market.a_mesh.tport.5(d=200)
+1021 00:23:00.670  network converges 0.063 secs, 3 uids authenticated, adj_change
+1021 00:23:00.690  d_mesh.4 add_mesh_connect tcp://vxr-dev-qsoms:6003 (775e54b0)
+1021 00:23:00.690  d_mesh.14 connect clear 10.126.5.20:6003 ev_tcp_tport_client using market.d_mesh.e fd 40
+1021 00:23:00.690  vxr-dev-qsoms.1 add_mesh ok tcp://vxr-dev-qsoms:6003
+1021 00:23:00.690  d_mesh.4 add_mesh_connect tcp://vxr-dev-procs:6003 (73fd984f)
+1021 00:23:00.690  d_mesh.15 connect clear 10.126.5.22:6003 ev_tcp_tport_client using market.d_mesh.f fd 42
+1021 00:23:00.690  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6003
+1021 00:23:00.700  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6003, tport=market.d_mesh.tport.14, hash=775e54b0 )
+1021 00:23:00.700  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6003, tport=market.d_mesh.tport.15, hash=73fd984f )
+1021 00:23:00.730  network converges 0.030 secs, 3 uids authenticated, add_mesh
+1021 00:23:00.760  network converges 0.024 secs, 3 uids authenticated, adj_change
+1021 00:23:00.790  network converges 0.020 secs, 3 uids authenticated, adj_change
+1021 00:23:06.738  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:06.738  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:06.738  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:06.738  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:06.738  vxr-dev-qsoms.1 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_rpy missing inbox seqno 28 -> 30 (market.b_mesh.tport.6)
+1021 00:23:06.738  vxr-dev-qsoms.1 _I.mtajGFDvHZ2mYtdUqV5OIw.mesh_rpy ignoring inbox seqno replay 30 -> 29 (market.a_mesh.tport.5)
+1021 00:23:06.746  b_mesh.6 add_mesh_connect tcp://vxr-dev-procs:6001 (92c6e8b8)
+1021 00:23:06.746  b_mesh.6 already connected (tcp://vxr-dev-procs:6001)
+1021 00:23:06.746  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6001
+1021 00:23:06.746  c_mesh.7 add_mesh_connect tcp://vxr-dev-procs:6002 (81961b4c)
+1021 00:23:06.746  c_mesh.7 already connected (tcp://vxr-dev-procs:6002)
+1021 00:23:06.746  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6002
+1021 00:23:06.769  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:10.389  b_mesh.2 connect clear 10.126.5.23:60118 ev_tcp_tport using market.b_mesh fd 43
+1021 00:23:10.389  b_mesh.16 add_mesh_accept tcp://vxr-dev-strategy:6001 from 10.126.5.23:60118
+1021 00:23:10.401  c_mesh.3 connect clear 10.126.5.23:45956 ev_tcp_tport using market.c_mesh fd 45
+1021 00:23:10.401  c_mesh.17 add_mesh_accept tcp://vxr-dev-strategy:6002 from 10.126.5.23:45956
+1021 00:23:10.416  vxr-dev-rundecksvn.3 set_mesh( tcp://vxr-dev-rundecksvn:6002, tport=market.c_mesh.tport.17, hash=4fee0881 )
+1021 00:23:10.416  vxr-dev-rundecksvn.3 mesh_csum not equal vxr-dev-rundecksvn=[V3vd4IaeS9QGdyk+1yk9XA] hb[fRCZeaYfhl6SkGAxR6117Q] mesh pending queue is_empty=1
+1021 00:23:10.416  vxr-dev-rundecksvn.3 set_mesh( tcp://vxr-dev-rundecksvn:6001, tport=market.b_mesh.tport.16, hash=5cbefb75 )
+1021 00:23:10.416  vxr-dev-rundecksvn.3 mesh_csum not equal vxr-dev-rundecksvn=[V3vd4IaeS9QGdyk+1yk9XA] hb[fRCZeaYfhl6SkGAxR6117Q] mesh pending queue is_empty=1
+1021 00:23:10.416  vxr-dev-rundecksvn.3 mesh_csum not equal vxr-dev-rundecksvn=[V3vd4IaeS9QGdyk+1yk9XA] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:10.416  vxr-dev-rundecksvn.3 mesh_csum not equal vxr-dev-rundecksvn=[V3vd4IaeS9QGdyk+1yk9XA] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:10.440  network converges 0.028 secs, 3 uids authenticated, add_mesh
+1021 00:23:10.470  network converges 0.023 secs, 3 uids authenticated, adj_change
+1021 00:23:10.499  network converges 0.020 secs, 3 uids authenticated, adj_change
+1021 00:23:10.540  c_mesh.3 add_mesh_connect tcp://vxr-dev-qsoms:6002 (8535d7b3)
+1021 00:23:10.540  c_mesh.18 connect clear 10.126.5.20:6002 ev_tcp_tport_client using market.c_mesh.12 fd 48
+1021 00:23:10.540  vxr-dev-qsoms.1 add_mesh ok tcp://vxr-dev-qsoms:6002
+1021 00:23:10.540  c_mesh.3 add_mesh_connect tcp://vxr-dev-procs:6002 (81961b4c)
+1021 00:23:10.540  c_mesh.19 connect clear 10.126.5.22:6002 ev_tcp_tport_client using market.c_mesh.13 fd 50
+1021 00:23:10.540  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6002
+1021 00:23:10.540  b_mesh.2 add_mesh_connect tcp://vxr-dev-qsoms:6001 (96652447)
+1021 00:23:10.540  b_mesh.20 connect clear 10.126.5.20:6001 ev_tcp_tport_client using market.b_mesh.14 fd 52
+1021 00:23:10.540  vxr-dev-qsoms.1 add_mesh ok tcp://vxr-dev-qsoms:6001
+1021 00:23:10.540  b_mesh.2 add_mesh_connect tcp://vxr-dev-procs:6001 (92c6e8b8)
+1021 00:23:10.540  b_mesh.21 connect clear 10.126.5.22:6001 ev_tcp_tport_client using market.b_mesh.15 fd 54
+1021 00:23:10.540  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6001
+1021 00:23:10.540  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6001, tport=market.b_mesh.tport.21, hash=92c6e8b8 )
+1021 00:23:10.540  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[ZsYygwLGYtVUUI3p664Dvw] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:10.540  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6002, tport=market.c_mesh.tport.19, hash=81961b4c )
+1021 00:23:10.540  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[ZsYygwLGYtVUUI3p664Dvw] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:10.540  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6001, tport=market.b_mesh.tport.20, hash=96652447 )
+1021 00:23:10.540  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6002, tport=market.c_mesh.tport.18, hash=8535d7b3 )
+1021 00:23:10.569  network converges 0.028 secs, 3 uids authenticated, add_mesh
+1021 00:23:10.609  network converges 0.029 secs, 3 uids authenticated, adj_change
+1021 00:23:16.588  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:16.588  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:16.588  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:16.588  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:16.591  a_mesh.5 add_mesh_connect tcp://vxr-dev-procs:6000 (60ad6bbb)
+1021 00:23:16.591  a_mesh.5 already connected (tcp://vxr-dev-procs:6000)
+1021 00:23:16.591  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6000
+1021 00:23:16.619  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:16.619  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:16.619  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:20.248  a_mesh.1 connect clear 10.126.5.23:56490 ev_tcp_tport using market.a_mesh fd 55
+1021 00:23:20.248  a_mesh.22 add_mesh_accept tcp://vxr-dev-strategy:6000 from 10.126.5.23:56490
+1021 00:23:20.248  vxr-dev-rundecksvn.3 set_mesh( tcp://vxr-dev-rundecksvn:6000, tport=market.a_mesh.tport.22, hash=aed57876 )
+1021 00:23:20.248  vxr-dev-rundecksvn.3 mesh_csum not equal vxr-dev-rundecksvn=[V3vd4IaeS9QGdyk+1yk9XA] hb[fRCZeaYfhl6SkGAxR6117Q] mesh pending queue is_empty=1
+1021 00:23:20.256  vxr-dev-rundecksvn.3 mesh_csum not equal vxr-dev-rundecksvn=[V3vd4IaeS9QGdyk+1yk9XA] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:20.269  network converges 0.030 secs, 3 uids authenticated, add_tport
+1021 00:23:20.300  network converges 0.020 secs, 3 uids authenticated, adj_change
+1021 00:23:20.330  a_mesh.1 add_mesh_connect tcp://vxr-dev-qsoms:6000 (640ea744)
+1021 00:23:20.330  a_mesh.23 connect clear 10.126.5.20:6000 ev_tcp_tport_client using market.a_mesh.17 fd 58
+1021 00:23:20.330  vxr-dev-qsoms.1 add_mesh ok tcp://vxr-dev-qsoms:6000
+1021 00:23:20.330  a_mesh.1 add_mesh_connect tcp://vxr-dev-procs:6000 (60ad6bbb)
+1021 00:23:20.330  a_mesh.24 connect clear 10.126.5.22:6000 ev_tcp_tport_client using market.a_mesh.18 fd 60
+1021 00:23:20.330  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6000
+1021 00:23:20.330  vxr-dev-procs.2 set_mesh( tcp://vxr-dev-procs:6000, tport=market.a_mesh.tport.24, hash=60ad6bbb )
+1021 00:23:20.330  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[ZsYygwLGYtVUUI3p664Dvw] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:20.330  vxr-dev-qsoms.1 set_mesh( tcp://vxr-dev-qsoms:6000, tport=market.a_mesh.tport.23, hash=640ea744 )
+1021 00:23:20.359  network converges 0.029 secs, 3 uids authenticated, add_mesh
+1021 00:23:20.389  network converges 0.024 secs, 3 uids authenticated, adj_change
+1021 00:23:20.419  network converges 0.020 secs, 3 uids authenticated, adj_change
+1021 00:23:26.438  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:26.438  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:26.438  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:26.438  vxr-dev-qsoms.1 mesh_csum not equal vxr-dev-qsoms=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=1
+1021 00:23:26.447  c_mesh.7 add_mesh_connect tcp://vxr-dev-procs:6002 (81961b4c)
+1021 00:23:26.447  c_mesh.7 already connected (tcp://vxr-dev-procs:6002)
+1021 00:23:26.447  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6002
+1021 00:23:26.447  a_mesh.5 add_mesh_connect tcp://vxr-dev-procs:6000 (60ad6bbb)
+1021 00:23:26.447  a_mesh.5 already connected (tcp://vxr-dev-procs:6000)
+1021 00:23:26.447  vxr-dev-procs.2 add_mesh ok tcp://vxr-dev-procs:6000
+1021 00:23:26.470  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:26.470  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:26.470  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
+1021 00:23:26.470  vxr-dev-procs.2 mesh_csum not equal vxr-dev-procs=[G9ar+qTZ5IvGwO3YrAN2Ug] hb[1nvVAnKossJm1ROy0nQFLQ] mesh pending queue is_empty=0
