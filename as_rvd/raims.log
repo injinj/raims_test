@@ -1,0 +1,850 @@
+=--=--=--=
+Sat Oct 22 00:16:41 2022
+UTC offset: 2:00 (CEST)
+PID: 4074462, ms_server version: 1.13.0-48
+=--=--=--=
+1022 00:16:41.495! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1022 00:16:41.497  raitcp.1 raitcp listening on [::]:6100
+1022 00:16:41.497  raimesh.2 raimesh listening on [::]:7100
+1022 00:16:41.497  raimesh.2 add_mesh_connect tcp://vxr-pp-raicache01:7100 (2794d93) tcp://vxr-pp-raicache02:7100 (36c58649)
+1022 00:16:41.497  raimesh.2 not connecting to self (tcp://vxr-pp-raicache02:7100)
+1022 00:16:41.497  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 17
+1022 00:16:41.497  ipc.0 rvd listening on [::]:7500
+1022 00:16:41.497  web: web start listening on [::]:7580
+1022 00:16:41.497  service rvd key pair loaded
+1022 00:16:41.497  transient user vxr-pp-raicache02_7500 created
+1022 00:16:41.497  session vxr-pp-raicache02_7500.rvd[3Fy/HqQzhKwxZtkVw8NpEA] started, start time 1666390601.490118045
+1022 00:16:41.497  running background deamon PID: 4074464
+1022 00:16:41.497  pub-window-size: 4194304 bytes
+1022 00:16:41.497  sub-window-size: 4194304 bytes
+1022 00:16:41.497  pub-window-time: 10 secs
+1022 00:16:41.497  sub-window-time: 10 secs
+1022 00:16:41.497  heartbeat: 10 secs
+1022 00:16:41.497  reliability: 15 secs
+1022 00:16:41.497  vxr-pp-raicache01_7500.1 set_mesh( tcp://vxr-pp-raicache01:7100, tport=rvd.raimesh.tport.3, hash=2794d93 )
+1022 00:16:41.497  vxr-pp-raicache01_7500.1 version matches 1.13.0-48
+1022 00:16:41.497  vxr-pp-raicache01_7500.1 auth msg verified with service rvd public key
+1022 00:16:41.497  vxr-pp-raicache01_7500.1 [NTJmHG3045ZJI+98ONwT4Q] add authentication from hello via challenge @ rvd.raimesh.tport.3, state new, count=1
+1022 00:16:41.505  network converges 0.006 secs, 1 uids authenticated, adj_update
+1022 00:16:41.687  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=6/ERR_READ_RESET, read connection reset fd=17 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=104/Connection reset by peer)
+1022 00:16:41.687  vxr-pp-raicache01_7500.1 add inbox no valid routes yet
+1022 00:16:41.687  vxr-pp-raicache01_7500.1 [NTJmHG3045ZJI+98ONwT4Q] remove auth source_close 
+1022 00:16:41.687  reconnect in 1 seconds
+1022 00:16:41.687  reconnect timer running (on_shutdown)
+1022 00:16:41.695  network converges 0.008 secs, 0 uids authenticated, pop_route
+1022 00:16:41.804  start_network:        service 9500, ""
+1022 00:16:41.804  start_network:        service 9410, ""
+1022 00:16:41.804  start_network:        service 9411, ""
+1022 00:16:41.804  start_network:        service 9600, ""
+1022 00:16:41.804  start_network:        service 9401, ""
+1022 00:16:41.804  start_network:        service 9400, ""
+1022 00:16:42.689  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 31
+1022 00:16:42.689  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=31 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:16:42.689  reconnect in 3 seconds
+1022 00:16:42.689  reconnect timer running (on_shutdown)
+1022 00:16:43.015  timeout pending peer [aLedVBxKqVU0bUdRhDH0tQ] (vxr-pp-qs_7500) -> vxr-pp-raicache01_7500 (peer_db)
+1022 00:16:44.265  timeout pending peer [8o2pmyKlF36EsD6WMAlBvg] (vxr-pp-tsmqry_7500) -> vxr-pp-raicache01_7500 (peer_db)
+1022 00:16:44.297  raitcp.1 connect clear 10.126.5.52:49576 ev_tcp_tport using rvd.raitcp fd 31
+1022 00:16:44.297  raitcp.4 add_tcp_accept
+1022 00:16:44.297  raitcp.1 connect clear 10.126.5.50:47542 ev_tcp_tport using rvd.raitcp fd 33
+1022 00:16:44.297  raitcp.5 add_tcp_accept
+1022 00:16:44.297  vxr-pp-strategy_7500.2 i_am false oldest true
+1022 00:16:44.310  vxr-pp-oms_7500.3 i_am false oldest true
+1022 00:16:44.310  network converges 0.009 secs, 0 uids authenticated, add_tport
+1022 00:16:44.310  vxr-pp-oms_7500.3 version matches 1.13.0-48
+1022 00:16:44.310  vxr-pp-oms_7500.3 auth msg verified with service rvd public key
+1022 00:16:44.310  vxr-pp-oms_7500.3 [ScUn24pt0SX5bfhywjaEJA] add authentication from hello via challenge @ rvd.raitcp.tport.5, state new, count=1
+1022 00:16:44.310  vxr-pp-strategy_7500.2 version matches 1.13.0-48
+1022 00:16:44.310  vxr-pp-strategy_7500.2 auth msg verified with service rvd public key
+1022 00:16:44.310  vxr-pp-strategy_7500.2 [642813wl5yNfew1dA/HMOA] add authentication from hello via challenge @ rvd.raitcp.tport.4, state new, count=1
+1022 00:16:44.310  vxr-pp-qs_7500.4 [aLedVBxKqVU0bUdRhDH0tQ] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.5, state new, count=1
+1022 00:16:44.310  vxr-pp-tsmqry_7500.5 [8o2pmyKlF36EsD6WMAlBvg] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.5, state new, count=1
+1022 00:16:44.310  vxr-pp-raicache01_7500.1 [NTJmHG3045ZJI+98ONwT4Q] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.5, state reanimated, count=2
+1022 00:16:44.355  network converges 0.042 secs, 5 uids authenticated, adj_update
+1022 00:16:44.777  vxr-pp-procs_7500.6 [LJMkjwc5gWyQ0FLyottsGg] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.5, state new, count=1
+1022 00:16:44.836  network converges 0.059 secs, 6 uids authenticated, adj_update
+1022 00:16:45.692  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 35
+1022 00:16:45.692  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=35 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:16:45.692  reconnect in 5 seconds
+1022 00:16:45.692  reconnect timer running (on_shutdown)
+1022 00:16:48.798  start_network:        service 9000, ""
+1022 00:16:50.348  start_network:        service 9001, ""
+1022 00:16:50.693  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 41
+1022 00:16:50.693  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=41 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:16:50.693  reconnect in 7 seconds
+1022 00:16:50.693  reconnect timer running (on_shutdown)
+1022 00:16:56.166  vxr-pp-raicache01_7500.1 [NTJmHG3045ZJI+98ONwT4Q] remove auth orphaned 
+1022 00:16:57.226  network converges 1.102 secs, 5 uids authenticated, adj_change
+1022 00:16:57.696  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 41
+1022 00:16:57.696  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=41 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:16:57.696  reconnect failed (on_shutdown)
+1022 00:18:00.225  network converges 0.046 secs, 5 uids authenticated, adj_update
+1022 00:18:53.285  network converges 0.047 secs, 5 uids authenticated, adj_update
+1022 00:18:55.214  vxr-pp-strategy_7500.2 [642813wl5yNfew1dA/HMOA] remove auth bye 
+1022 00:18:55.214  raitcp.4 disconnected 10.126.5.52:49576 (Sock fd=31 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.5.52:49576)
+1022 00:18:55.245  network converges 0.035 secs, 4 uids authenticated, adj_change
+1022 00:18:59.276  network converges 0.032 secs, 4 uids authenticated, adj_update
+1022 00:19:02.446  network converges 0.037 secs, 4 uids authenticated, adj_update
+1022 00:19:05.884  raitcp.1 connect clear 10.126.5.52:49648 ev_tcp_tport using rvd.raitcp fd 31
+1022 00:19:05.884  raitcp.4 add_tcp_accept
+1022 00:19:05.889  vxr-pp-strategy_7500.7 I am oldest peer
+1022 00:19:05.889  vxr-pp-strategy_7500.7 version matches 1.13.0-48
+1022 00:19:05.889  vxr-pp-strategy_7500.7 auth msg verified with service rvd public key
+1022 00:19:05.889  vxr-pp-strategy_7500.7 [fTJ/tXnsXcU20ggg+6Mz3g] add authentication from handshake via challenge @ rvd.raitcp.tport.4, state new, count=1
+1022 00:19:05.935  network converges 0.046 secs, 5 uids authenticated, adj_update
+1022 00:19:06.005  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:19:06.185  network converges 0.158 secs, 5 uids authenticated, adj_change
+1022 00:19:11.106  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:19:11.336  network converges 0.043 secs, 5 uids authenticated, adj_change
+1022 00:19:11.386  network converges 0.040 secs, 5 uids authenticated, adj_change
+1022 00:19:11.446  network converges 0.049 secs, 5 uids authenticated, adj_change
+1022 00:19:11.496  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:19:15.875  network converges 0.049 secs, 5 uids authenticated, adj_change
+1022 00:19:15.925  network converges 0.042 secs, 5 uids authenticated, adj_change
+1022 00:19:15.995  network converges 0.049 secs, 5 uids authenticated, adj_change
+1022 00:19:20.956  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:19:30.806  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:19:40.655  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:19:50.505  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:20:00.355  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:20:10.205  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:20:20.055  network converges 0.045 secs, 5 uids authenticated, adj_change
+1022 00:20:29.906  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:20:39.756  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:20:49.606  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:20:59.456  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:21:09.305  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:21:19.155  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:21:29.005  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:21:38.856  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:21:48.705  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:21:58.556  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:22:08.406  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:22:18.256  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:22:28.106  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:22:37.955  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:22:47.805  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:22:57.655  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:23:07.505  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:23:17.355  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:23:27.206  network converges 0.046 secs, 5 uids authenticated, adj_change
+=--=--=--=
+Sat Oct 22 00:24:23 2022
+UTC offset: 2:00 (CEST)
+PID: 4075165, ms_server version: 1.13.0-48
+=--=--=--=
+1022 00:24:23.524! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1022 00:24:23.526  raitcp.1 raitcp listening on [::]:6100
+1022 00:24:23.526  raimesh.2 raimesh listening on [::]:7100
+1022 00:24:23.526  raimesh.2 add_mesh_connect tcp://vxr-pp-raicache01:7100 (2794d93) tcp://vxr-pp-raicache02:7100 (36c58649)
+1022 00:24:23.526  raimesh.2 not connecting to self (tcp://vxr-pp-raicache02:7100)
+1022 00:24:23.526  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 17
+1022 00:24:23.526  ipc.0 rvd listening on [::]:7500
+1022 00:24:23.526  web: web start listening on [::]:7580
+1022 00:24:23.526  service rvd key pair loaded
+1022 00:24:23.526  transient user vxr-pp-raicache02_7500 created
+1022 00:24:23.526  session vxr-pp-raicache02_7500.rvd[sYlurgs2MZvyWjE4W2JL3w] started, start time 1666391063.517547737
+1022 00:24:23.526  running background deamon PID: 4075167
+1022 00:24:23.526  pub-window-size: 4194304 bytes
+1022 00:24:23.526  sub-window-size: 4194304 bytes
+1022 00:24:23.526  pub-window-time: 10 secs
+1022 00:24:23.526  sub-window-time: 10 secs
+1022 00:24:23.526  heartbeat: 10 secs
+1022 00:24:23.526  reliability: 15 secs
+1022 00:24:23.526  vxr-pp-raicache01_7500.1 set_mesh( tcp://vxr-pp-raicache01:7100, tport=rvd.raimesh.tport.3, hash=2794d93 )
+1022 00:24:23.526  vxr-pp-raicache01_7500.1 version matches 1.13.0-48
+1022 00:24:23.526  vxr-pp-raicache01_7500.1 auth msg verified with service rvd public key
+1022 00:24:23.526  vxr-pp-raicache01_7500.1 [3+Xo4cQYPciUNS9lWSg5Ig] add authentication from hello via challenge @ rvd.raimesh.tport.3, state new, count=1
+1022 00:24:23.534  network converges 0.007 secs, 1 uids authenticated, adj_update
+1022 00:24:23.703  raimesh.3 disconnected 10.126.5.56:7100 (Sock fd=17 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100)
+1022 00:24:23.703  vxr-pp-raicache01_7500.1 add inbox no valid routes yet
+1022 00:24:23.703  vxr-pp-raicache01_7500.1 [3+Xo4cQYPciUNS9lWSg5Ig] remove auth source_close 
+1022 00:24:23.703  reconnect in 1 seconds
+1022 00:24:23.703  reconnect timer running (on_shutdown)
+1022 00:24:23.704  network converges 0.002 secs, 0 uids authenticated, pop_route
+1022 00:24:24.704  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 17
+1022 00:24:24.706  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=17 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:24:24.706  reconnect in 3 seconds
+1022 00:24:24.706  reconnect timer running (on_shutdown)
+1022 00:24:25.035  timeout pending peer [aLedVBxKqVU0bUdRhDH0tQ] (vxr-pp-qs_7500) -> vxr-pp-raicache01_7500 (peer_db)
+1022 00:24:25.279  start_network:        service 9001, ""
+1022 00:24:25.300  start_network:        service 9000, ""
+1022 00:24:26.304  timeout pending peer [8o2pmyKlF36EsD6WMAlBvg] (vxr-pp-tsmqry_7500) -> vxr-pp-raicache01_7500 (peer_db)
+1022 00:24:27.283  start_network:        service 9411, ""
+1022 00:24:27.283  start_network:        service 9400, ""
+1022 00:24:27.283  start_network:        service 9600, ""
+1022 00:24:27.283  start_network:        service 9500, ""
+1022 00:24:27.283  start_network:        service 9401, ""
+1022 00:24:27.283  start_network:        service 9410, ""
+1022 00:24:27.555  timeout pending peer [LJMkjwc5gWyQ0FLyottsGg] (vxr-pp-procs_7500) -> vxr-pp-raicache01_7500 (peer_db)
+1022 00:24:27.708  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 37
+1022 00:24:27.708  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=37 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:24:27.708  reconnect in 5 seconds
+1022 00:24:27.708  reconnect timer running (on_shutdown)
+1022 00:24:28.824  timeout pending peer [fTJ/tXnsXcU20ggg+6Mz3g] (vxr-pp-strategy_7500) -> vxr-pp-raicache01_7500 (peer_db)
+1022 00:24:30.085  timeout pending peer [ScUn24pt0SX5bfhywjaEJA] (vxr-pp-oms_7500) -> vxr-pp-raicache01_7500 (peer_db)
+1022 00:24:30.285  raitcp.1 connect clear 10.126.5.50:47700 ev_tcp_tport using rvd.raitcp fd 37
+1022 00:24:30.285  raitcp.4 add_tcp_accept
+1022 00:24:30.285  raitcp.1 connect clear 10.126.5.52:49800 ev_tcp_tport using rvd.raitcp fd 39
+1022 00:24:30.285  raitcp.5 add_tcp_accept
+1022 00:24:30.285  vxr-pp-oms_7500.2 i_am false oldest true
+1022 00:24:30.289  network converges 0.005 secs, 0 uids authenticated, add_tport
+1022 00:24:30.289  vxr-pp-oms_7500.2 version matches 1.13.0-48
+1022 00:24:30.289  vxr-pp-oms_7500.2 auth msg verified with service rvd public key
+1022 00:24:30.289  vxr-pp-oms_7500.2 [ScUn24pt0SX5bfhywjaEJA] add authentication from hello via challenge @ rvd.raitcp.tport.4, state new, count=1
+1022 00:24:30.289  vxr-pp-strategy_7500.3 version matches 1.13.0-48
+1022 00:24:30.289  vxr-pp-strategy_7500.3 auth msg verified with service rvd public key
+1022 00:24:30.289  vxr-pp-strategy_7500.3 [fTJ/tXnsXcU20ggg+6Mz3g] add authentication from hello via challenge @ rvd.raitcp.tport.5, state new, count=1
+1022 00:24:30.289  vxr-pp-procs_7500.4 [LJMkjwc5gWyQ0FLyottsGg] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.4, state new, count=1
+1022 00:24:30.289  vxr-pp-qs_7500.5 [aLedVBxKqVU0bUdRhDH0tQ] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.4, state new, count=1
+1022 00:24:30.289  vxr-pp-tsmqry_7500.6 [8o2pmyKlF36EsD6WMAlBvg] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.4, state new, count=1
+1022 00:24:30.289  vxr-pp-raicache01_7500.1 [3+Xo4cQYPciUNS9lWSg5Ig] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.raitcp.tport.4, state reanimated, count=2
+1022 00:24:30.403! reserve size 1485is less then message len 1526
+1022 00:24:30.403       0   a0 00 05 ee  fd ad b2 03  c4 03 b1 89  6e ae 0b 36              n  6  
+1022 00:24:30.403      10   31 9b f2 5a  31 38 5b 62  4b df c4 05  53 7f 00 00  1  Z18[bK   S    
+1022 00:24:30.403      20   e0 56 b1 03  53 7f 00 00  cf 18 7d 03  53 7f 00 00   V  S    } S    
+1022 00:24:30.403      30   0b 00 00 00  01 00 00 00  e0 56 b1 03  53 7f 00 00           V  S    
+1022 00:24:30.403      40   d0 ef 4f 6e  fd 7f 00 00  67 00 00 00  00 00 00 00    On   g         
+1022 00:24:30.403      50   10 f0 c1 11  00 01 c1 19  00 0b c1 12  00 0a c1 20                    
+1022 00:24:30.403      60   00 01 c1 1c  00 03 c4 0b  7d 32 7f b5  79 ec 5d c5          }2 y ]   
+1022 00:24:30.403      70   36 d2 08 20  fb a3 33 de  48 0f 00 00  05 78 c1 22  6     3 H    x "  
+1022 00:24:30.403      80   00 02 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.403      90   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.403      a0   6d 65 73 68  47 2c 00 0f  76 78 72 2d  70 70 2d 6f  meshG,  vxr-pp-o  
+1022 00:24:30.403      b0   6d 73 5f 37  35 30 30 00  c4 03 49 c5  27 db 8a 6d  ms_7500   I '  m  
+1022 00:24:30.403      c0   d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  00 04 c1 3d   % m r 6 $ "   =  
+1022 00:24:30.403      d0   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.403      e0   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.403      f0   47 2c 00 0f  76 78 72 2d  70 70 2d 6f  6d 73 5f 37  G,  vxr-pp-oms_7  
+1022 00:24:30.403     100   35 30 30 00  c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  500   I '  m % m  
+1022 00:24:30.403     110   f8 72 c2 36  84 24 c1 22  00 06 c1 3d  03 e8 c1 3e   r 6 $ "   =   >  
+1022 00:24:30.403     120   03 e8 c1 3f  00 64 c1 40  03 e8 47 2b  00 06 63 5f     ? d @  G+  c_  
+1022 00:24:30.403     130   6d 65 73 68  47 44 00 04  6d 65 73 68  47 2c 00 0f  meshGD  meshG,    
+1022 00:24:30.403     140   76 78 72 2d  70 70 2d 6f  6d 73 5f 37  35 30 30 00  vxr-pp-oms_7500   
+1022 00:24:30.403     150   c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36    I '  m % m r 6  
+1022 00:24:30.403     160   84 24 c1 22  00 08 c1 3d  03 e8 c1 3e  03 e8 c1 3f   $ "   =   >   ?  
+1022 00:24:30.403     170   03 e8 c1 40  03 e8 47 2b  00 06 64 5f  6d 65 73 68     @  G+  d_mesh  
+1022 00:24:30.403     180   47 44 00 04  6d 65 73 68  47 2c 00 0f  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.403     190   70 70 2d 6f  6d 73 5f 37  35 30 30 00  c4 03 49 c5  pp-oms_7500   I   
+1022 00:24:30.403     1a0   27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  '  m % m r 6 $ "  
+1022 00:24:30.403     1b0   00 0a c1 3d  27 10 c1 3e  00 64 c1 3f  27 10 c1 40     ='  > d ?'  @  
+1022 00:24:30.403     1c0   00 64 47 2b  00 16 74 63  70 5f 72 61  69 63 61 63   dG+  tcp_raicac  
+1022 00:24:30.403     1d0   68 65 5f 73  65 63 6f 6e  64 61 72 79  47 44 00 03  he_secondaryGD    
+1022 00:24:30.403     1e0   74 63 70 00  47 2c 00 16  76 78 72 2d  70 70 2d 72  tcp G,  vxr-pp-r  
+1022 00:24:30.403     1f0   61 69 63 61  63 68 65 30  32 5f 37 35  30 30 c4 03  aicache02_7500    
+1022 00:24:30.403     200   b1 89 6e ae  0b 36 31 9b  f2 5a 31 38  5b 62 4b df    n  61  Z18[bK   
+1022 00:24:30.403     210   c1 22 00 0b  c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8   "   =   >   ?    
+1022 00:24:30.403     220   c1 40 03 e8  47 2b 00 06  61 5f 6d 65  73 68 47 44   @  G+  a_meshGD  
+1022 00:24:30.403     230   00 04 6d 65  73 68 47 2c  00 11 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.403     240   2d 70 72 6f  63 73 5f 37  35 30 30 00  c4 03 2c 93  -procs_7500   ,   
+1022 00:24:30.403     250   24 8f 07 39  81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  $  9 l  R   l  "  
+1022 00:24:30.403     260   00 0c c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.403     270   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.403     280   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.403     290   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.403     2a0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 0d  "  ~  > 0 A  "    
+1022 00:24:30.403     2b0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.403     2c0   47 2b 00 06  61 5f 6d 65  73 68 47 44  00 04 6d 65  G+  a_meshGD  me  
+1022 00:24:30.403     2d0   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.403     2e0   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.403     2f0   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 0e c1 3d   l  R   l  "   =  
+1022 00:24:30.403     300   03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40  03 e8 47 2b     >   ?   @  G+  
+1022 00:24:30.403     310   00 06 61 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    a_meshGD  mesh  
+1022 00:24:30.403     320   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.403     330   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.403     340   84 31 f4 b5  c1 22 00 0f  c1 3d 03 e8  c1 3e 03 e8   1   "   =   >    
+1022 00:24:30.403     350   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  64 5f 6d 65   ?   @  G+  d_me  
+1022 00:24:30.403     360   73 68 47 44  00 04 6d 65  73 68 47 2c  00 0e 76 78  shGD  meshG,  vx  
+1022 00:24:30.403     370   72 2d 70 70  2d 71 73 5f  37 35 30 30  c4 03 68 b7  r-pp-qs_7500  h   
+1022 00:24:30.403     380   9d 54 1c 4a  a9 55 34 6d  47 51 84 31  f4 b5 c1 22   T J U4mGQ 1   "  
+1022 00:24:30.403     390   00 10 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.403     3a0   03 e8 47 2b  00 06 64 5f  6d 65 73 68  47 44 00 04    G+  d_meshGD    
+1022 00:24:30.403     3b0   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.403     3c0   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.403     3d0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 11  "  ~  > 0 A  "    
+1022 00:24:30.403     3e0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.403     3f0   47 2b 00 06  64 5f 6d 65  73 68 47 44  00 04 6d 65  G+  d_meshGD  me  
+1022 00:24:30.403     400   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.403     410   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.403     420   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 12 c1 3d   l  R   l  "   =  
+1022 00:24:30.403     430   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.403     440   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.403     450   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.403     460   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.403     470   84 31 f4 b5  c1 22 00 13  c1 3d 03 e8  c1 3e 00 64   1   "   =   > d  
+1022 00:24:30.403     480   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  62 5f 6d 65   ?   @  G+  b_me  
+1022 00:24:30.403     490   73 68 47 44  00 04 6d 65  73 68 47 2c  00 11 76 78  shGD  meshG,  vx  
+1022 00:24:30.403     4a0   72 2d 70 70  2d 70 72 6f  63 73 5f 37  35 30 30 00  r-pp-procs_7500   
+1022 00:24:30.403     4b0   c4 03 2c 93  24 8f 07 39  81 6c 90 d0  52 f2 a2 db    , $  9 l  R     
+1022 00:24:30.403     4c0   6c 1a c1 22  00 14 c1 3d  03 e8 c1 3e  00 64 c1 3f  l  "   =   > d ?  
+1022 00:24:30.403     4d0   03 e8 c1 40  03 e8 47 2b  00 06 62 5f  6d 65 73 68     @  G+  b_mesh  
+1022 00:24:30.403     4e0   47 44 00 04  6d 65 73 68  47 2c 00 12  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.403     4f0   70 70 2d 74  73 6d 71 72  79 5f 37 35  30 30 c4 03  pp-tsmqry_7500    
+1022 00:24:30.403     500   f2 8d a9 9b  22 a5 17 7e  84 b0 3e 96  30 09 41 be      "  ~  > 0 A   
+1022 00:24:30.403     510   c1 22 00 15  c1 3d 03 e8  c1 3e 03 e8  c1 3f 00 64   "   =   >   ? d  
+1022 00:24:30.403     520   c1 40 03 e8  47 2b 00 06  63 5f 6d 65  73 68 47 44   @  G+  c_meshGD  
+1022 00:24:30.403     530   00 04 6d 65  73 68 47 2c  00 0e 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.403     540   2d 71 73 5f  37 35 30 30  c4 03 68 b7  9d 54 1c 4a  -qs_7500  h  T J  
+1022 00:24:30.403     550   a9 55 34 6d  47 51 84 31  f4 b5 c1 22  00 16 c1 3d   U4mGQ 1   "   =  
+1022 00:24:30.403     560   03 e8 c1 3e  03 e8 c1 3f  00 64 c1 40  03 e8 47 2b     >   ? d @  G+  
+1022 00:24:30.403     570   00 06 63 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    c_meshGD  mesh  
+1022 00:24:30.403     580   47 2c 00 11  76 78 72 2d  70 70 2d 70  72 6f 63 73  G,  vxr-pp-procs  
+1022 00:24:30.403     590   5f 37 35 30  30 00 c4 03  2c 93 24 8f  07 39 81 6c  _7500   , $  9 l  
+1022 00:24:30.403     5a0   90 d0 52 f2  a2 db 6c 1a  c1 22 00 17  c1 3d 03 e8    R   l  "   =    
+1022 00:24:30.403     5b0   c1 3e 03 e8  c1 3f 00 64  c1 40 03 e8  47 2b 00 06   >   ? d @  G+    
+1022 00:24:30.403     5c0   63 5f 6d 65  73 68 47 44  00 04 6d 65  73 68 47 2c  c_meshGD  meshG,  
+1022 00:24:30.403     5d0   00 12 76 78  72 2d 70 70  2d 74 73 6d  71 72 79 5f    vxr-pp-tsmqry_  
+1022 00:24:30.403     5e0   37 35 30 30  c4 03 f2 8d  a9 9b 22 a5  17 7e 84 b0  7500      "  ~    
+1022 00:24:30.403     5f0   3e 96 30 09  41 be                                  > 0 A             
+1022 00:24:30.403       0   a0 00 05 ee  fd ad b2 03  c4 03 b1 89  6e ae 0b 36              n  6  
+1022 00:24:30.403      10   31 9b f2 5a  31 38 5b 62  4b df c4 05  53 7f 00 00  1  Z18[bK   S    
+1022 00:24:30.403      20   e0 56 b1 03  53 7f 00 00  cf 18 7d 03  53 7f 00 00   V  S    } S    
+1022 00:24:30.403      30   0b 00 00 00  01 00 00 00  e0 56 b1 03  53 7f 00 00           V  S    
+1022 00:24:30.403      40   d0 ef 4f 6e  fd 7f 00 00  67 00 00 00  00 00 00 00    On   g         
+1022 00:24:30.403      50   10 f0 c1 11  00 01 c1 19  00 0b c1 12  00 0a c1 20                    
+1022 00:24:30.403      60   00 01 c1 1c  00 03 c4 0b  7d 32 7f b5  79 ec 5d c5          }2 y ]   
+1022 00:24:30.403      70   36 d2 08 20  fb a3 33 de  48 0f 00 00  05 78 c1 22  6     3 H    x "  
+1022 00:24:30.403      80   00 02 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.403      90   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.403      a0   6d 65 73 68  47 2c 00 0f  76 78 72 2d  70 70 2d 6f  meshG,  vxr-pp-o  
+1022 00:24:30.403      b0   6d 73 5f 37  35 30 30 00  c4 03 49 c5  27 db 8a 6d  ms_7500   I '  m  
+1022 00:24:30.403      c0   d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  00 04 c1 3d   % m r 6 $ "   =  
+1022 00:24:30.403      d0   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.403      e0   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.403      f0   47 2c 00 0f  76 78 72 2d  70 70 2d 6f  6d 73 5f 37  G,  vxr-pp-oms_7  
+1022 00:24:30.403     100   35 30 30 00  c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  500   I '  m % m  
+1022 00:24:30.403     110   f8 72 c2 36  84 24 c1 22  00 06 c1 3d  03 e8 c1 3e   r 6 $ "   =   >  
+1022 00:24:30.403     120   03 e8 c1 3f  00 64 c1 40  03 e8 47 2b  00 06 63 5f     ? d @  G+  c_  
+1022 00:24:30.403     130   6d 65 73 68  47 44 00 04  6d 65 73 68  47 2c 00 0f  meshGD  meshG,    
+1022 00:24:30.403     140   76 78 72 2d  70 70 2d 6f  6d 73 5f 37  35 30 30 00  vxr-pp-oms_7500   
+1022 00:24:30.403     150   c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36    I '  m % m r 6  
+1022 00:24:30.403     160   84 24 c1 22  00 08 c1 3d  03 e8 c1 3e  03 e8 c1 3f   $ "   =   >   ?  
+1022 00:24:30.403     170   03 e8 c1 40  03 e8 47 2b  00 06 64 5f  6d 65 73 68     @  G+  d_mesh  
+1022 00:24:30.403     180   47 44 00 04  6d 65 73 68  47 2c 00 0f  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.403     190   70 70 2d 6f  6d 73 5f 37  35 30 30 00  c4 03 49 c5  pp-oms_7500   I   
+1022 00:24:30.403     1a0   27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  '  m % m r 6 $ "  
+1022 00:24:30.403     1b0   00 0a c1 3d  27 10 c1 3e  00 64 c1 3f  27 10 c1 40     ='  > d ?'  @  
+1022 00:24:30.403     1c0   00 64 47 2b  00 16 74 63  70 5f 72 61  69 63 61 63   dG+  tcp_raicac  
+1022 00:24:30.403     1d0   68 65 5f 73  65 63 6f 6e  64 61 72 79  47 44 00 03  he_secondaryGD    
+1022 00:24:30.403     1e0   74 63 70 00  47 2c 00 16  76 78 72 2d  70 70 2d 72  tcp G,  vxr-pp-r  
+1022 00:24:30.403     1f0   61 69 63 61  63 68 65 30  32 5f 37 35  30 30 c4 03  aicache02_7500    
+1022 00:24:30.403     200   b1 89 6e ae  0b 36 31 9b  f2 5a 31 38  5b 62 4b df    n  61  Z18[bK   
+1022 00:24:30.403     210   c1 22 00 0b  c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8   "   =   >   ?    
+1022 00:24:30.403     220   c1 40 03 e8  47 2b 00 06  61 5f 6d 65  73 68 47 44   @  G+  a_meshGD  
+1022 00:24:30.403     230   00 04 6d 65  73 68 47 2c  00 11 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.403     240   2d 70 72 6f  63 73 5f 37  35 30 30 00  c4 03 2c 93  -procs_7500   ,   
+1022 00:24:30.403     250   24 8f 07 39  81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  $  9 l  R   l  "  
+1022 00:24:30.403     260   00 0c c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.403     270   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.403     280   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.403     290   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.403     2a0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 0d  "  ~  > 0 A  "    
+1022 00:24:30.403     2b0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.403     2c0   47 2b 00 06  61 5f 6d 65  73 68 47 44  00 04 6d 65  G+  a_meshGD  me  
+1022 00:24:30.403     2d0   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.403     2e0   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.403     2f0   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 0e c1 3d   l  R   l  "   =  
+1022 00:24:30.403     300   03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40  03 e8 47 2b     >   ?   @  G+  
+1022 00:24:30.403     310   00 06 61 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    a_meshGD  mesh  
+1022 00:24:30.403     320   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.403     330   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.403     340   84 31 f4 b5  c1 22 00 0f  c1 3d 03 e8  c1 3e 03 e8   1   "   =   >    
+1022 00:24:30.403     350   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  64 5f 6d 65   ?   @  G+  d_me  
+1022 00:24:30.403     360   73 68 47 44  00 04 6d 65  73 68 47 2c  00 0e 76 78  shGD  meshG,  vx  
+1022 00:24:30.403     370   72 2d 70 70  2d 71 73 5f  37 35 30 30  c4 03 68 b7  r-pp-qs_7500  h   
+1022 00:24:30.403     380   9d 54 1c 4a  a9 55 34 6d  47 51 84 31  f4 b5 c1 22   T J U4mGQ 1   "  
+1022 00:24:30.403     390   00 10 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.403     3a0   03 e8 47 2b  00 06 64 5f  6d 65 73 68  47 44 00 04    G+  d_meshGD    
+1022 00:24:30.403     3b0   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.403     3c0   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.403     3d0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 11  "  ~  > 0 A  "    
+1022 00:24:30.403     3e0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.403     3f0   47 2b 00 06  64 5f 6d 65  73 68 47 44  00 04 6d 65  G+  d_meshGD  me  
+1022 00:24:30.403     400   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.403     410   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.403     420   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 12 c1 3d   l  R   l  "   =  
+1022 00:24:30.403     430   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.403     440   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.403     450   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.403     460   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.403     470   84 31 f4 b5  c1 22 00 13  c1 3d 03 e8  c1 3e 00 64   1   "   =   > d  
+1022 00:24:30.403     480   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  62 5f 6d 65   ?   @  G+  b_me  
+1022 00:24:30.403     490   73 68 47 44  00 04 6d 65  73 68 47 2c  00 11 76 78  shGD  meshG,  vx  
+1022 00:24:30.403     4a0   72 2d 70 70  2d 70 72 6f  63 73 5f 37  35 30 30 00  r-pp-procs_7500   
+1022 00:24:30.403     4b0   c4 03 2c 93  24 8f 07 39  81 6c 90 d0  52 f2 a2 db    , $  9 l  R     
+1022 00:24:30.403     4c0   6c 1a c1 22  00 14 c1 3d  03 e8 c1 3e  00 64 c1 3f  l  "   =   > d ?  
+1022 00:24:30.403     4d0   03 e8 c1 40  03 e8 47 2b  00 06 62 5f  6d 65 73 68     @  G+  b_mesh  
+1022 00:24:30.403     4e0   47 44 00 04  6d 65 73 68  47 2c 00 12  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.403     4f0   70 70 2d 74  73 6d 71 72  79 5f 37 35  30 30 c4 03  pp-tsmqry_7500    
+1022 00:24:30.403     500   f2 8d a9 9b  22 a5 17 7e  84 b0 3e 96  30 09 41 be      "  ~  > 0 A   
+1022 00:24:30.403     510   c1 22 00 15  c1 3d 03 e8  c1 3e 03 e8  c1 3f 00 64   "   =   >   ? d  
+1022 00:24:30.403     520   c1 40 03 e8  47 2b 00 06  63 5f 6d 65  73 68 47 44   @  G+  c_meshGD  
+1022 00:24:30.403     530   00 04 6d 65  73 68 47 2c  00 0e 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.403     540   2d 71 73 5f  37 35 30 30  c4 03 68 b7  9d 54 1c 4a  -qs_7500  h  T J  
+1022 00:24:30.403     550   a9 55 34 6d  47 51 84 31  f4 b5 c1 22  00 16 c1 3d   U4mGQ 1   "   =  
+1022 00:24:30.403     560   03 e8 c1 3e  03 e8 c1 3f  00 64 c1 40  03 e8 47 2b     >   ? d @  G+  
+1022 00:24:30.403     570   00 06 63 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    c_meshGD  mesh  
+1022 00:24:30.403     580   47 2c 00 11  76 78 72 2d  70 70 2d 70  72 6f 63 73  G,  vxr-pp-procs  
+1022 00:24:30.403     590   5f 37 35 30  30 00 c4 03  2c 93 24 8f  07 39 81 6c  _7500   , $  9 l  
+1022 00:24:30.403     5a0   90 d0 52 f2  a2 db 6c 1a  c1 22 00 17  c1 3d 03 e8    R   l  "   =    
+1022 00:24:30.403     5b0   c1 3e 03 e8  c1 3f 00 64  c1 40 03 e8  47 2b 00 06   >   ? d @  G+    
+1022 00:24:30.403     5c0   63 5f 6d 65  73 68 47 44  00 04 6d 65  73 68 47 2c  c_meshGD  meshG,  
+1022 00:24:30.403     5d0   00 12 76 78  72 2d 70 70  2d 74 73 6d  71 72 79 5f    vxr-pp-tsmqry_  
+1022 00:24:30.403     5e0   37 35 30 30  c4 03 f2 8d  a9 9b 22 a5  17 7e 84 b0  7500      "  ~    
+1022 00:24:30.403     5f0   3e 96 30 09  41 be                                  > 0 A             
+1022 00:24:30.459! reserve size 1485is less then message len 1526
+1022 00:24:30.459       0   a0 00 05 ee  c8 c3 e9 f2  c4 03 b1 89  6e ae 0b 36              n  6  
+1022 00:24:30.459      10   31 9b f2 5a  31 38 5b 62  4b df c4 05  d3 77 38 a0  1  Z18[bK    w8   
+1022 00:24:30.459      20   97 65 bd 9d  5e 68 8e 51  5d 76 69 e3  47 00 00 21   e  ^h Q]vi G  !  
+1022 00:24:30.459      30   5f 49 2e 38  6f 32 70 6d  79 4b 6c 46  33 36 45 73  _I.8o2pmyKlF36Es  
+1022 00:24:30.459      40   44 36 57 4d  41 6c 42 76  67 2e 61 64  6a 5f 72 70  D6WMAlBvg.adj_rp  
+1022 00:24:30.459      50   79 00 c1 11  00 01 c1 19  00 0b c1 12  00 0a c1 20  y                 
+1022 00:24:30.459      60   00 01 c1 1c  00 03 c4 0b  7d 32 7f b5  79 ec 5d c5          }2 y ]   
+1022 00:24:30.459      70   36 d2 08 20  fb a3 33 de  48 0f 00 00  05 78 c1 22  6     3 H    x "  
+1022 00:24:30.459      80   00 02 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.459      90   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.459      a0   6d 65 73 68  47 2c 00 0f  76 78 72 2d  70 70 2d 6f  meshG,  vxr-pp-o  
+1022 00:24:30.459      b0   6d 73 5f 37  35 30 30 00  c4 03 49 c5  27 db 8a 6d  ms_7500   I '  m  
+1022 00:24:30.459      c0   d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  00 04 c1 3d   % m r 6 $ "   =  
+1022 00:24:30.459      d0   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.459      e0   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.459      f0   47 2c 00 0f  76 78 72 2d  70 70 2d 6f  6d 73 5f 37  G,  vxr-pp-oms_7  
+1022 00:24:30.459     100   35 30 30 00  c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  500   I '  m % m  
+1022 00:24:30.459     110   f8 72 c2 36  84 24 c1 22  00 06 c1 3d  03 e8 c1 3e   r 6 $ "   =   >  
+1022 00:24:30.459     120   03 e8 c1 3f  00 64 c1 40  03 e8 47 2b  00 06 63 5f     ? d @  G+  c_  
+1022 00:24:30.459     130   6d 65 73 68  47 44 00 04  6d 65 73 68  47 2c 00 0f  meshGD  meshG,    
+1022 00:24:30.459     140   76 78 72 2d  70 70 2d 6f  6d 73 5f 37  35 30 30 00  vxr-pp-oms_7500   
+1022 00:24:30.459     150   c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36    I '  m % m r 6  
+1022 00:24:30.459     160   84 24 c1 22  00 08 c1 3d  03 e8 c1 3e  03 e8 c1 3f   $ "   =   >   ?  
+1022 00:24:30.459     170   03 e8 c1 40  03 e8 47 2b  00 06 64 5f  6d 65 73 68     @  G+  d_mesh  
+1022 00:24:30.459     180   47 44 00 04  6d 65 73 68  47 2c 00 0f  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.459     190   70 70 2d 6f  6d 73 5f 37  35 30 30 00  c4 03 49 c5  pp-oms_7500   I   
+1022 00:24:30.459     1a0   27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  '  m % m r 6 $ "  
+1022 00:24:30.459     1b0   00 0a c1 3d  27 10 c1 3e  00 64 c1 3f  27 10 c1 40     ='  > d ?'  @  
+1022 00:24:30.459     1c0   00 64 47 2b  00 16 74 63  70 5f 72 61  69 63 61 63   dG+  tcp_raicac  
+1022 00:24:30.459     1d0   68 65 5f 73  65 63 6f 6e  64 61 72 79  47 44 00 03  he_secondaryGD    
+1022 00:24:30.459     1e0   74 63 70 00  47 2c 00 16  76 78 72 2d  70 70 2d 72  tcp G,  vxr-pp-r  
+1022 00:24:30.459     1f0   61 69 63 61  63 68 65 30  32 5f 37 35  30 30 c4 03  aicache02_7500    
+1022 00:24:30.459     200   b1 89 6e ae  0b 36 31 9b  f2 5a 31 38  5b 62 4b df    n  61  Z18[bK   
+1022 00:24:30.459     210   c1 22 00 0b  c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8   "   =   >   ?    
+1022 00:24:30.459     220   c1 40 03 e8  47 2b 00 06  61 5f 6d 65  73 68 47 44   @  G+  a_meshGD  
+1022 00:24:30.459     230   00 04 6d 65  73 68 47 2c  00 11 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.459     240   2d 70 72 6f  63 73 5f 37  35 30 30 00  c4 03 2c 93  -procs_7500   ,   
+1022 00:24:30.459     250   24 8f 07 39  81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  $  9 l  R   l  "  
+1022 00:24:30.459     260   00 0c c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.459     270   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.459     280   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.459     290   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.459     2a0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 0d  "  ~  > 0 A  "    
+1022 00:24:30.459     2b0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.459     2c0   47 2b 00 06  61 5f 6d 65  73 68 47 44  00 04 6d 65  G+  a_meshGD  me  
+1022 00:24:30.459     2d0   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.459     2e0   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.459     2f0   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 0e c1 3d   l  R   l  "   =  
+1022 00:24:30.459     300   03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40  03 e8 47 2b     >   ?   @  G+  
+1022 00:24:30.459     310   00 06 61 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    a_meshGD  mesh  
+1022 00:24:30.459     320   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.459     330   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.459     340   84 31 f4 b5  c1 22 00 0f  c1 3d 03 e8  c1 3e 03 e8   1   "   =   >    
+1022 00:24:30.459     350   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  64 5f 6d 65   ?   @  G+  d_me  
+1022 00:24:30.459     360   73 68 47 44  00 04 6d 65  73 68 47 2c  00 0e 76 78  shGD  meshG,  vx  
+1022 00:24:30.459     370   72 2d 70 70  2d 71 73 5f  37 35 30 30  c4 03 68 b7  r-pp-qs_7500  h   
+1022 00:24:30.459     380   9d 54 1c 4a  a9 55 34 6d  47 51 84 31  f4 b5 c1 22   T J U4mGQ 1   "  
+1022 00:24:30.459     390   00 10 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.459     3a0   03 e8 47 2b  00 06 64 5f  6d 65 73 68  47 44 00 04    G+  d_meshGD    
+1022 00:24:30.459     3b0   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.459     3c0   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.459     3d0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 11  "  ~  > 0 A  "    
+1022 00:24:30.459     3e0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.459     3f0   47 2b 00 06  64 5f 6d 65  73 68 47 44  00 04 6d 65  G+  d_meshGD  me  
+1022 00:24:30.459     400   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.459     410   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.459     420   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 12 c1 3d   l  R   l  "   =  
+1022 00:24:30.459     430   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.459     440   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.459     450   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.459     460   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.459     470   84 31 f4 b5  c1 22 00 13  c1 3d 03 e8  c1 3e 00 64   1   "   =   > d  
+1022 00:24:30.459     480   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  62 5f 6d 65   ?   @  G+  b_me  
+1022 00:24:30.459     490   73 68 47 44  00 04 6d 65  73 68 47 2c  00 11 76 78  shGD  meshG,  vx  
+1022 00:24:30.459     4a0   72 2d 70 70  2d 70 72 6f  63 73 5f 37  35 30 30 00  r-pp-procs_7500   
+1022 00:24:30.459     4b0   c4 03 2c 93  24 8f 07 39  81 6c 90 d0  52 f2 a2 db    , $  9 l  R     
+1022 00:24:30.459     4c0   6c 1a c1 22  00 14 c1 3d  03 e8 c1 3e  00 64 c1 3f  l  "   =   > d ?  
+1022 00:24:30.459     4d0   03 e8 c1 40  03 e8 47 2b  00 06 62 5f  6d 65 73 68     @  G+  b_mesh  
+1022 00:24:30.459     4e0   47 44 00 04  6d 65 73 68  47 2c 00 12  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.459     4f0   70 70 2d 74  73 6d 71 72  79 5f 37 35  30 30 c4 03  pp-tsmqry_7500    
+1022 00:24:30.459     500   f2 8d a9 9b  22 a5 17 7e  84 b0 3e 96  30 09 41 be      "  ~  > 0 A   
+1022 00:24:30.459     510   c1 22 00 15  c1 3d 03 e8  c1 3e 03 e8  c1 3f 00 64   "   =   >   ? d  
+1022 00:24:30.459     520   c1 40 03 e8  47 2b 00 06  63 5f 6d 65  73 68 47 44   @  G+  c_meshGD  
+1022 00:24:30.459     530   00 04 6d 65  73 68 47 2c  00 0e 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.459     540   2d 71 73 5f  37 35 30 30  c4 03 68 b7  9d 54 1c 4a  -qs_7500  h  T J  
+1022 00:24:30.459     550   a9 55 34 6d  47 51 84 31  f4 b5 c1 22  00 16 c1 3d   U4mGQ 1   "   =  
+1022 00:24:30.459     560   03 e8 c1 3e  03 e8 c1 3f  00 64 c1 40  03 e8 47 2b     >   ? d @  G+  
+1022 00:24:30.459     570   00 06 63 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    c_meshGD  mesh  
+1022 00:24:30.459     580   47 2c 00 11  76 78 72 2d  70 70 2d 70  72 6f 63 73  G,  vxr-pp-procs  
+1022 00:24:30.459     590   5f 37 35 30  30 00 c4 03  2c 93 24 8f  07 39 81 6c  _7500   , $  9 l  
+1022 00:24:30.459     5a0   90 d0 52 f2  a2 db 6c 1a  c1 22 00 17  c1 3d 03 e8    R   l  "   =    
+1022 00:24:30.459     5b0   c1 3e 03 e8  c1 3f 00 64  c1 40 03 e8  47 2b 00 06   >   ? d @  G+    
+1022 00:24:30.459     5c0   63 5f 6d 65  73 68 47 44  00 04 6d 65  73 68 47 2c  c_meshGD  meshG,  
+1022 00:24:30.459     5d0   00 12 76 78  72 2d 70 70  2d 74 73 6d  71 72 79 5f    vxr-pp-tsmqry_  
+1022 00:24:30.459     5e0   37 35 30 30  c4 03 f2 8d  a9 9b 22 a5  17 7e 84 b0  7500      "  ~    
+1022 00:24:30.459     5f0   3e 96 30 09  41 be                                  > 0 A             
+1022 00:24:30.459       0   a0 00 05 ee  c8 c3 e9 f2  c4 03 b1 89  6e ae 0b 36              n  6  
+1022 00:24:30.459      10   31 9b f2 5a  31 38 5b 62  4b df c4 05  d3 77 38 a0  1  Z18[bK    w8   
+1022 00:24:30.459      20   97 65 bd 9d  5e 68 8e 51  5d 76 69 e3  47 00 00 21   e  ^h Q]vi G  !  
+1022 00:24:30.459      30   5f 49 2e 38  6f 32 70 6d  79 4b 6c 46  33 36 45 73  _I.8o2pmyKlF36Es  
+1022 00:24:30.459      40   44 36 57 4d  41 6c 42 76  67 2e 61 64  6a 5f 72 70  D6WMAlBvg.adj_rp  
+1022 00:24:30.459      50   79 00 c1 11  00 01 c1 19  00 0b c1 12  00 0a c1 20  y                 
+1022 00:24:30.459      60   00 01 c1 1c  00 03 c4 0b  7d 32 7f b5  79 ec 5d c5          }2 y ]   
+1022 00:24:30.459      70   36 d2 08 20  fb a3 33 de  48 0f 00 00  05 78 c1 22  6     3 H    x "  
+1022 00:24:30.459      80   00 02 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.459      90   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.459      a0   6d 65 73 68  47 2c 00 0f  76 78 72 2d  70 70 2d 6f  meshG,  vxr-pp-o  
+1022 00:24:30.459      b0   6d 73 5f 37  35 30 30 00  c4 03 49 c5  27 db 8a 6d  ms_7500   I '  m  
+1022 00:24:30.459      c0   d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  00 04 c1 3d   % m r 6 $ "   =  
+1022 00:24:30.459      d0   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.459      e0   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.459      f0   47 2c 00 0f  76 78 72 2d  70 70 2d 6f  6d 73 5f 37  G,  vxr-pp-oms_7  
+1022 00:24:30.459     100   35 30 30 00  c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  500   I '  m % m  
+1022 00:24:30.459     110   f8 72 c2 36  84 24 c1 22  00 06 c1 3d  03 e8 c1 3e   r 6 $ "   =   >  
+1022 00:24:30.459     120   03 e8 c1 3f  00 64 c1 40  03 e8 47 2b  00 06 63 5f     ? d @  G+  c_  
+1022 00:24:30.459     130   6d 65 73 68  47 44 00 04  6d 65 73 68  47 2c 00 0f  meshGD  meshG,    
+1022 00:24:30.459     140   76 78 72 2d  70 70 2d 6f  6d 73 5f 37  35 30 30 00  vxr-pp-oms_7500   
+1022 00:24:30.459     150   c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36    I '  m % m r 6  
+1022 00:24:30.459     160   84 24 c1 22  00 08 c1 3d  03 e8 c1 3e  03 e8 c1 3f   $ "   =   >   ?  
+1022 00:24:30.459     170   03 e8 c1 40  03 e8 47 2b  00 06 64 5f  6d 65 73 68     @  G+  d_mesh  
+1022 00:24:30.459     180   47 44 00 04  6d 65 73 68  47 2c 00 0f  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.459     190   70 70 2d 6f  6d 73 5f 37  35 30 30 00  c4 03 49 c5  pp-oms_7500   I   
+1022 00:24:30.459     1a0   27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  '  m % m r 6 $ "  
+1022 00:24:30.459     1b0   00 0a c1 3d  27 10 c1 3e  00 64 c1 3f  27 10 c1 40     ='  > d ?'  @  
+1022 00:24:30.459     1c0   00 64 47 2b  00 16 74 63  70 5f 72 61  69 63 61 63   dG+  tcp_raicac  
+1022 00:24:30.459     1d0   68 65 5f 73  65 63 6f 6e  64 61 72 79  47 44 00 03  he_secondaryGD    
+1022 00:24:30.459     1e0   74 63 70 00  47 2c 00 16  76 78 72 2d  70 70 2d 72  tcp G,  vxr-pp-r  
+1022 00:24:30.459     1f0   61 69 63 61  63 68 65 30  32 5f 37 35  30 30 c4 03  aicache02_7500    
+1022 00:24:30.459     200   b1 89 6e ae  0b 36 31 9b  f2 5a 31 38  5b 62 4b df    n  61  Z18[bK   
+1022 00:24:30.459     210   c1 22 00 0b  c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8   "   =   >   ?    
+1022 00:24:30.459     220   c1 40 03 e8  47 2b 00 06  61 5f 6d 65  73 68 47 44   @  G+  a_meshGD  
+1022 00:24:30.459     230   00 04 6d 65  73 68 47 2c  00 11 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.459     240   2d 70 72 6f  63 73 5f 37  35 30 30 00  c4 03 2c 93  -procs_7500   ,   
+1022 00:24:30.459     250   24 8f 07 39  81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  $  9 l  R   l  "  
+1022 00:24:30.459     260   00 0c c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.459     270   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.459     280   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.459     290   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.459     2a0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 0d  "  ~  > 0 A  "    
+1022 00:24:30.459     2b0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.459     2c0   47 2b 00 06  61 5f 6d 65  73 68 47 44  00 04 6d 65  G+  a_meshGD  me  
+1022 00:24:30.459     2d0   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.459     2e0   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.459     2f0   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 0e c1 3d   l  R   l  "   =  
+1022 00:24:30.459     300   03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40  03 e8 47 2b     >   ?   @  G+  
+1022 00:24:30.459     310   00 06 61 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    a_meshGD  mesh  
+1022 00:24:30.459     320   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.459     330   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.459     340   84 31 f4 b5  c1 22 00 0f  c1 3d 03 e8  c1 3e 03 e8   1   "   =   >    
+1022 00:24:30.459     350   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  64 5f 6d 65   ?   @  G+  d_me  
+1022 00:24:30.459     360   73 68 47 44  00 04 6d 65  73 68 47 2c  00 0e 76 78  shGD  meshG,  vx  
+1022 00:24:30.459     370   72 2d 70 70  2d 71 73 5f  37 35 30 30  c4 03 68 b7  r-pp-qs_7500  h   
+1022 00:24:30.459     380   9d 54 1c 4a  a9 55 34 6d  47 51 84 31  f4 b5 c1 22   T J U4mGQ 1   "  
+1022 00:24:30.459     390   00 10 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.459     3a0   03 e8 47 2b  00 06 64 5f  6d 65 73 68  47 44 00 04    G+  d_meshGD    
+1022 00:24:30.459     3b0   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.459     3c0   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.459     3d0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 11  "  ~  > 0 A  "    
+1022 00:24:30.459     3e0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.459     3f0   47 2b 00 06  64 5f 6d 65  73 68 47 44  00 04 6d 65  G+  d_meshGD  me  
+1022 00:24:30.459     400   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.459     410   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.459     420   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 12 c1 3d   l  R   l  "   =  
+1022 00:24:30.459     430   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.459     440   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.459     450   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.459     460   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.459     470   84 31 f4 b5  c1 22 00 13  c1 3d 03 e8  c1 3e 00 64   1   "   =   > d  
+1022 00:24:30.459     480   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  62 5f 6d 65   ?   @  G+  b_me  
+1022 00:24:30.459     490   73 68 47 44  00 04 6d 65  73 68 47 2c  00 11 76 78  shGD  meshG,  vx  
+1022 00:24:30.459     4a0   72 2d 70 70  2d 70 72 6f  63 73 5f 37  35 30 30 00  r-pp-procs_7500   
+1022 00:24:30.459     4b0   c4 03 2c 93  24 8f 07 39  81 6c 90 d0  52 f2 a2 db    , $  9 l  R     
+1022 00:24:30.459     4c0   6c 1a c1 22  00 14 c1 3d  03 e8 c1 3e  00 64 c1 3f  l  "   =   > d ?  
+1022 00:24:30.459     4d0   03 e8 c1 40  03 e8 47 2b  00 06 62 5f  6d 65 73 68     @  G+  b_mesh  
+1022 00:24:30.459     4e0   47 44 00 04  6d 65 73 68  47 2c 00 12  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.459     4f0   70 70 2d 74  73 6d 71 72  79 5f 37 35  30 30 c4 03  pp-tsmqry_7500    
+1022 00:24:30.459     500   f2 8d a9 9b  22 a5 17 7e  84 b0 3e 96  30 09 41 be      "  ~  > 0 A   
+1022 00:24:30.459     510   c1 22 00 15  c1 3d 03 e8  c1 3e 03 e8  c1 3f 00 64   "   =   >   ? d  
+1022 00:24:30.459     520   c1 40 03 e8  47 2b 00 06  63 5f 6d 65  73 68 47 44   @  G+  c_meshGD  
+1022 00:24:30.459     530   00 04 6d 65  73 68 47 2c  00 0e 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.459     540   2d 71 73 5f  37 35 30 30  c4 03 68 b7  9d 54 1c 4a  -qs_7500  h  T J  
+1022 00:24:30.459     550   a9 55 34 6d  47 51 84 31  f4 b5 c1 22  00 16 c1 3d   U4mGQ 1   "   =  
+1022 00:24:30.459     560   03 e8 c1 3e  03 e8 c1 3f  00 64 c1 40  03 e8 47 2b     >   ? d @  G+  
+1022 00:24:30.459     570   00 06 63 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    c_meshGD  mesh  
+1022 00:24:30.459     580   47 2c 00 11  76 78 72 2d  70 70 2d 70  72 6f 63 73  G,  vxr-pp-procs  
+1022 00:24:30.459     590   5f 37 35 30  30 00 c4 03  2c 93 24 8f  07 39 81 6c  _7500   , $  9 l  
+1022 00:24:30.459     5a0   90 d0 52 f2  a2 db 6c 1a  c1 22 00 17  c1 3d 03 e8    R   l  "   =    
+1022 00:24:30.459     5b0   c1 3e 03 e8  c1 3f 00 64  c1 40 03 e8  47 2b 00 06   >   ? d @  G+    
+1022 00:24:30.459     5c0   63 5f 6d 65  73 68 47 44  00 04 6d 65  73 68 47 2c  c_meshGD  meshG,  
+1022 00:24:30.459     5d0   00 12 76 78  72 2d 70 70  2d 74 73 6d  71 72 79 5f    vxr-pp-tsmqry_  
+1022 00:24:30.459     5e0   37 35 30 30  c4 03 f2 8d  a9 9b 22 a5  17 7e 84 b0  7500      "  ~    
+1022 00:24:30.459     5f0   3e 96 30 09  41 be                                  > 0 A             
+1022 00:24:30.479! reserve size 1485is less then message len 1526
+1022 00:24:30.479       0   a0 00 05 ee  3c aa 05 29  c4 03 b1 89  6e ae 0b 36      <  )    n  6  
+1022 00:24:30.479      10   31 9b f2 5a  31 38 5b 62  4b df c4 05  8f b7 88 66  1  Z18[bK      f  
+1022 00:24:30.479      20   6c 10 ee 8c  75 ed 32 c4  01 0e 37 7b  47 00 00 21  l   u 2   7{G  !  
+1022 00:24:30.479      30   5f 49 2e 61  4c 65 64 56  42 78 4b 71  56 55 30 62  _I.aLedVBxKqVU0b  
+1022 00:24:30.479      40   55 64 52 68  44 48 30 74  51 2e 61 64  6a 5f 72 70  UdRhDH0tQ.adj_rp  
+1022 00:24:30.479      50   79 00 c1 11  00 01 c1 19  00 0b c1 12  00 0a c1 20  y                 
+1022 00:24:30.479      60   00 01 c1 1c  00 03 c4 0b  7d 32 7f b5  79 ec 5d c5          }2 y ]   
+1022 00:24:30.479      70   36 d2 08 20  fb a3 33 de  48 0f 00 00  05 78 c1 22  6     3 H    x "  
+1022 00:24:30.479      80   00 02 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.479      90   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.479      a0   6d 65 73 68  47 2c 00 0f  76 78 72 2d  70 70 2d 6f  meshG,  vxr-pp-o  
+1022 00:24:30.479      b0   6d 73 5f 37  35 30 30 00  c4 03 49 c5  27 db 8a 6d  ms_7500   I '  m  
+1022 00:24:30.479      c0   d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  00 04 c1 3d   % m r 6 $ "   =  
+1022 00:24:30.479      d0   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.479      e0   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.479      f0   47 2c 00 0f  76 78 72 2d  70 70 2d 6f  6d 73 5f 37  G,  vxr-pp-oms_7  
+1022 00:24:30.479     100   35 30 30 00  c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  500   I '  m % m  
+1022 00:24:30.479     110   f8 72 c2 36  84 24 c1 22  00 06 c1 3d  03 e8 c1 3e   r 6 $ "   =   >  
+1022 00:24:30.479     120   03 e8 c1 3f  00 64 c1 40  03 e8 47 2b  00 06 63 5f     ? d @  G+  c_  
+1022 00:24:30.479     130   6d 65 73 68  47 44 00 04  6d 65 73 68  47 2c 00 0f  meshGD  meshG,    
+1022 00:24:30.479     140   76 78 72 2d  70 70 2d 6f  6d 73 5f 37  35 30 30 00  vxr-pp-oms_7500   
+1022 00:24:30.479     150   c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36    I '  m % m r 6  
+1022 00:24:30.479     160   84 24 c1 22  00 08 c1 3d  03 e8 c1 3e  03 e8 c1 3f   $ "   =   >   ?  
+1022 00:24:30.479     170   03 e8 c1 40  03 e8 47 2b  00 06 64 5f  6d 65 73 68     @  G+  d_mesh  
+1022 00:24:30.479     180   47 44 00 04  6d 65 73 68  47 2c 00 0f  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.479     190   70 70 2d 6f  6d 73 5f 37  35 30 30 00  c4 03 49 c5  pp-oms_7500   I   
+1022 00:24:30.479     1a0   27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  '  m % m r 6 $ "  
+1022 00:24:30.479     1b0   00 0a c1 3d  27 10 c1 3e  00 64 c1 3f  27 10 c1 40     ='  > d ?'  @  
+1022 00:24:30.479     1c0   00 64 47 2b  00 16 74 63  70 5f 72 61  69 63 61 63   dG+  tcp_raicac  
+1022 00:24:30.479     1d0   68 65 5f 73  65 63 6f 6e  64 61 72 79  47 44 00 03  he_secondaryGD    
+1022 00:24:30.479     1e0   74 63 70 00  47 2c 00 16  76 78 72 2d  70 70 2d 72  tcp G,  vxr-pp-r  
+1022 00:24:30.479     1f0   61 69 63 61  63 68 65 30  32 5f 37 35  30 30 c4 03  aicache02_7500    
+1022 00:24:30.479     200   b1 89 6e ae  0b 36 31 9b  f2 5a 31 38  5b 62 4b df    n  61  Z18[bK   
+1022 00:24:30.479     210   c1 22 00 0b  c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8   "   =   >   ?    
+1022 00:24:30.479     220   c1 40 03 e8  47 2b 00 06  61 5f 6d 65  73 68 47 44   @  G+  a_meshGD  
+1022 00:24:30.479     230   00 04 6d 65  73 68 47 2c  00 11 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.479     240   2d 70 72 6f  63 73 5f 37  35 30 30 00  c4 03 2c 93  -procs_7500   ,   
+1022 00:24:30.479     250   24 8f 07 39  81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  $  9 l  R   l  "  
+1022 00:24:30.479     260   00 0c c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.479     270   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.479     280   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.479     290   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.479     2a0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 0d  "  ~  > 0 A  "    
+1022 00:24:30.479     2b0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.479     2c0   47 2b 00 06  61 5f 6d 65  73 68 47 44  00 04 6d 65  G+  a_meshGD  me  
+1022 00:24:30.479     2d0   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.479     2e0   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.479     2f0   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 0e c1 3d   l  R   l  "   =  
+1022 00:24:30.479     300   03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40  03 e8 47 2b     >   ?   @  G+  
+1022 00:24:30.479     310   00 06 61 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    a_meshGD  mesh  
+1022 00:24:30.479     320   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.479     330   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.479     340   84 31 f4 b5  c1 22 00 0f  c1 3d 03 e8  c1 3e 03 e8   1   "   =   >    
+1022 00:24:30.479     350   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  64 5f 6d 65   ?   @  G+  d_me  
+1022 00:24:30.479     360   73 68 47 44  00 04 6d 65  73 68 47 2c  00 0e 76 78  shGD  meshG,  vx  
+1022 00:24:30.479     370   72 2d 70 70  2d 71 73 5f  37 35 30 30  c4 03 68 b7  r-pp-qs_7500  h   
+1022 00:24:30.479     380   9d 54 1c 4a  a9 55 34 6d  47 51 84 31  f4 b5 c1 22   T J U4mGQ 1   "  
+1022 00:24:30.479     390   00 10 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.479     3a0   03 e8 47 2b  00 06 64 5f  6d 65 73 68  47 44 00 04    G+  d_meshGD    
+1022 00:24:30.479     3b0   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.479     3c0   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.479     3d0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 11  "  ~  > 0 A  "    
+1022 00:24:30.479     3e0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.479     3f0   47 2b 00 06  64 5f 6d 65  73 68 47 44  00 04 6d 65  G+  d_meshGD  me  
+1022 00:24:30.479     400   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.479     410   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.479     420   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 12 c1 3d   l  R   l  "   =  
+1022 00:24:30.479     430   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.479     440   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.479     450   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.479     460   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.479     470   84 31 f4 b5  c1 22 00 13  c1 3d 03 e8  c1 3e 00 64   1   "   =   > d  
+1022 00:24:30.479     480   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  62 5f 6d 65   ?   @  G+  b_me  
+1022 00:24:30.479     490   73 68 47 44  00 04 6d 65  73 68 47 2c  00 11 76 78  shGD  meshG,  vx  
+1022 00:24:30.479     4a0   72 2d 70 70  2d 70 72 6f  63 73 5f 37  35 30 30 00  r-pp-procs_7500   
+1022 00:24:30.479     4b0   c4 03 2c 93  24 8f 07 39  81 6c 90 d0  52 f2 a2 db    , $  9 l  R     
+1022 00:24:30.479     4c0   6c 1a c1 22  00 14 c1 3d  03 e8 c1 3e  00 64 c1 3f  l  "   =   > d ?  
+1022 00:24:30.479     4d0   03 e8 c1 40  03 e8 47 2b  00 06 62 5f  6d 65 73 68     @  G+  b_mesh  
+1022 00:24:30.479     4e0   47 44 00 04  6d 65 73 68  47 2c 00 12  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.479     4f0   70 70 2d 74  73 6d 71 72  79 5f 37 35  30 30 c4 03  pp-tsmqry_7500    
+1022 00:24:30.479     500   f2 8d a9 9b  22 a5 17 7e  84 b0 3e 96  30 09 41 be      "  ~  > 0 A   
+1022 00:24:30.479     510   c1 22 00 15  c1 3d 03 e8  c1 3e 03 e8  c1 3f 00 64   "   =   >   ? d  
+1022 00:24:30.479     520   c1 40 03 e8  47 2b 00 06  63 5f 6d 65  73 68 47 44   @  G+  c_meshGD  
+1022 00:24:30.479     530   00 04 6d 65  73 68 47 2c  00 0e 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.479     540   2d 71 73 5f  37 35 30 30  c4 03 68 b7  9d 54 1c 4a  -qs_7500  h  T J  
+1022 00:24:30.479     550   a9 55 34 6d  47 51 84 31  f4 b5 c1 22  00 16 c1 3d   U4mGQ 1   "   =  
+1022 00:24:30.479     560   03 e8 c1 3e  03 e8 c1 3f  00 64 c1 40  03 e8 47 2b     >   ? d @  G+  
+1022 00:24:30.479     570   00 06 63 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    c_meshGD  mesh  
+1022 00:24:30.479     580   47 2c 00 11  76 78 72 2d  70 70 2d 70  72 6f 63 73  G,  vxr-pp-procs  
+1022 00:24:30.479     590   5f 37 35 30  30 00 c4 03  2c 93 24 8f  07 39 81 6c  _7500   , $  9 l  
+1022 00:24:30.479     5a0   90 d0 52 f2  a2 db 6c 1a  c1 22 00 17  c1 3d 03 e8    R   l  "   =    
+1022 00:24:30.479     5b0   c1 3e 03 e8  c1 3f 00 64  c1 40 03 e8  47 2b 00 06   >   ? d @  G+    
+1022 00:24:30.479     5c0   63 5f 6d 65  73 68 47 44  00 04 6d 65  73 68 47 2c  c_meshGD  meshG,  
+1022 00:24:30.479     5d0   00 12 76 78  72 2d 70 70  2d 74 73 6d  71 72 79 5f    vxr-pp-tsmqry_  
+1022 00:24:30.479     5e0   37 35 30 30  c4 03 f2 8d  a9 9b 22 a5  17 7e 84 b0  7500      "  ~    
+1022 00:24:30.479     5f0   3e 96 30 09  41 be                                  > 0 A             
+1022 00:24:30.479       0   a0 00 05 ee  3c aa 05 29  c4 03 b1 89  6e ae 0b 36      <  )    n  6  
+1022 00:24:30.479      10   31 9b f2 5a  31 38 5b 62  4b df c4 05  8f b7 88 66  1  Z18[bK      f  
+1022 00:24:30.479      20   6c 10 ee 8c  75 ed 32 c4  01 0e 37 7b  47 00 00 21  l   u 2   7{G  !  
+1022 00:24:30.479      30   5f 49 2e 61  4c 65 64 56  42 78 4b 71  56 55 30 62  _I.aLedVBxKqVU0b  
+1022 00:24:30.479      40   55 64 52 68  44 48 30 74  51 2e 61 64  6a 5f 72 70  UdRhDH0tQ.adj_rp  
+1022 00:24:30.479      50   79 00 c1 11  00 01 c1 19  00 0b c1 12  00 0a c1 20  y                 
+1022 00:24:30.479      60   00 01 c1 1c  00 03 c4 0b  7d 32 7f b5  79 ec 5d c5          }2 y ]   
+1022 00:24:30.479      70   36 d2 08 20  fb a3 33 de  48 0f 00 00  05 78 c1 22  6     3 H    x "  
+1022 00:24:30.479      80   00 02 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.479      90   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.479      a0   6d 65 73 68  47 2c 00 0f  76 78 72 2d  70 70 2d 6f  meshG,  vxr-pp-o  
+1022 00:24:30.479      b0   6d 73 5f 37  35 30 30 00  c4 03 49 c5  27 db 8a 6d  ms_7500   I '  m  
+1022 00:24:30.479      c0   d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  00 04 c1 3d   % m r 6 $ "   =  
+1022 00:24:30.479      d0   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.479      e0   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.479      f0   47 2c 00 0f  76 78 72 2d  70 70 2d 6f  6d 73 5f 37  G,  vxr-pp-oms_7  
+1022 00:24:30.479     100   35 30 30 00  c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  500   I '  m % m  
+1022 00:24:30.479     110   f8 72 c2 36  84 24 c1 22  00 06 c1 3d  03 e8 c1 3e   r 6 $ "   =   >  
+1022 00:24:30.479     120   03 e8 c1 3f  00 64 c1 40  03 e8 47 2b  00 06 63 5f     ? d @  G+  c_  
+1022 00:24:30.479     130   6d 65 73 68  47 44 00 04  6d 65 73 68  47 2c 00 0f  meshGD  meshG,    
+1022 00:24:30.479     140   76 78 72 2d  70 70 2d 6f  6d 73 5f 37  35 30 30 00  vxr-pp-oms_7500   
+1022 00:24:30.479     150   c4 03 49 c5  27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36    I '  m % m r 6  
+1022 00:24:30.479     160   84 24 c1 22  00 08 c1 3d  03 e8 c1 3e  03 e8 c1 3f   $ "   =   >   ?  
+1022 00:24:30.479     170   03 e8 c1 40  03 e8 47 2b  00 06 64 5f  6d 65 73 68     @  G+  d_mesh  
+1022 00:24:30.479     180   47 44 00 04  6d 65 73 68  47 2c 00 0f  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.479     190   70 70 2d 6f  6d 73 5f 37  35 30 30 00  c4 03 49 c5  pp-oms_7500   I   
+1022 00:24:30.479     1a0   27 db 8a 6d  d1 25 f9 6d  f8 72 c2 36  84 24 c1 22  '  m % m r 6 $ "  
+1022 00:24:30.479     1b0   00 0a c1 3d  27 10 c1 3e  00 64 c1 3f  27 10 c1 40     ='  > d ?'  @  
+1022 00:24:30.479     1c0   00 64 47 2b  00 16 74 63  70 5f 72 61  69 63 61 63   dG+  tcp_raicac  
+1022 00:24:30.479     1d0   68 65 5f 73  65 63 6f 6e  64 61 72 79  47 44 00 03  he_secondaryGD    
+1022 00:24:30.479     1e0   74 63 70 00  47 2c 00 16  76 78 72 2d  70 70 2d 72  tcp G,  vxr-pp-r  
+1022 00:24:30.479     1f0   61 69 63 61  63 68 65 30  32 5f 37 35  30 30 c4 03  aicache02_7500    
+1022 00:24:30.479     200   b1 89 6e ae  0b 36 31 9b  f2 5a 31 38  5b 62 4b df    n  61  Z18[bK   
+1022 00:24:30.479     210   c1 22 00 0b  c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8   "   =   >   ?    
+1022 00:24:30.479     220   c1 40 03 e8  47 2b 00 06  61 5f 6d 65  73 68 47 44   @  G+  a_meshGD  
+1022 00:24:30.479     230   00 04 6d 65  73 68 47 2c  00 11 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.479     240   2d 70 72 6f  63 73 5f 37  35 30 30 00  c4 03 2c 93  -procs_7500   ,   
+1022 00:24:30.479     250   24 8f 07 39  81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  $  9 l  R   l  "  
+1022 00:24:30.479     260   00 0c c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.479     270   03 e8 47 2b  00 06 61 5f  6d 65 73 68  47 44 00 04    G+  a_meshGD    
+1022 00:24:30.479     280   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.479     290   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.479     2a0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 0d  "  ~  > 0 A  "    
+1022 00:24:30.479     2b0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.479     2c0   47 2b 00 06  61 5f 6d 65  73 68 47 44  00 04 6d 65  G+  a_meshGD  me  
+1022 00:24:30.479     2d0   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.479     2e0   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.479     2f0   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 0e c1 3d   l  R   l  "   =  
+1022 00:24:30.479     300   03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40  03 e8 47 2b     >   ?   @  G+  
+1022 00:24:30.479     310   00 06 61 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    a_meshGD  mesh  
+1022 00:24:30.479     320   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.479     330   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.479     340   84 31 f4 b5  c1 22 00 0f  c1 3d 03 e8  c1 3e 03 e8   1   "   =   >    
+1022 00:24:30.479     350   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  64 5f 6d 65   ?   @  G+  d_me  
+1022 00:24:30.479     360   73 68 47 44  00 04 6d 65  73 68 47 2c  00 0e 76 78  shGD  meshG,  vx  
+1022 00:24:30.479     370   72 2d 70 70  2d 71 73 5f  37 35 30 30  c4 03 68 b7  r-pp-qs_7500  h   
+1022 00:24:30.479     380   9d 54 1c 4a  a9 55 34 6d  47 51 84 31  f4 b5 c1 22   T J U4mGQ 1   "  
+1022 00:24:30.479     390   00 10 c1 3d  03 e8 c1 3e  03 e8 c1 3f  03 e8 c1 40     =   >   ?   @  
+1022 00:24:30.479     3a0   03 e8 47 2b  00 06 64 5f  6d 65 73 68  47 44 00 04    G+  d_meshGD    
+1022 00:24:30.479     3b0   6d 65 73 68  47 2c 00 12  76 78 72 2d  70 70 2d 74  meshG,  vxr-pp-t  
+1022 00:24:30.479     3c0   73 6d 71 72  79 5f 37 35  30 30 c4 03  f2 8d a9 9b  smqry_7500        
+1022 00:24:30.479     3d0   22 a5 17 7e  84 b0 3e 96  30 09 41 be  c1 22 00 11  "  ~  > 0 A  "    
+1022 00:24:30.479     3e0   c1 3d 03 e8  c1 3e 03 e8  c1 3f 03 e8  c1 40 03 e8   =   >   ?   @    
+1022 00:24:30.479     3f0   47 2b 00 06  64 5f 6d 65  73 68 47 44  00 04 6d 65  G+  d_meshGD  me  
+1022 00:24:30.479     400   73 68 47 2c  00 11 76 78  72 2d 70 70  2d 70 72 6f  shG,  vxr-pp-pro  
+1022 00:24:30.479     410   63 73 5f 37  35 30 30 00  c4 03 2c 93  24 8f 07 39  cs_7500   , $  9  
+1022 00:24:30.479     420   81 6c 90 d0  52 f2 a2 db  6c 1a c1 22  00 12 c1 3d   l  R   l  "   =  
+1022 00:24:30.479     430   03 e8 c1 3e  00 64 c1 3f  03 e8 c1 40  03 e8 47 2b     > d ?   @  G+  
+1022 00:24:30.479     440   00 06 62 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    b_meshGD  mesh  
+1022 00:24:30.479     450   47 2c 00 0e  76 78 72 2d  70 70 2d 71  73 5f 37 35  G,  vxr-pp-qs_75  
+1022 00:24:30.479     460   30 30 c4 03  68 b7 9d 54  1c 4a a9 55  34 6d 47 51  00  h  T J U4mGQ  
+1022 00:24:30.479     470   84 31 f4 b5  c1 22 00 13  c1 3d 03 e8  c1 3e 00 64   1   "   =   > d  
+1022 00:24:30.479     480   c1 3f 03 e8  c1 40 03 e8  47 2b 00 06  62 5f 6d 65   ?   @  G+  b_me  
+1022 00:24:30.479     490   73 68 47 44  00 04 6d 65  73 68 47 2c  00 11 76 78  shGD  meshG,  vx  
+1022 00:24:30.479     4a0   72 2d 70 70  2d 70 72 6f  63 73 5f 37  35 30 30 00  r-pp-procs_7500   
+1022 00:24:30.479     4b0   c4 03 2c 93  24 8f 07 39  81 6c 90 d0  52 f2 a2 db    , $  9 l  R     
+1022 00:24:30.479     4c0   6c 1a c1 22  00 14 c1 3d  03 e8 c1 3e  00 64 c1 3f  l  "   =   > d ?  
+1022 00:24:30.479     4d0   03 e8 c1 40  03 e8 47 2b  00 06 62 5f  6d 65 73 68     @  G+  b_mesh  
+1022 00:24:30.479     4e0   47 44 00 04  6d 65 73 68  47 2c 00 12  76 78 72 2d  GD  meshG,  vxr-  
+1022 00:24:30.479     4f0   70 70 2d 74  73 6d 71 72  79 5f 37 35  30 30 c4 03  pp-tsmqry_7500    
+1022 00:24:30.479     500   f2 8d a9 9b  22 a5 17 7e  84 b0 3e 96  30 09 41 be      "  ~  > 0 A   
+1022 00:24:30.479     510   c1 22 00 15  c1 3d 03 e8  c1 3e 03 e8  c1 3f 00 64   "   =   >   ? d  
+1022 00:24:30.479     520   c1 40 03 e8  47 2b 00 06  63 5f 6d 65  73 68 47 44   @  G+  c_meshGD  
+1022 00:24:30.479     530   00 04 6d 65  73 68 47 2c  00 0e 76 78  72 2d 70 70    meshG,  vxr-pp  
+1022 00:24:30.479     540   2d 71 73 5f  37 35 30 30  c4 03 68 b7  9d 54 1c 4a  -qs_7500  h  T J  
+1022 00:24:30.479     550   a9 55 34 6d  47 51 84 31  f4 b5 c1 22  00 16 c1 3d   U4mGQ 1   "   =  
+1022 00:24:30.479     560   03 e8 c1 3e  03 e8 c1 3f  00 64 c1 40  03 e8 47 2b     >   ? d @  G+  
+1022 00:24:30.479     570   00 06 63 5f  6d 65 73 68  47 44 00 04  6d 65 73 68    c_meshGD  mesh  
+1022 00:24:30.479     580   47 2c 00 11  76 78 72 2d  70 70 2d 70  72 6f 63 73  G,  vxr-pp-procs  
+1022 00:24:30.479     590   5f 37 35 30  30 00 c4 03  2c 93 24 8f  07 39 81 6c  _7500   , $  9 l  
+1022 00:24:30.479     5a0   90 d0 52 f2  a2 db 6c 1a  c1 22 00 17  c1 3d 03 e8    R   l  "   =    
+1022 00:24:30.479     5b0   c1 3e 03 e8  c1 3f 00 64  c1 40 03 e8  47 2b 00 06   >   ? d @  G+    
+1022 00:24:30.479     5c0   63 5f 6d 65  73 68 47 44  00 04 6d 65  73 68 47 2c  c_meshGD  meshG,  
+1022 00:24:30.479     5d0   00 12 76 78  72 2d 70 70  2d 74 73 6d  71 72 79 5f    vxr-pp-tsmqry_  
+1022 00:24:30.479     5e0   37 35 30 30  c4 03 f2 8d  a9 9b 22 a5  17 7e 84 b0  7500      "  ~    
+1022 00:24:30.479     5f0   3e 96 30 09  41 be                                  > 0 A             
+1022 00:24:31.224  vxr-pp-raicache01_7500.1 [3+Xo4cQYPciUNS9lWSg5Ig] remove auth dropped 
+1022 00:24:31.265  network converges 0.975 secs, 5 uids authenticated, adj_update
+1022 00:24:32.711  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 41
+1022 00:24:32.711  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=41 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:24:32.711  reconnect in 7 seconds
+1022 00:24:32.711  reconnect timer running (on_shutdown)
+1022 00:24:36.154  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:24:39.712  raimesh.3 connect clear 10.126.5.56:7100 ev_tcp_tport_client using rvd.raimesh.3 fd 41
+1022 00:24:39.712  raimesh.3 disconnected 10.126.5.56:7100 (Sock error=5/ERR_BAD_READ, read failed fd=41 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.5.56:7100 errno=111/Connection refused)
+1022 00:24:39.712  reconnect failed (on_shutdown)
+1022 00:24:46.005  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:24:55.855  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:25:05.705  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:25:15.555  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:25:25.405  network converges 0.045 secs, 5 uids authenticated, adj_change
+1022 00:25:35.255  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:25:45.105  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:25:54.954  network converges 0.045 secs, 5 uids authenticated, adj_change
+1022 00:26:04.805  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:26:14.655  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:26:24.505  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:26:34.356  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:26:38.462  vxr-pp-oms_7500.2 [ScUn24pt0SX5bfhywjaEJA] remove auth bye 
+1022 00:26:38.468  raitcp.4 disconnected 10.126.5.50:47700 (Sock error=6/ERR_READ_RESET, read connection reset fd=37 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.5.50:47700 errno=104/Connection reset by peer)
+1022 00:26:38.505  network converges 0.036 secs, 4 uids authenticated, adj_change
+1022 00:26:38.505  vxr-pp-qs_7500.5 old primary route is tport rvd.raitcp.tport.4(d=4294967295), using route rvd.raitcp.tport.5(d=11000)
+1022 00:26:38.505  vxr-pp-tsmqry_7500.6 old primary route is tport rvd.raitcp.tport.4(d=4294967295), using route rvd.raitcp.tport.5(d=11000)
+1022 00:26:50.755  vxr-pp-procs_7500.4 [LJMkjwc5gWyQ0FLyottsGg] remove auth orphaned 
+1022 00:26:51.794  network converges 1.061 secs, 3 uids authenticated, adj_change
+1022 00:26:58.535  vxr-pp-qs_7500.5 [aLedVBxKqVU0bUdRhDH0tQ] remove auth orphaned 
+1022 00:26:59.565  network converges 1.048 secs, 2 uids authenticated, adj_change
+1022 00:27:14.262  vxr-pp-tsmqry_7500.6 [8o2pmyKlF36EsD6WMAlBvg] remove auth dropped 
+1022 00:27:14.264  network converges 0.003 secs, 1 uids authenticated, adj_change
+1022 00:27:26.184  raimesh.2 connect clear 10.126.5.56:51904 ev_tcp_tport using rvd.raimesh fd 37
+1022 00:27:26.184  raimesh.3 add_mesh_accept tcp://vxr-pp-raicache02:7100 from 10.126.5.56:51904
+1022 00:27:26.189  vxr-pp-raicache01_7500.7 set_mesh( tcp://vxr-pp-raicache01:7100, tport=rvd.raimesh.tport.3, hash=2794d93 )
+1022 00:27:26.189  vxr-pp-raicache01_7500.7 I am oldest peer
+1022 00:27:26.189  vxr-pp-raicache01_7500.7 version matches 1.13.0-48
+1022 00:27:26.189  vxr-pp-raicache01_7500.7 auth msg verified with service rvd public key
+1022 00:27:26.189  vxr-pp-raicache01_7500.7 [hZYrosBeh58YEvatBEYzmw] add authentication from handshake via challenge @ rvd.raimesh.tport.3, state new, count=1
+1022 00:27:26.205  network converges 0.016 secs, 2 uids authenticated, adj_change
+1022 00:27:29.845  network converges 0.049 secs, 2 uids authenticated, adj_change
+1022 00:27:29.845  vxr-pp-strategy_7500.3 old primary route is tport rvd.raitcp.tport.5(d=10000), using route rvd.raimesh.tport.3(d=1100)
+1022 00:30:18.005  network converges 0.016 secs, 2 uids authenticated, adj_change
+1022 00:30:18.045  network converges 0.018 secs, 2 uids authenticated, adj_update
+1022 00:30:18.045  vxr-pp-procs_7500.8 [FNuu+qcnz8ixCwZdWmeW9A] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.raitcp.tport.5, state new, count=1
+1022 00:30:18.074  network converges 0.029 secs, 3 uids authenticated, adj_update
+1022 00:30:18.074  vxr-pp-procs_7500.8 old primary route is tport rvd.raitcp.tport.5(d=11000), using route rvd.raimesh.tport.3(d=2100)
+1022 00:30:21.975  network converges 0.029 secs, 3 uids authenticated, adj_change
+1022 00:30:22.005  network converges 0.029 secs, 3 uids authenticated, adj_change
+1022 00:30:47.056  network converges 0.021 secs, 3 uids authenticated, adj_update
+1022 00:30:47.085  vxr-pp-tsmqry_7500.9 [QtIjRLzMG9mH+Mc1JK9VjQ] add authentication from sync_result via vxr-pp-raicache01_7500 @ rvd.raimesh.tport.3, state new, count=1
+1022 00:30:47.125  network converges 0.040 secs, 4 uids authenticated, adj_update
+1022 00:30:47.215  network converges 0.088 secs, 4 uids authenticated, adj_change
+1022 00:30:52.335  network converges 0.031 secs, 4 uids authenticated, adj_change
+1022 00:30:52.335  vxr-pp-qs_7500.10 [nsd8nJYHmUmuD7uqlYC9fQ] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.raitcp.tport.5, state new, count=1
+1022 00:30:52.405  network converges 0.041 secs, 5 uids authenticated, adj_change
+1022 00:30:52.405  vxr-pp-qs_7500.10 old primary route is tport rvd.raitcp.tport.5(d=12000), using route rvd.raimesh.tport.3(d=3100)
+1022 00:30:52.595  network converges 0.048 secs, 5 uids authenticated, adj_change
+1022 00:30:55.596  network converges 0.047 secs, 5 uids authenticated, adj_change
+1022 00:30:55.655  network converges 0.049 secs, 5 uids authenticated, adj_change
+1022 00:30:58.865  network converges 0.042 secs, 5 uids authenticated, adj_change
+1022 00:30:58.935  network converges 0.049 secs, 5 uids authenticated, adj_change
+1022 00:30:58.985  network converges 0.046 secs, 5 uids authenticated, adj_change
+1022 00:31:02.295  network converges 0.049 secs, 5 uids authenticated, adj_change
+1022 00:31:02.345  network converges 0.044 secs, 5 uids authenticated, adj_change
+1022 00:31:05.475  network converges 0.048 secs, 5 uids authenticated, adj_change
+1022 00:31:05.535  network converges 0.048 secs, 5 uids authenticated, adj_change
+1022 00:31:08.755  network converges 0.049 secs, 5 uids authenticated, adj_change
+1022 00:31:08.815  network converges 0.044 secs, 5 uids authenticated, adj_change
