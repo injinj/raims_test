@@ -70,6 +70,3 @@ startup:
     - b_mesh
     - c_mesh
     - d_mesh   
-  
-    - tcp_raicache_primary
-    - tcp_raicache_secondary
