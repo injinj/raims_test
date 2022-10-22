@@ -1,0 +1,64 @@
+
+[ppmercury@vxr-pp-procs latest]$ head raims.log.1
+=--=--=--=
+Sat Oct 22 00:00:00 2022
+UTC offset: 2:00 (CEST)
+PID: 2119112, ms_server version: 1.13.0-48
+=--=--=--=
+1022 00:00:01.085  timeout pending peer [hbwd5iS/NIeTai/p+uxcHg] (vxr-pp-tsmqry_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:02.585  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:04.096  timeout pending peer [hbwd5iS/NIeTai/p+uxcHg] (vxr-pp-tsmqry_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:05.616  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:07.135  timeout pending peer [hbwd5iS/NIeTai/p+uxcHg] (vxr-pp-tsmqry_7500) -> vxr-pp-oms_7500 (unauth_adj)
+
+
+
+
+[ppmercury@vxr-pp-oms latest]$ less -n raims.log.1
+=--=--=--=
+Sat Oct 22 00:00:00 2022
+UTC offset: 2:00 (CEST)
+PID: 1745557, ms_server version: 1.13.0-48
+=--=--=--=
+1022 00:00:00.273  vxr-pp-raicache02_7500.7 uid_csum not equal vxr-pp-raicache02_7500=[LeZD6WTePoSOS3G1uy72Uw] hb[yEjRNKAiq1G9lKI+QqV1/w]
+1022 00:00:00.336  vxr-pp-procs_7500.1 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:00.733  vxr-pp-strategy_7500.3 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:00.993  vxr-pp-strategy_7500.3 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:01.493  vxr-pp-strategy_7500.3 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:01.979  vxr-pp-qs_7500.2 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:02.586  vxr-pp-procs_7500.1 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:02.846  vxr-pp-procs_7500.1 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:03.346  vxr-pp-procs_7500.1 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:03.753  vxr-pp-strategy_7500.3 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:04.003  vxr-pp-strategy_7500.3 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:04.514  vxr-pp-strategy_7500.3 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:04.978  vxr-pp-qs_7500.2 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+1022 00:00:05.228  vxr-pp-qs_7500.2 sync_request(user=vxr-pp-tsmqry_7500), b_nonce not found: [hbwd5iS/NIeTai/p+uxcHg]
+
+
+
+
+[ppmercury@vxr-pp-tsmqry latest]$ less raims.log.1
+=--=--=--=
+Sat Oct 22 00:00:00 2022
+UTC offset: 2:00 (CEST)
+PID: 1746749, ms_server version: 1.13.0-48
+=--=--=--=
+1022 00:00:02.391  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:05.341  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:08.371  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:11.341  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:14.372  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:17.372  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:20.381  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:23.400  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:26.432  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:29.411  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:32.431  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:35.481  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:38.491  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:41.491  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+1022 00:00:44.461  timeout pending peer [8H/6p6wNkPRZ8WGRYx0P2A] (vxr-pp-raicache02_7500) -> vxr-pp-oms_7500 (unauth_adj)
+
+
+
