@@ -1,0 +1,1618 @@
+1107 04:00:31.597  start_network:        service 9500, ""
+1107 08:58:51.864  vxr-pp-raicache01_7500.6 [OKqX4Oj5nhmUoQfzBjNEFw] remove auth dropped 
+1107 08:58:51.905  network converges 0.041 secs, 5 uids authenticated, adj_change
+1107 08:58:52.285  vxr-pp-raicache01_7500.9 [bvraWST3GzpPsdZ7+PiNkg] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.d_mesh.tport.22, state new, count=1
+1107 08:58:52.345  network converges 0.059 secs, 6 uids authenticated, adj_update
+1107 08:58:52.345  vxr-pp-raicache01_7500.9 old primary route is tport rvd.d_mesh.tport.22(d=12000), using route rvd.a_mesh.tport.2(d=11100)
+1107 08:58:53.375  network converges 0.184 secs, 6 uids authenticated, adj_change
+1107 08:58:58.773  vxr-pp-raicache02_7500.2 [j9jSFh8H6nKiXAEjpkcB8Q] remove auth dropped 
+1107 08:58:58.815  network converges 0.043 secs, 5 uids authenticated, adj_change
+1107 08:58:59.065  vxr-pp-raicache02_7500.10 [vc3O1HIWfDsobbZmm00yAA] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.a_mesh.tport.21, state new, count=1
+1107 08:58:59.125  network converges 0.060 secs, 6 uids authenticated, adj_update
+1107 08:58:59.125  vxr-pp-raicache02_7500.10 old primary route is tport rvd.a_mesh.tport.21(d=1200), using route rvd.a_mesh.tport.2(d=1200)
+1107 08:59:00.265  network converges 0.187 secs, 6 uids authenticated, adj_change
+1107 08:59:18.376  vxr-pp-oms_7500.1 [3ZMp+BI3DPCZDmvQ3gLRgw] remove auth bye 
+1107 08:59:18.401  a_mesh.2 disconnected 10.126.5.50:6000 (Sock fd=15 state=0 name=rvd.a_mesh.tcp_conn.2 peer=10.126.5.50:6000)
+1107 08:59:18.401  reconnect timer running (on_shutdown)
+1107 08:59:18.401  b_mesh.4 disconnected 10.126.5.50:6001 (Sock fd=19 state=0 name=rvd.b_mesh.tcp_conn.4 peer=10.126.5.50:6001)
+1107 08:59:18.401  reconnect timer running (on_shutdown)
+1107 08:59:18.401  c_mesh.6 disconnected 10.126.5.50:6002 (Sock fd=23 state=0 name=rvd.c_mesh.tcp_conn.6 peer=10.126.5.50:6002)
+1107 08:59:18.401  reconnect timer running (on_shutdown)
+1107 08:59:18.401  d_mesh.8 disconnected 10.126.5.50:6003 (Sock fd=27 state=0 name=rvd.d_mesh.tcp_conn.8 peer=10.126.5.50:6003)
+1107 08:59:18.401  reconnect timer running (on_shutdown)
+1107 08:59:18.425  network converges 0.049 secs, 5 uids authenticated, adj_change
+1107 08:59:18.425  vxr-pp-raicache01_7500.9 old primary route is tport rvd.a_mesh.tport.2(d=4294967295), using route rvd.a_mesh.tport.21(d=200)
+1107 08:59:18.425  vxr-pp-raicache02_7500.10 old primary route is tport rvd.a_mesh.tport.2(d=4294967295), using route rvd.a_mesh.tport.21(d=1200)
+1107 08:59:18.512  a_mesh.2 stopped trying 10.126.5.50:6000 (already connected to mesh)
+1107 08:59:18.512  b_mesh.4 stopped trying 10.126.5.50:6001 (already connected to mesh)
+1107 08:59:18.512  c_mesh.6 stopped trying 10.126.5.50:6002 (already connected to mesh)
+1107 08:59:18.512  d_mesh.8 stopped trying 10.126.5.50:6003 (already connected to mesh)
+1107 08:59:18.549  c_mesh.5 connect plaintext 10.126.5.50:49656 ev_tcp_tport using rvd.c_mesh fd 15
+1107 08:59:18.549  c_mesh.6 add_mesh_accept tcp://vxr-pp-procs:6002 from 10.126.5.50:49656
+1107 08:59:18.549  d_mesh.7 connect plaintext 10.126.5.50:59370 ev_tcp_tport using rvd.d_mesh fd 19
+1107 08:59:18.549  d_mesh.8 add_mesh_accept tcp://vxr-pp-procs:6003 from 10.126.5.50:59370
+1107 08:59:18.549  b_mesh.3 connect plaintext 10.126.5.50:59776 ev_tcp_tport using rvd.b_mesh fd 23
+1107 08:59:18.549  b_mesh.4 add_mesh_accept tcp://vxr-pp-procs:6001 from 10.126.5.50:59776
+1107 08:59:18.549  a_mesh.1 connect plaintext 10.126.5.50:35134 ev_tcp_tport using rvd.a_mesh fd 27
+1107 08:59:18.549  a_mesh.2 add_mesh_accept tcp://vxr-pp-procs:6000 from 10.126.5.50:35134
+1107 08:59:18.559! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] version diff: 1.13.0-57 != 1.13.0-53
+1107 08:59:18.562  vxr-pp-oms_7500.11 (u_session_hb) set_mesh_url(a_mesh) tcp://vxr-pp-oms:6000 (add)
+1107 08:59:18.562  vxr-pp-oms_7500.11 I am oldest peer
+1107 08:59:18.562  vxr-pp-oms_7500.11 (u_session_hb) set_mesh_url(c_mesh) tcp://vxr-pp-oms:6002 (add)
+1107 08:59:18.562  vxr-pp-oms_7500.11 (u_session_hb) set_mesh_url(b_mesh) tcp://vxr-pp-oms:6001 (add)
+1107 08:59:18.562  vxr-pp-oms_7500.11 (u_session_hb) set_mesh_url(d_mesh) tcp://vxr-pp-oms:6003 (add)
+1107 08:59:18.562  vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.b_mesh.tport.23, state new, count=1
+1107 08:59:18.569  vxr-pp-oms_7500.11 auth msg verified with service rvd public key
+1107 08:59:18.625  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 08:59:18.640  d_mesh.7 connect plaintext 10.126.5.50:59384 ev_tcp_tport using rvd.d_mesh fd 85
+1107 08:59:18.640  d_mesh.10 add_mesh_accept tcp://vxr-pp-procs:6003 from 10.126.5.50:59384
+1107 08:59:18.640  c_mesh.5 connect plaintext 10.126.5.50:49696 ev_tcp_tport using rvd.c_mesh fd 86
+1107 08:59:18.640  c_mesh.13 add_mesh_accept tcp://vxr-pp-procs:6002 from 10.126.5.50:49696
+1107 08:59:18.650! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] advertised 100 != 1000 on rvd.d_mesh.tport.10
+1107 08:59:18.650! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] advertised 100 != 1000 on rvd.c_mesh.tport.13
+1107 08:59:18.650  vxr-pp-oms_7500.11 (u_session_hb) set_mesh_url(d_mesh) tcp://vxr-pp-oms:6000 (add)
+1107 08:59:18.650  vxr-pp-oms_7500.11 (u_session_hb) set_mesh_url(c_mesh) tcp://vxr-pp-oms:6000 (add)
+1107 08:59:18.705  network converges 0.055 secs, 6 uids authenticated, adv_cost
+1107 08:59:18.705  vxr-pp-raicache01_7500.9 old primary route is tport rvd.a_mesh.tport.21(d=200), using route rvd.a_mesh.tport.2(d=200)
+1107 08:59:18.705  vxr-pp-raicache02_7500.10 old primary route is tport rvd.a_mesh.tport.21(d=1200), using route rvd.a_mesh.tport.2(d=1200)
+1107 08:59:18.765  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 08:59:18.825  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 08:59:18.885  network converges 0.054 secs, 6 uids authenticated, adj_change
+1107 08:59:19.017  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 08:59:22.115  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 08:59:23.008! vxr-pp-tsmqry_7500.8 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] advertised 1000 != 100 on rvd.b_mesh.tport.18
+1107 08:59:23.065  network converges 0.057 secs, 6 uids authenticated, adv_cost
+1107 08:59:23.125  network converges 0.054 secs, 6 uids authenticated, adj_change
+1107 08:59:23.255  network converges 0.056 secs, 6 uids authenticated, adj_change
+1107 08:59:28.427! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[1] advertised 100 != 1000 on rvd.b_mesh.tport.4
+1107 08:59:28.427! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[3] advertised 100 != 1000 on rvd.d_mesh.tport.8
+1107 08:59:28.427! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[2] advertised 100 != 1000 on rvd.c_mesh.tport.6
+1107 08:59:28.496! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] advertised 100 != 1000 on rvd.c_mesh.tport.13
+1107 08:59:28.496! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] advertised 100 != 1000 on rvd.d_mesh.tport.10
+1107 08:59:28.554  network converges 0.058 secs, 6 uids authenticated, adv_cost
+1107 08:59:28.614  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 08:59:28.674  network converges 0.054 secs, 6 uids authenticated, adj_change
+1107 08:59:28.804  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 08:59:38.277! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[1] advertised 100 != 1000 on rvd.b_mesh.tport.4
+1107 08:59:38.277! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[3] advertised 100 != 1000 on rvd.d_mesh.tport.8
+1107 08:59:38.277! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[2] advertised 100 != 1000 on rvd.c_mesh.tport.6
+1107 08:59:38.347! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] advertised 100 != 1000 on rvd.d_mesh.tport.10
+1107 08:59:38.347! vxr-pp-oms_7500.11 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] advertised 100 != 1000 on rvd.c_mesh.tport.13
+1107 08:59:38.405  network converges 0.058 secs, 6 uids authenticated, adv_cost
+1107 08:59:38.464  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 08:59:38.524  network converges 0.054 secs, 6 uids authenticated, adj_change
+=--=--=--=
+Mon Nov  7 08:59:38 2022
+UTC offset: 1:00 (CEST)
+PID: 661888, ms_server version: 1.13.0-57
+=--=--=--=
+1107 08:59:38.605! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 08:59:38.605  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 08:59:38.605  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 08:59:38.605  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 08:59:38.605  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 08:59:38.605  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 08:59:38.605  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 08:59:38.605  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 08:59:38.605  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 08:59:38.605  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 08:59:38.605  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 08:59:38.605  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 08:59:38.605  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 08:59:38.605  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 08:59:38.605  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 08:59:38.605  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 08:59:38.605  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 08:59:38.605  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 08:59:38.605  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 08:59:38.605  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 08:59:38.605  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 08:59:38.605  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 08:59:38.605  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 08:59:38.605  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 08:59:38.605  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 08:59:38.605  ipc.0 rvd listening on 0.0.0.0:7500
+1107 08:59:38.605  web: web start listening on 0.0.0.0:8080
+1107 08:59:38.605  service rvd key pair loaded
+1107 08:59:38.605  transient user vxr-pp-procs_7500 created
+1107 08:59:38.605  session vxr-pp-procs_7500.rvd[wCtlpG/3470OowfdSVIxIA] started, start time 1667807978.601057768
+1107 08:59:38.605  running background deamon PID: 661890
+1107 08:59:38.605  pub_window_size: 4194304 bytes
+1107 08:59:38.605  sub_window_size: 4194304 bytes
+1107 08:59:38.605  pub_window_time: 10 secs
+1107 08:59:38.605  sub_window_time: 10 secs
+1107 08:59:38.605  heartbeat: 10 secs
+1107 08:59:38.605  reliability: 15 secs
+1107 08:59:38.605  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 08:59:38.605  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 08:59:38.605  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 49
+1107 08:59:38.605  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 47
+1107 08:59:38.605  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 35
+1107 08:59:38.605  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 19
+1107 08:59:38.605  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 27
+1107 08:59:38.605  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 37
+1107 08:59:38.605  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 21
+1107 08:59:38.605  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 45
+1107 08:59:38.605  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 25
+1107 08:59:38.605  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 08:59:38.605  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 08:59:38.605  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 17
+1107 08:59:38.605  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 31
+1107 08:59:38.605  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 39
+=--=--=--=
+Mon Nov  7 08:59:38 2022
+UTC offset: 1:00 (CEST)
+PID: 661900, ms_server version: 1.13.0-57
+=--=--=--=
+1107 08:59:38.736! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 08:59:38.740  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 08:59:38.740  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 08:59:38.740  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 08:59:38.740  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 08:59:38.740  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 08:59:38.740  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 08:59:38.740  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 08:59:38.740  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 08:59:38.740  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 08:59:38.740  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 08:59:38.740  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 08:59:38.740  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 08:59:38.740  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 08:59:38.740  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 08:59:38.740  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 08:59:38.740  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 08:59:38.740  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 08:59:38.740  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 08:59:38.740  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 08:59:38.740  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 08:59:38.740  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 08:59:38.740  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 08:59:38.740  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 08:59:38.740  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 08:59:38.740  ipc.0 rvd listening on 0.0.0.0:7500
+1107 08:59:38.740  web: web start listening on 0.0.0.0:8080
+1107 08:59:38.740  service rvd key pair loaded
+1107 08:59:38.740  transient user vxr-pp-procs_7500 created
+1107 08:59:38.740  session vxr-pp-procs_7500.rvd[dOeCFbmzA/RiBkpi2JecvA] started, start time 1667807978.732037360
+1107 08:59:38.740  running background deamon PID: 661902
+1107 08:59:38.740  pub_window_size: 4194304 bytes
+1107 08:59:38.740  sub_window_size: 4194304 bytes
+1107 08:59:38.740  pub_window_time: 10 secs
+1107 08:59:38.740  sub_window_time: 10 secs
+1107 08:59:38.740  heartbeat: 10 secs
+1107 08:59:38.740  reliability: 15 secs
+1107 08:59:38.740  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 08:59:38.740  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 08:59:38.740  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 49
+1107 08:59:38.740  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 31
+1107 08:59:38.740  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 19
+1107 08:59:38.740  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 27
+1107 08:59:38.740  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 47
+1107 08:59:38.740  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 39
+1107 08:59:38.740  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 21
+1107 08:59:38.740  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 25
+1107 08:59:38.740  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 08:59:38.740  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 08:59:38.740  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 17
+1107 08:59:38.740  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 35
+1107 08:59:38.740  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 41
+1107 08:59:38.740  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 37
+1107 08:59:38.740  vxr-pp-strategy_7500.1 i_am false oldest true
+1107 08:59:38.740  vxr-pp-qs_7500.2 i_am false oldest true
+1107 08:59:38.755! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] version diff: 1.13.0-53 != 1.13.0-57
+1107 08:59:38.755! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 08:59:38.755!  repeated 1
+1107 08:59:38.755! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] version diff: 1.13.0-53 != 1.13.0-57
+1107 08:59:38.755! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.13
+1107 08:59:38.755! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] version diff: 1.13.0-53 != 1.13.0-57
+1107 08:59:38.755!  repeated 1
+1107 08:59:38.755! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.18
+1107 08:59:38.755! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 08:59:38.755! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.8
+1107 08:59:38.755! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.13
+1107 08:59:38.755!  repeated 1
+1107 08:59:38.755! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] version diff: 1.13.0-53 != 1.13.0-57
+1107 08:59:38.755  vxr-pp-tsmqry_7500.3 auth msg verified with service rvd public key
+1107 08:59:38.755  vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] add authentication from hello via challenge @ rvd.d_mesh.tport.20, state new, count=1
+1107 08:59:38.755  vxr-pp-qs_7500.2 auth msg verified with service rvd public key
+1107 08:59:38.755  vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] add authentication from hello via challenge @ rvd.c_mesh.tport.13, state new, count=1
+1107 08:59:38.755  vxr-pp-strategy_7500.1 i_am false oldest true
+1107 08:59:38.755  vxr-pp-strategy_7500.1 old_hb_seqno 1 seqno 2, age 1030127958419954
+1107 08:59:38.755  vxr-pp-oms_7500.4 i_am false oldest true
+1107 08:59:38.755  vxr-pp-oms_7500.4 version matches 1.13.0-57
+1107 08:59:38.755  vxr-pp-oms_7500.4 auth msg verified with service rvd public key
+1107 08:59:38.755  vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] add authentication from hello via challenge @ rvd.b_mesh.tport.7, state new, count=1
+1107 08:59:38.755  vxr-pp-strategy_7500.1 auth msg verified with service rvd public key
+1107 08:59:38.755  vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] add authentication from hello via challenge @ rvd.a_mesh.tport.4, state new, count=1
+1107 08:59:38.755  vxr-pp-strategy_7500.1 no auth found, stage 2, challenge_count 1
+1107 08:59:38.755  vxr-pp-qs_7500.2 uid_csum not equal vxr-pp-qs_7500=[FRCmSvCM0d3VWQqvh9q64A] hb[xieyx6ZtttyyhWqy5G8Fcg]
+1107 08:59:38.755  vxr-pp-raicache01_7500.5 [bvraWST3GzpPsdZ7+PiNkg] add authentication from sync_result via vxr-pp-tsmqry_7500 @ rvd.d_mesh.tport.20, state new, count=1
+1107 08:59:38.755  vxr-pp-raicache02_7500.6 [vc3O1HIWfDsobbZmm00yAA] add authentication from sync_result via vxr-pp-tsmqry_7500 @ rvd.d_mesh.tport.20, state new, count=1
+1107 08:59:38.755  vxr-pp-strategy_7500.1 auth msg verified with service rvd public key
+1107 08:59:38.756! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.10
+1107 08:59:38.756! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.15
+1107 08:59:38.756  vxr-pp-strategy_7500.1 _I.dOeCFbmzA/RiBkpi2JecvA.mesh_req missing inbox seqno 6 -> 9 (rvd.b_mesh.tport.9)
+1107 08:59:38.756  vxr-pp-strategy_7500.1 _I.dOeCFbmzA/RiBkpi2JecvA.mesh_req missing inbox seqno 6 -> 8 (rvd.c_mesh.tport.14)
+1107 08:59:38.816  network converges 0.059 secs, 6 uids authenticated, push_route
+1107 08:59:38.816  vxr-pp-tsmqry_7500.3 old primary route is tport rvd.d_mesh.tport.20(d=1000), using route rvd.a_mesh.tport.5(d=100)
+1107 08:59:38.816  vxr-pp-raicache01_7500.5 old primary route is tport rvd.d_mesh.tport.20(d=1200), using route rvd.a_mesh.tport.4(d=200)
+1107 08:59:38.816  vxr-pp-raicache02_7500.6 old primary route is tport rvd.d_mesh.tport.20(d=2200), using route rvd.a_mesh.tport.4(d=1200)
+1107 08:59:38.884  network converges 0.054 secs, 6 uids authenticated, adj_change
+1107 08:59:38.884  d_mesh.16 connect plaintext 10.126.5.50:59432 ev_tcp_tport using rvd.d_mesh.10 fd 45
+1107 08:59:38.884  d_mesh.21 add_mesh_accept from 10.126.5.50:59432
+1107 08:59:38.884  c_mesh.11 connect plaintext 10.126.5.50:49748 ev_tcp_tport using rvd.c_mesh.b fd 56
+1107 08:59:38.884  c_mesh.22 add_mesh_accept from 10.126.5.50:49748
+1107 08:59:38.887! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 08:59:38.887! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 08:59:38.946  network converges 0.059 secs, 6 uids authenticated, add_mesh
+1107 08:59:38.957  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 08:59:38.957  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 08:59:38.957  b_mesh.23 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.b_mesh.6.17 fd 62
+1107 08:59:38.957  a_mesh.24 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.a_mesh.1.18 fd 59
+1107 08:59:38.966! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 08:59:38.966! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 08:59:38.976! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 08:59:38.976! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 08:59:39.026  network converges 0.059 secs, 6 uids authenticated, add_mesh
+1107 08:59:39.096  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 08:59:48.237   repeated 1
+1107 08:59:48.237  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 08:59:48.377   repeated 1
+1107 08:59:48.377  network converges 0.055 secs, 6 uids authenticated, adj_change
+1107 08:59:48.447  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 08:59:48.573  start_network:        service 9500, ""
+1107 08:59:48.601! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 08:59:48.601! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.14
+1107 08:59:48.601! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.19
+1107 08:59:48.601! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.9
+1107 08:59:48.601! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.13
+1107 08:59:48.601! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.8
+1107 08:59:48.601! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.18
+1107 08:59:48.607! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.10
+1107 08:59:48.607! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.15
+1107 08:59:48.727  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 08:59:48.737! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 08:59:48.737! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 08:59:48.787  network converges 0.055 secs, 6 uids authenticated, adj_change
+1107 08:59:48.827! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 08:59:48.827! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 08:59:48.857  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 08:59:51.088   repeated 1
+1107 08:59:51.088  vxr-pp-strategy_7500.1 _I.dOeCFbmzA/RiBkpi2JecvA.ping missing inbox seqno 6 -> 10 (rvd.a_mesh.tport.4)
+1107 08:59:58.087  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 08:59:58.227   repeated 1
+1107 08:59:58.227  network converges 0.055 secs, 6 uids authenticated, adj_change
+1107 08:59:58.297  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 08:59:58.451! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 08:59:58.451! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.19
+1107 08:59:58.451! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.9
+1107 08:59:58.451! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.14
+1107 08:59:58.451! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.8
+1107 08:59:58.451! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.13
+1107 08:59:58.451! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.18
+1107 08:59:58.457! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.15
+1107 08:59:58.457! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.10
+1107 08:59:58.577  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 08:59:58.588! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 08:59:58.588! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 08:59:58.637  network converges 0.055 secs, 6 uids authenticated, adj_change
+1107 08:59:58.677! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 08:59:58.677! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 08:59:58.707  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 09:00:07.937   repeated 1
+1107 09:00:07.937  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 09:00:08.018  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 09:00:08.077  network converges 0.055 secs, 6 uids authenticated, adj_change
+1107 09:00:08.147  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 09:00:08.301! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 09:00:08.301! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.14
+1107 09:00:08.301! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.9
+1107 09:00:08.301! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.19
+1107 09:00:08.301! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.13
+1107 09:00:08.301! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.8
+1107 09:00:08.301! vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.18
+1107 09:00:08.307! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.10
+1107 09:00:08.307! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.15
+1107 09:00:08.427  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 09:00:08.437! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:00:08.437! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:00:08.487  network converges 0.055 secs, 6 uids authenticated, adj_change
+1107 09:00:08.526! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:00:08.527! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:00:08.557  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 09:00:08.647  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 09:00:10.923  vxr-pp-qs_7500.2 [xN/YCneJTwZAsTNvfHlKGg] remove auth bye 
+1107 09:00:10.923  c_mesh.13 disconnected 10.126.5.51:6002 (Sock fd=41 state=0 name=rvd.c_mesh.tcp_conn.13 peer=10.126.5.51:6002)
+1107 09:00:10.923  d_mesh.18 disconnected 10.126.5.51:6003 (Sock error=6/ERR_READ_RESET, read connection reset fd=27 state=0 name=rvd.d_mesh.tcp_conn.18 peer=10.126.5.51:6003 errno=104/Connection reset by peer)
+1107 09:00:10.923  a_mesh.3 disconnected 10.126.5.51:6000 (Sock error=6/ERR_READ_RESET, read connection reset fd=29 state=0 name=rvd.a_mesh.tcp_conn.3 peer=10.126.5.51:6000 errno=104/Connection reset by peer)
+1107 09:00:10.939  b_mesh.8 disconnected 10.126.5.51:6001 (Sock error=6/ERR_READ_RESET, read connection reset fd=19 state=0 name=rvd.b_mesh.tcp_conn.8 peer=10.126.5.51:6001 errno=104/Connection reset by peer)
+1107 09:00:10.983  d_mesh.16 connect plaintext 10.126.5.51:41528 ev_tcp_tport using rvd.d_mesh.10 fd 19
+1107 09:00:10.983  d_mesh.25 add_mesh_accept from 10.126.5.51:41528
+1107 09:00:10.983  b_mesh.6 connect plaintext 10.126.5.51:47732 ev_tcp_tport using rvd.b_mesh.6 fd 29
+1107 09:00:10.983  b_mesh.26 add_mesh_accept from 10.126.5.51:47732
+1107 09:00:10.983  a_mesh.1 connect plaintext 10.126.5.51:55612 ev_tcp_tport using rvd.a_mesh.1 fd 89
+1107 09:00:10.983  a_mesh.27 add_mesh_accept from 10.126.5.51:55612
+1107 09:00:10.983  c_mesh.11 connect plaintext 10.126.5.51:52132 ev_tcp_tport using rvd.c_mesh.b fd 91
+1107 09:00:10.983  c_mesh.28 add_mesh_accept from 10.126.5.51:52132
+1107 09:00:10.983  c_mesh.28 disconnected 10.126.5.51:52132 (Sock fd=91 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52132)
+1107 09:00:10.992  d_mesh.25 disconnected 10.126.5.51:41528 (Sock error=6/ERR_READ_RESET, read connection reset fd=19 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41528 errno=104/Connection reset by peer)
+1107 09:00:10.992  a_mesh.27 disconnected 10.126.5.51:55612 (Sock error=6/ERR_READ_RESET, read connection reset fd=89 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55612 errno=104/Connection reset by peer)
+1107 09:00:10.992  b_mesh.26 disconnected 10.126.5.51:47732 (Sock error=6/ERR_READ_RESET, read connection reset fd=29 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47732 errno=104/Connection reset by peer)
+1107 09:00:11.024  d_mesh.16 connect plaintext 10.126.5.51:41560 ev_tcp_tport using rvd.d_mesh.10 fd 19
+1107 09:00:11.024  d_mesh.25 add_mesh_accept from 10.126.5.51:41560
+1107 09:00:11.024  b_mesh.6 connect plaintext 10.126.5.51:47764 ev_tcp_tport using rvd.b_mesh.6 fd 29
+1107 09:00:11.024  b_mesh.26 add_mesh_accept from 10.126.5.51:47764
+1107 09:00:11.024  a_mesh.1 connect plaintext 10.126.5.51:55638 ev_tcp_tport using rvd.a_mesh.1 fd 89
+1107 09:00:11.024  a_mesh.27 add_mesh_accept from 10.126.5.51:55638
+1107 09:00:11.024  c_mesh.11 connect plaintext 10.126.5.51:52162 ev_tcp_tport using rvd.c_mesh.b fd 91
+1107 09:00:11.024  c_mesh.28 add_mesh_accept from 10.126.5.51:52162
+1107 09:00:11.024  c_mesh.28 disconnected 10.126.5.51:52162 (Sock fd=91 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52162)
+1107 09:00:11.024  d_mesh.25 disconnected 10.126.5.51:41560 (Sock fd=19 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41560)
+1107 09:00:11.024  a_mesh.27 disconnected 10.126.5.51:55638 (Sock fd=89 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55638)
+1107 09:00:11.024  b_mesh.26 disconnected 10.126.5.51:47764 (Sock fd=29 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47764)
+1107 09:00:11.024  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 91
+1107 09:00:11.024  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 19
+1107 09:00:11.024  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 09:00:11.026  network converges 0.043 secs, 5 uids authenticated, add_tport
+1107 09:00:11.040  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 29
+1107 09:00:11.153  d_mesh.16 connect plaintext 10.126.5.51:41592 ev_tcp_tport using rvd.d_mesh.10 fd 19
+1107 09:00:11.153  d_mesh.25 add_mesh_accept from 10.126.5.51:41592
+1107 09:00:11.153  b_mesh.6 connect plaintext 10.126.5.51:47796 ev_tcp_tport using rvd.b_mesh.6 fd 29
+1107 09:00:11.153  b_mesh.26 add_mesh_accept from 10.126.5.51:47796
+1107 09:00:11.153  a_mesh.1 connect plaintext 10.126.5.51:55674 ev_tcp_tport using rvd.a_mesh.1 fd 89
+1107 09:00:11.153  a_mesh.27 add_mesh_accept from 10.126.5.51:55674
+1107 09:00:11.153  c_mesh.11 connect plaintext 10.126.5.51:52194 ev_tcp_tport using rvd.c_mesh.b fd 91
+1107 09:00:11.153  c_mesh.28 add_mesh_accept from 10.126.5.51:52194
+1107 09:00:11.153  c_mesh.28 disconnected 10.126.5.51:52194 (Sock fd=91 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52194)
+1107 09:00:11.153  d_mesh.25 disconnected 10.126.5.51:41592 (Sock fd=19 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41592)
+1107 09:00:11.153  a_mesh.27 disconnected 10.126.5.51:55674 (Sock fd=89 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55674)
+1107 09:00:11.153  b_mesh.26 disconnected 10.126.5.51:47796 (Sock fd=29 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47796)
+1107 09:00:11.283  d_mesh.16 connect plaintext 10.126.5.51:41624 ev_tcp_tport using rvd.d_mesh.10 fd 19
+1107 09:00:11.283  d_mesh.25 add_mesh_accept from 10.126.5.51:41624
+1107 09:00:11.283  b_mesh.6 connect plaintext 10.126.5.51:47828 ev_tcp_tport using rvd.b_mesh.6 fd 29
+1107 09:00:11.283  b_mesh.26 add_mesh_accept from 10.126.5.51:47828
+1107 09:00:11.283  a_mesh.1 connect plaintext 10.126.5.51:55706 ev_tcp_tport using rvd.a_mesh.1 fd 89
+1107 09:00:11.283  a_mesh.27 add_mesh_accept from 10.126.5.51:55706
+1107 09:00:11.283  c_mesh.11 connect plaintext 10.126.5.51:52226 ev_tcp_tport using rvd.c_mesh.b fd 91
+1107 09:00:11.283  c_mesh.28 add_mesh_accept from 10.126.5.51:52226
+1107 09:00:11.283  c_mesh.28 disconnected 10.126.5.51:52226 (Sock fd=91 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52226)
+1107 09:00:11.287  d_mesh.25 disconnected 10.126.5.51:41624 (Sock fd=19 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41624)
+1107 09:00:11.287  a_mesh.27 disconnected 10.126.5.51:55706 (Sock fd=89 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55706)
+1107 09:00:11.287  b_mesh.26 disconnected 10.126.5.51:47828 (Sock fd=29 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47828)
+1107 09:00:11.424  d_mesh.16 connect plaintext 10.126.5.51:41656 ev_tcp_tport using rvd.d_mesh.10 fd 19
+1107 09:00:11.424  d_mesh.25 add_mesh_accept from 10.126.5.51:41656
+1107 09:00:11.424  b_mesh.6 connect plaintext 10.126.5.51:47860 ev_tcp_tport using rvd.b_mesh.6 fd 29
+1107 09:00:11.424  b_mesh.26 add_mesh_accept from 10.126.5.51:47860
+1107 09:00:11.424  a_mesh.1 connect plaintext 10.126.5.51:55740 ev_tcp_tport using rvd.a_mesh.1 fd 89
+1107 09:00:11.424  a_mesh.27 add_mesh_accept from 10.126.5.51:55740
+1107 09:00:11.424  c_mesh.11 connect plaintext 10.126.5.51:52260 ev_tcp_tport using rvd.c_mesh.b fd 91
+1107 09:00:11.424  c_mesh.28 add_mesh_accept from 10.126.5.51:52260
+1107 09:00:11.424  c_mesh.28 disconnected 10.126.5.51:52260 (Sock fd=91 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52260)
+1107 09:00:11.424  d_mesh.25 disconnected 10.126.5.51:41656 (Sock fd=19 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41656)
+1107 09:00:11.424  a_mesh.27 disconnected 10.126.5.51:55740 (Sock fd=89 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55740)
+1107 09:00:11.424  b_mesh.26 disconnected 10.126.5.51:47860 (Sock fd=29 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47860)
+1107 09:00:17.767  network converges 0.048 secs, 5 uids authenticated, adj_change
+1107 09:00:17.847  network converges 0.048 secs, 5 uids authenticated, adj_change
+1107 09:00:17.917  network converges 0.050 secs, 5 uids authenticated, adj_change
+1107 09:00:17.977  network converges 0.048 secs, 5 uids authenticated, adj_change
+1107 09:00:18.027  vxr-pp-raicache01_7500.5 old primary route is tport rvd.a_mesh.tport.4(d=200), using route rvd.a_mesh.tport.2(d=200)
+1107 09:00:18.027  vxr-pp-raicache02_7500.6 old primary route is tport rvd.a_mesh.tport.4(d=1200), using route rvd.a_mesh.tport.2(d=1200)
+1107 09:00:18.147  vxr-pp-oms_7500.4 mesh_csum not equal vxr-pp-oms_7500=[0c9+QIcFntuV6DnA+6Pw+g] hb[RY6O83/+oXo0CP+8HAABXQ] mesh pending queue is_empty=1
+1107 09:00:18.148! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 09:00:18.148! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.14
+1107 09:00:18.148! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.9
+1107 09:00:18.148! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.19
+1107 09:00:18.158! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.5
+1107 09:00:18.158! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.10
+1107 09:00:18.158! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.15
+1107 09:00:18.158  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 09:00:18.158  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 09:00:18.158  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 09:00:18.158  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 09:00:18.158  a_mesh.27 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.a_mesh.1.1b fd 96
+1107 09:00:18.158  a_mesh.29 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.a_mesh.1.1d fd 19
+1107 09:00:18.158  a_mesh.30 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.a_mesh.1.1e fd 89
+1107 09:00:18.158  a_mesh.31 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.a_mesh.1.1f fd 93
+1107 09:00:18.168! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:00:18.168! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:00:18.168! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:00:18.178! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:00:18.178! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:00:18.178! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:00:18.178! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:00:18.288! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:00:18.288! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:00:18.288  vxr-pp-oms_7500.4 mesh_csum not equal vxr-pp-oms_7500=[0c9+QIcFntuV6DnA+6Pw+g] hb[RY6O83/+oXo0CP+8HAABXQ] mesh pending queue is_empty=0
+1107 09:00:18.377!  repeated 1
+1107 09:00:18.377! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:00:18.377! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:00:18.377  vxr-pp-oms_7500.4 mesh_csum not equal vxr-pp-oms_7500=[0c9+QIcFntuV6DnA+6Pw+g] hb[RY6O83/+oXo0CP+8HAABXQ] mesh pending queue is_empty=0
+1107 09:00:20.847! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.4
+1107 09:00:20.937  vxr-pp-tsmqry_7500.3 old primary route is tport rvd.a_mesh.tport.5(d=100), using route rvd.a_mesh.tport.4(d=100)
+1107 09:00:21.680  d_mesh.16 connect plaintext 10.126.5.51:41686 ev_tcp_tport using rvd.d_mesh.10 fd 95
+1107 09:00:21.680  d_mesh.25 add_mesh_accept from 10.126.5.51:41686
+1107 09:00:21.680  b_mesh.6 connect plaintext 10.126.5.51:47888 ev_tcp_tport using rvd.b_mesh.6 fd 97
+1107 09:00:21.680  b_mesh.26 add_mesh_accept from 10.126.5.51:47888
+1107 09:00:21.680  a_mesh.1 connect plaintext 10.126.5.51:55768 ev_tcp_tport using rvd.a_mesh.1 fd 98
+1107 09:00:21.680  a_mesh.32 add_mesh_accept from 10.126.5.51:55768
+1107 09:00:21.680  c_mesh.11 connect plaintext 10.126.5.51:52288 ev_tcp_tport using rvd.c_mesh.b fd 100
+1107 09:00:21.680  c_mesh.28 add_mesh_accept from 10.126.5.51:52288
+1107 09:00:21.680  c_mesh.28 disconnected 10.126.5.51:52288 (Sock fd=100 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52288)
+1107 09:00:21.680  d_mesh.25 disconnected 10.126.5.51:41686 (Sock fd=95 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41686)
+1107 09:00:21.680  a_mesh.32 disconnected 10.126.5.51:55768 (Sock fd=98 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55768)
+1107 09:00:21.680  b_mesh.26 disconnected 10.126.5.51:47888 (Sock fd=97 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47888)
+1107 09:00:21.814  d_mesh.16 connect plaintext 10.126.5.51:41714 ev_tcp_tport using rvd.d_mesh.10 fd 95
+1107 09:00:21.814  d_mesh.25 add_mesh_accept from 10.126.5.51:41714
+1107 09:00:21.814  b_mesh.6 connect plaintext 10.126.5.51:47922 ev_tcp_tport using rvd.b_mesh.6 fd 97
+1107 09:00:21.814  b_mesh.26 add_mesh_accept from 10.126.5.51:47922
+1107 09:00:21.814  a_mesh.1 connect plaintext 10.126.5.51:55802 ev_tcp_tport using rvd.a_mesh.1 fd 98
+1107 09:00:21.814  a_mesh.32 add_mesh_accept from 10.126.5.51:55802
+1107 09:00:21.814  c_mesh.11 connect plaintext 10.126.5.51:52322 ev_tcp_tport using rvd.c_mesh.b fd 100
+1107 09:00:21.814  c_mesh.28 add_mesh_accept from 10.126.5.51:52322
+1107 09:00:21.814  c_mesh.28 disconnected 10.126.5.51:52322 (Sock fd=100 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52322)
+1107 09:00:21.814  d_mesh.25 disconnected 10.126.5.51:41714 (Sock fd=95 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41714)
+1107 09:00:21.814  a_mesh.32 disconnected 10.126.5.51:55802 (Sock fd=98 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55802)
+1107 09:00:21.814  b_mesh.26 disconnected 10.126.5.51:47922 (Sock fd=97 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47922)
+1107 09:00:21.886  vxr-pp-raicache01_7500.5 old primary route is tport rvd.a_mesh.tport.2(d=200), using route rvd.a_mesh.tport.4(d=200)
+1107 09:00:21.886  vxr-pp-raicache02_7500.6 old primary route is tport rvd.a_mesh.tport.2(d=1200), using route rvd.a_mesh.tport.4(d=1200)
+1107 09:00:21.944  d_mesh.16 connect plaintext 10.126.5.51:41750 ev_tcp_tport using rvd.d_mesh.10 fd 95
+1107 09:00:21.944  d_mesh.25 add_mesh_accept from 10.126.5.51:41750
+1107 09:00:21.944  b_mesh.6 connect plaintext 10.126.5.51:47954 ev_tcp_tport using rvd.b_mesh.6 fd 97
+1107 09:00:21.944  b_mesh.26 add_mesh_accept from 10.126.5.51:47954
+1107 09:00:21.944  a_mesh.1 connect plaintext 10.126.5.51:55834 ev_tcp_tport using rvd.a_mesh.1 fd 98
+1107 09:00:21.944  a_mesh.32 add_mesh_accept from 10.126.5.51:55834
+1107 09:00:21.944  c_mesh.11 connect plaintext 10.126.5.51:52354 ev_tcp_tport using rvd.c_mesh.b fd 100
+1107 09:00:21.944  c_mesh.28 add_mesh_accept from 10.126.5.51:52354
+1107 09:00:21.944  c_mesh.28 disconnected 10.126.5.51:52354 (Sock fd=100 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52354)
+1107 09:00:21.944  d_mesh.25 disconnected 10.126.5.51:41750 (Sock fd=95 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41750)
+1107 09:00:21.944  a_mesh.32 disconnected 10.126.5.51:55834 (Sock fd=98 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55834)
+1107 09:00:21.944  b_mesh.26 disconnected 10.126.5.51:47954 (Sock fd=97 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47954)
+1107 09:00:22.075  b_mesh.6 connect plaintext 10.126.5.51:47986 ev_tcp_tport using rvd.b_mesh.6 fd 95
+1107 09:00:22.075  b_mesh.26 add_mesh_accept from 10.126.5.51:47986
+1107 09:00:22.075  d_mesh.16 connect plaintext 10.126.5.51:41794 ev_tcp_tport using rvd.d_mesh.10 fd 97
+1107 09:00:22.075  d_mesh.25 add_mesh_accept from 10.126.5.51:41794
+1107 09:00:22.075  a_mesh.1 connect plaintext 10.126.5.51:55866 ev_tcp_tport using rvd.a_mesh.1 fd 98
+1107 09:00:22.075  a_mesh.32 add_mesh_accept from 10.126.5.51:55866
+1107 09:00:22.075  c_mesh.11 connect plaintext 10.126.5.51:52384 ev_tcp_tport using rvd.c_mesh.b fd 100
+1107 09:00:22.075  c_mesh.28 add_mesh_accept from 10.126.5.51:52384
+1107 09:00:22.075  c_mesh.28 disconnected 10.126.5.51:52384 (Sock fd=100 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.51:52384)
+1107 09:00:22.075  d_mesh.25 disconnected 10.126.5.51:41794 (Sock fd=97 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.51:41794)
+1107 09:00:22.075  a_mesh.32 disconnected 10.126.5.51:55866 (Sock fd=98 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.51:55866)
+1107 09:00:22.075  b_mesh.26 disconnected 10.126.5.51:47986 (Sock fd=95 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.51:47986)
+1107 09:00:22.205  d_mesh.16 connect plaintext 10.126.5.51:41814 ev_tcp_tport using rvd.d_mesh.10 fd 95
+1107 09:00:22.205  d_mesh.25 add_mesh_accept from 10.126.5.51:41814
+1107 09:00:22.205  b_mesh.6 connect plaintext 10.126.5.51:48018 ev_tcp_tport using rvd.b_mesh.6 fd 97
+1107 09:00:22.205  b_mesh.26 add_mesh_accept from 10.126.5.51:48018
+1107 09:00:22.205  a_mesh.1 connect plaintext 10.126.5.51:55898 ev_tcp_tport using rvd.a_mesh.1 fd 98
+1107 09:00:22.205  a_mesh.32 add_mesh_accept from 10.126.5.51:55898
+1107 09:00:22.205  c_mesh.11 connect plaintext 10.126.5.51:52418 ev_tcp_tport using rvd.c_mesh.b fd 100
+1107 09:00:22.205  c_mesh.28 add_mesh_accept from 10.126.5.51:52418
+1107 09:00:22.215  vxr-pp-qs_7500.7 I am oldest peer
+1107 09:00:22.215  vxr-pp-qs_7500.7 version matches 1.13.0-57
+1107 09:00:22.221  vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.a_mesh.tport.29, state new, count=1
+1107 09:00:22.221  vxr-pp-qs_7500.7 auth msg verified with service rvd public key
+1107 09:00:22.286  a_mesh.1 connect plaintext 10.126.5.51:55906 ev_tcp_tport using rvd.a_mesh.1 fd 101
+1107 09:00:22.286  a_mesh.33 add_mesh_accept from 10.126.5.51:55906
+1107 09:00:22.295! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:00:23.828  d_mesh.16 connect plaintext 10.126.5.51:41856 ev_tcp_tport using rvd.d_mesh.10 fd 103
+1107 09:00:23.828  d_mesh.34 add_mesh_accept from 10.126.5.51:41856
+1107 09:00:23.828  a_mesh.1 connect plaintext 10.126.5.51:55926 ev_tcp_tport using rvd.a_mesh.1 fd 105
+1107 09:00:23.828  a_mesh.35 add_mesh_accept from 10.126.5.51:55926
+1107 09:00:23.828  b_mesh.6 connect plaintext 10.126.5.51:48062 ev_tcp_tport using rvd.b_mesh.6 fd 107
+1107 09:00:23.828  b_mesh.36 add_mesh_accept from 10.126.5.51:48062
+1107 09:00:23.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:00:23.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:00:23.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:00:23.845!  repeated 1
+1107 09:00:23.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:00:23.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:00:27.867  vxr-pp-raicache01_7500.5 old primary route is tport rvd.a_mesh.tport.4(d=200), using route rvd.a_mesh.tport.2(d=200)
+1107 09:00:27.867  vxr-pp-raicache02_7500.6 old primary route is tport rvd.a_mesh.tport.4(d=1200), using route rvd.a_mesh.tport.2(d=1200)
+1107 09:00:27.997  vxr-pp-oms_7500.4 mesh_csum not equal vxr-pp-oms_7500=[IUjckRVmxaGqQvULfe7n6w] hb[tQksIu2d+gALojN3mk0WTA] mesh pending queue is_empty=1
+1107 09:00:27.998! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 09:00:27.998! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.19
+1107 09:00:27.998! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.14
+1107 09:00:27.998! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.9
+1107 09:00:27.998! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.4
+1107 09:00:28.010! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.10
+1107 09:00:28.010! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.15
+1107 09:00:28.010! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.5
+1107 09:00:28.010  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:00:28.010  a_mesh.37 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.25 fd 111
+1107 09:00:28.021! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.37
+1107 09:00:28.028! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:00:28.028! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:00:28.028! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:00:28.028! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:00:28.028! vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.37
+1107 09:00:28.137! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:00:28.137! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:00:28.137  vxr-pp-oms_7500.4 mesh_csum not equal vxr-pp-oms_7500=[IUjckRVmxaGqQvULfe7n6w] hb[tQksIu2d+gALojN3mk0WTA] mesh pending queue is_empty=0
+1107 09:00:28.227!  repeated 1
+1107 09:00:28.227! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:00:28.227! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:00:28.227  vxr-pp-oms_7500.4 mesh_csum not equal vxr-pp-oms_7500=[IUjckRVmxaGqQvULfe7n6w] hb[tQksIu2d+gALojN3mk0WTA] mesh pending queue is_empty=0
+1107 09:00:31.786  vxr-pp-strategy_7500.1 [lEHws/j7P6Gh4MZ856Pxpw] remove auth bye 
+1107 09:00:31.786  a_mesh.37 disconnected 10.126.5.52:6000 (Sock fd=111 state=0 name=rvd.a_mesh.tcp_conn.37 peer=10.126.5.52:6000)
+1107 09:00:31.786  a_mesh.29 disconnected 10.126.5.52:6003 (Sock fd=19 state=0 name=rvd.a_mesh.tcp_conn.29 peer=10.126.5.52:6003)
+1107 09:00:31.789  a_mesh.27 disconnected 10.126.5.52:6002 (Sock fd=96 state=0 name=rvd.a_mesh.tcp_conn.27 peer=10.126.5.52:6002)
+1107 09:00:31.789  c_mesh.14 disconnected 10.126.5.52:6002 (Sock fd=47 state=0 name=rvd.c_mesh.tcp_conn.14 peer=10.126.5.52:6002)
+1107 09:00:31.789  d_mesh.19 disconnected 10.126.5.52:6003 (Sock fd=51 state=0 name=rvd.d_mesh.tcp_conn.19 peer=10.126.5.52:6003)
+1107 09:00:31.789  b_mesh.9 disconnected 10.126.5.52:6001 (Sock fd=15 state=0 name=rvd.b_mesh.tcp_conn.9 peer=10.126.5.52:6001)
+1107 09:00:31.789  a_mesh.4 disconnected 10.126.5.52:6000 (Sock fd=31 state=0 name=rvd.a_mesh.tcp_conn.4 peer=10.126.5.52:6000)
+1107 09:00:31.826  d_mesh.16 connect plaintext 10.126.5.52:36362 ev_tcp_tport using rvd.d_mesh.10 fd 15
+1107 09:00:31.826  d_mesh.38 add_mesh_accept from 10.126.5.52:36362
+1107 09:00:31.826  a_mesh.1 connect plaintext 10.126.5.52:44862 ev_tcp_tport using rvd.a_mesh.1 fd 31
+1107 09:00:31.826  a_mesh.39 add_mesh_accept from 10.126.5.52:44862
+1107 09:00:31.826  b_mesh.6 connect plaintext 10.126.5.52:50736 ev_tcp_tport using rvd.b_mesh.6 fd 51
+1107 09:00:31.826  b_mesh.40 add_mesh_accept from 10.126.5.52:50736
+1107 09:00:31.836  c_mesh.11 connect plaintext 10.126.5.52:38098 ev_tcp_tport using rvd.c_mesh.b fd 110
+1107 09:00:31.836  c_mesh.41 add_mesh_accept from 10.126.5.52:38098
+1107 09:00:31.836  vxr-pp-strategy_7500.8 I am oldest peer
+1107 09:00:31.836  vxr-pp-strategy_7500.8 version matches 1.13.0-57
+1107 09:00:31.841  vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] add authentication from sync_result via vxr-pp-oms_7500 @ rvd.a_mesh.tport.2, state new, count=1
+1107 09:00:31.841  vxr-pp-strategy_7500.8 auth msg verified with service rvd public key
+1107 09:00:31.887  a_mesh.29 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.a_mesh.1.1d fd 116
+1107 09:00:31.887  a_mesh.27 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.a_mesh.1.1b fd 112
+1107 09:00:31.895! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:00:31.895! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:00:31.905!  repeated 1
+1107 09:00:31.905! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:00:32.144! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:00:33.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:00:33.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:00:33.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:00:36.776! rv_9500 (127.0.0.1:46308): msg loss events: 1
+1107 09:00:36.776!  event pub_restart: 1
+1107 09:00:36.860! rv_9500 (127.0.0.1:46306): msg loss events: 1
+1107 09:00:36.860!  event pub_restart: 1
+1107 09:00:37.847! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[3] [1000,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.20
+1107 09:00:37.857! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[2] [1000,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.15
+1107 09:00:37.857! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.5
+1107 09:00:37.857! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[1] [1000,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.10
+1107 09:00:37.857  vxr-pp-tsmqry_7500.3 mesh_csum not equal vxr-pp-tsmqry_7500=[+LvzKCNACTS+gLOC5FHxtA] hb[jFxxPZrzCsDchvngPMZtCA] mesh pending queue is_empty=1
+1107 09:00:37.877! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:00:37.877! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:00:37.987! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:00:37.987! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:00:38.077! vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] conflicting cost[0] [1000,1000,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:00:38.077! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:00:41.755! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:00:41.755! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:00:41.995! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:00:43.544! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:00:43.544! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:00:43.544! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:00:46.897  network converges 14.731 secs, 6 uids authenticated, adj_change
+1107 09:00:47.251  vxr-pp-tsmqry_7500.3 [Z1vS/tOIeUOVQtsokklAqA] remove auth bye 
+1107 09:00:47.251  a_mesh.24 disconnected 10.126.5.53:6001 (Sock error=6/ERR_READ_RESET, read connection reset fd=59 state=0 name=rvd.a_mesh.tcp_conn.24 peer=10.126.5.53:6001 errno=104/Connection reset by peer)
+1107 09:00:47.251  a_mesh.5 disconnected 10.126.5.53:6000 (Sock error=6/ERR_READ_RESET, read connection reset fd=39 state=0 name=rvd.a_mesh.tcp_conn.5 peer=10.126.5.53:6000 errno=104/Connection reset by peer)
+1107 09:00:47.251  a_mesh.31 disconnected 10.126.5.53:6003 (Sock error=6/ERR_READ_RESET, read connection reset fd=93 state=0 name=rvd.a_mesh.tcp_conn.31 peer=10.126.5.53:6003 errno=104/Connection reset by peer)
+1107 09:00:47.251  c_mesh.15 disconnected 10.126.5.53:6002 (Sock error=6/ERR_READ_RESET, read connection reset fd=35 state=0 name=rvd.c_mesh.tcp_conn.15 peer=10.126.5.53:6002 errno=104/Connection reset by peer)
+1107 09:00:47.251  d_mesh.20 disconnected 10.126.5.53:6003 (Sock error=6/ERR_READ_RESET, read connection reset fd=54 state=0 name=rvd.d_mesh.tcp_conn.20 peer=10.126.5.53:6003 errno=104/Connection reset by peer)
+1107 09:00:47.251  a_mesh.30 disconnected 10.126.5.53:6002 (Sock error=6/ERR_READ_RESET, read connection reset fd=89 state=0 name=rvd.a_mesh.tcp_conn.30 peer=10.126.5.53:6002 errno=104/Connection reset by peer)
+1107 09:00:47.251  b_mesh.10 disconnected 10.126.5.53:6001 (Sock error=6/ERR_READ_RESET, read connection reset fd=49 state=0 name=rvd.b_mesh.tcp_conn.10 peer=10.126.5.53:6001 errno=104/Connection reset by peer)
+1107 09:00:47.276  d_mesh.16 connect plaintext 10.126.5.53:51082 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:00:47.276  d_mesh.42 add_mesh_accept from 10.126.5.53:51082
+1107 09:00:47.276  b_mesh.6 connect plaintext 10.126.5.53:55906 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:00:47.276  b_mesh.43 add_mesh_accept from 10.126.5.53:55906
+1107 09:00:47.276  a_mesh.1 connect plaintext 10.126.5.53:56322 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:00:47.276  a_mesh.44 add_mesh_accept from 10.126.5.53:56322
+1107 09:00:47.278  c_mesh.11 connect plaintext 10.126.5.53:38594 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:00:47.278  c_mesh.45 add_mesh_accept from 10.126.5.53:38594
+1107 09:00:47.278  c_mesh.45 disconnected 10.126.5.53:38594 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38594)
+1107 09:00:47.278  d_mesh.42 disconnected 10.126.5.53:51082 (Sock error=6/ERR_READ_RESET, read connection reset fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51082 errno=104/Connection reset by peer)
+1107 09:00:47.278  b_mesh.43 disconnected 10.126.5.53:55906 (Sock error=6/ERR_READ_RESET, read connection reset fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:55906 errno=104/Connection reset by peer)
+1107 09:00:47.278  a_mesh.44 disconnected 10.126.5.53:56322 (Sock error=6/ERR_READ_RESET, read connection reset fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56322 errno=104/Connection reset by peer)
+1107 09:00:47.327  network converges 0.050 secs, 5 uids authenticated, add_tport
+1107 09:00:47.352  a_mesh.24 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.a_mesh.1.18 fd 118
+1107 09:00:47.352  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 35
+1107 09:00:47.352  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 114
+1107 09:00:47.352  a_mesh.31 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.a_mesh.1.1f fd 49
+1107 09:00:47.352  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 35
+1107 09:00:47.352  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 114
+1107 09:00:47.352  a_mesh.30 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.a_mesh.1.1e fd 93
+1107 09:00:47.408  d_mesh.16 connect plaintext 10.126.5.53:51114 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:00:47.408  d_mesh.42 add_mesh_accept from 10.126.5.53:51114
+1107 09:00:47.408  b_mesh.6 connect plaintext 10.126.5.53:55938 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:00:47.408  b_mesh.43 add_mesh_accept from 10.126.5.53:55938
+1107 09:00:47.408  a_mesh.1 connect plaintext 10.126.5.53:56356 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:00:47.408  a_mesh.44 add_mesh_accept from 10.126.5.53:56356
+1107 09:00:47.408  c_mesh.11 connect plaintext 10.126.5.53:38628 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:00:47.408  c_mesh.45 add_mesh_accept from 10.126.5.53:38628
+1107 09:00:47.425  vxr-pp-tsmqry_7500.9 I am oldest peer
+1107 09:00:47.425  vxr-pp-tsmqry_7500.9 version matches 1.13.0-57
+1107 09:00:47.425  vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.a_mesh.tport.29, state new, count=1
+1107 09:00:47.425  vxr-pp-tsmqry_7500.9 auth msg verified with service rvd public key
+1107 09:00:47.477  network converges 0.052 secs, 6 uids authenticated, adj_change
+1107 09:00:47.500  a_mesh.1 connect plaintext 10.126.5.53:56366 ev_tcp_tport using rvd.a_mesh.1 fd 114
+1107 09:00:47.500  a_mesh.46 add_mesh_accept from 10.126.5.53:56366
+1107 09:00:47.509! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:00:47.557! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:00:47.557! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:00:47.567! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:00:47.567! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:00:47.617  network converges 0.059 secs, 6 uids authenticated, add_mesh
+1107 09:00:47.677  network converges 0.051 secs, 6 uids authenticated, adj_change
+1107 09:00:47.747  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 09:00:47.837!  repeated 1
+1107 09:00:47.837! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:00:47.837! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:00:47.927! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:00:51.605! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:00:51.605! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:00:51.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:00:53.395! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:00:53.395! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:00:53.395! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:00:57.357! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:00:57.417! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:00:57.417! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:00:57.687! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:00:57.687! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:00:57.777! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:01:01.456! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:01:01.456! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:01:01.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:01:03.245! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:01:03.245! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:01:03.245! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:01:07.207! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:01:07.267! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:01:07.267! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:01:07.537! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:01:07.537! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:01:07.627! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:01:11.305! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:01:11.305! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:01:11.545! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:01:13.095! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:01:13.095! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:01:13.095! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:01:16.367! rv_9500 (127.0.0.1:46318): msg loss events: 1
+1107 09:01:16.367!  event pub_restart: 1
+1107 09:01:17.057! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:01:17.117! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:01:17.117! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:01:17.387! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:01:17.387! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:01:17.477! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:01:21.155! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:01:21.155! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:01:21.395! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:01:22.945! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:01:22.945! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:01:22.945! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:01:26.907! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:01:26.967! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:01:26.967! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:01:27.237! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:01:27.237! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:01:27.327! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:01:31.005! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:01:31.005! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:01:31.245! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:01:32.795! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:01:32.795! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:01:32.795! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:01:36.756! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:01:36.816! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:01:36.816! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:01:37.086! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:01:37.086! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:01:37.176! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:01:40.855! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:01:40.855! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:01:41.095! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:01:42.645! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:01:42.645! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:01:42.645! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:01:46.607! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:01:46.667! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:01:46.667! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:01:46.937! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:01:46.937! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:01:47.027! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:01:50.705! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:01:50.705! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:01:50.945! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:01:52.495! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:01:52.495! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:01:52.495! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:01:56.457! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:01:56.517! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:01:56.517! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:01:56.787! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:01:56.787! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:01:56.877! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:02:00.555! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:02:00.555! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:02:00.795! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:02:02.345! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:02:02.345! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:02:02.345! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:02:06.308! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:02:06.367! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:02:06.367! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:02:06.637! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:02:06.637! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:02:06.727! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:02:10.405! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:02:10.405! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:02:10.645! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:02:12.195! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:02:12.195! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:02:12.195! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:02:16.157! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:02:16.217! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:02:16.217! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:02:16.487! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:02:16.487! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:02:16.577! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:02:20.254! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:02:20.254! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:02:20.495! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:02:22.045! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:02:22.045! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:02:22.045! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:02:26.007! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:02:26.067! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:02:26.067! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:02:26.337! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:02:26.337! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:02:26.427! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:02:30.104! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:02:30.104! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:02:30.344! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:02:31.895! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:02:31.895! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:02:31.895! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:02:35.857! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:02:35.917! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.31
+1107 09:02:35.917! vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:02:36.187! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:02:36.187! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:02:36.277! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:02:39.955! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:02:39.955! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:02:40.195! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:02:41.744! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:02:41.744! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:02:41.744! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:02:42.256  vxr-pp-tsmqry_7500.9 [1qx3CxHjqleKOVkzXQBkIw] remove auth bye 
+1107 09:02:42.256  a_mesh.24 disconnected 10.126.5.53:6001 (Sock error=6/ERR_READ_RESET, read connection reset fd=124 state=0 name=rvd.a_mesh.tcp_conn.24 peer=10.126.5.53:6001 errno=104/Connection reset by peer)
+1107 09:02:42.256  a_mesh.31 disconnected 10.126.5.53:6003 (Sock fd=117 state=0 name=rvd.a_mesh.tcp_conn.31 peer=10.126.5.53:6003)
+1107 09:02:42.256  a_mesh.46 disconnected 10.126.5.53:56366 (Sock fd=114 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56366)
+1107 09:02:42.256  d_mesh.42 disconnected 10.126.5.53:51114 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51114)
+1107 09:02:42.256  a_mesh.30 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.a_mesh.1.1e fd 117
+1107 09:02:42.256  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 114
+1107 09:02:42.258  c_mesh.45 disconnected 10.126.5.53:38628 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38628)
+1107 09:02:42.258  a_mesh.44 disconnected 10.126.5.53:56356 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56356)
+1107 09:02:42.258  b_mesh.43 disconnected 10.126.5.53:55938 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:55938)
+1107 09:02:42.258  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 93
+1107 09:02:42.258  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 35
+1107 09:02:42.258  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 59
+1107 09:02:42.282  d_mesh.16 connect plaintext 10.126.5.53:51160 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:42.282  d_mesh.42 add_mesh_accept from 10.126.5.53:51160
+1107 09:02:42.282  c_mesh.11 connect plaintext 10.126.5.53:38650 ev_tcp_tport using rvd.c_mesh.b fd 49
+1107 09:02:42.282  c_mesh.45 add_mesh_accept from 10.126.5.53:38650
+1107 09:02:42.282  b_mesh.6 connect plaintext 10.126.5.53:55984 ev_tcp_tport using rvd.b_mesh.6 fd 59
+1107 09:02:42.282  b_mesh.43 add_mesh_accept from 10.126.5.53:55984
+1107 09:02:42.282  a_mesh.1 connect plaintext 10.126.5.53:56402 ev_tcp_tport using rvd.a_mesh.1 fd 93
+1107 09:02:42.282  a_mesh.44 add_mesh_accept from 10.126.5.53:56402
+1107 09:02:42.282  c_mesh.45 disconnected 10.126.5.53:38650 (Sock fd=49 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38650)
+1107 09:02:42.282  d_mesh.42 disconnected 10.126.5.53:51160 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51160)
+1107 09:02:42.282  a_mesh.44 disconnected 10.126.5.53:56402 (Sock fd=93 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56402)
+1107 09:02:42.282  b_mesh.43 disconnected 10.126.5.53:55984 (Sock fd=59 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:55984)
+1107 09:02:42.297  network converges 0.045 secs, 5 uids authenticated, adj_change
+1107 09:02:42.353  a_mesh.24 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.a_mesh.1.18 fd 59
+1107 09:02:42.353  a_mesh.31 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.a_mesh.1.1f fd 35
+1107 09:02:42.412  d_mesh.16 connect plaintext 10.126.5.53:51192 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:42.412  d_mesh.42 add_mesh_accept from 10.126.5.53:51192
+1107 09:02:42.412  b_mesh.6 connect plaintext 10.126.5.53:56016 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:42.412  b_mesh.43 add_mesh_accept from 10.126.5.53:56016
+1107 09:02:42.412  a_mesh.1 connect plaintext 10.126.5.53:56434 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:42.412  a_mesh.44 add_mesh_accept from 10.126.5.53:56434
+1107 09:02:42.412  c_mesh.11 connect plaintext 10.126.5.53:38706 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:42.412  c_mesh.45 add_mesh_accept from 10.126.5.53:38706
+1107 09:02:42.412  c_mesh.45 disconnected 10.126.5.53:38706 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38706)
+1107 09:02:42.412  d_mesh.42 disconnected 10.126.5.53:51192 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51192)
+1107 09:02:42.412  a_mesh.44 disconnected 10.126.5.53:56434 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56434)
+1107 09:02:42.412  b_mesh.43 disconnected 10.126.5.53:56016 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56016)
+1107 09:02:42.544  d_mesh.16 connect plaintext 10.126.5.53:51224 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:42.544  d_mesh.42 add_mesh_accept from 10.126.5.53:51224
+1107 09:02:42.544  b_mesh.6 connect plaintext 10.126.5.53:56048 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:42.544  b_mesh.43 add_mesh_accept from 10.126.5.53:56048
+1107 09:02:42.544  a_mesh.1 connect plaintext 10.126.5.53:56464 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:42.544  a_mesh.44 add_mesh_accept from 10.126.5.53:56464
+1107 09:02:42.544  c_mesh.11 connect plaintext 10.126.5.53:38736 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:42.544  c_mesh.45 add_mesh_accept from 10.126.5.53:38736
+1107 09:02:42.544  c_mesh.45 disconnected 10.126.5.53:38736 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38736)
+1107 09:02:42.544  d_mesh.42 disconnected 10.126.5.53:51224 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51224)
+1107 09:02:42.544  a_mesh.44 disconnected 10.126.5.53:56464 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56464)
+1107 09:02:42.544  b_mesh.43 disconnected 10.126.5.53:56048 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56048)
+1107 09:02:42.673  d_mesh.16 connect plaintext 10.126.5.53:51256 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:42.673  d_mesh.42 add_mesh_accept from 10.126.5.53:51256
+1107 09:02:42.673  b_mesh.6 connect plaintext 10.126.5.53:56080 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:42.673  b_mesh.43 add_mesh_accept from 10.126.5.53:56080
+1107 09:02:42.673  a_mesh.1 connect plaintext 10.126.5.53:56496 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:42.673  a_mesh.44 add_mesh_accept from 10.126.5.53:56496
+1107 09:02:42.673  c_mesh.11 connect plaintext 10.126.5.53:38768 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:42.673  c_mesh.45 add_mesh_accept from 10.126.5.53:38768
+1107 09:02:42.673  c_mesh.45 disconnected 10.126.5.53:38768 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38768)
+1107 09:02:42.673  d_mesh.42 disconnected 10.126.5.53:51256 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51256)
+1107 09:02:42.673  a_mesh.44 disconnected 10.126.5.53:56496 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56496)
+1107 09:02:42.673  b_mesh.43 disconnected 10.126.5.53:56080 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56080)
+1107 09:02:42.804  d_mesh.16 connect plaintext 10.126.5.53:51288 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:42.804  d_mesh.42 add_mesh_accept from 10.126.5.53:51288
+1107 09:02:42.804  b_mesh.6 connect plaintext 10.126.5.53:56122 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:42.804  b_mesh.43 add_mesh_accept from 10.126.5.53:56122
+1107 09:02:42.804  a_mesh.1 connect plaintext 10.126.5.53:56528 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:42.804  a_mesh.44 add_mesh_accept from 10.126.5.53:56528
+1107 09:02:42.804  c_mesh.11 connect plaintext 10.126.5.53:38800 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:42.804  c_mesh.45 add_mesh_accept from 10.126.5.53:38800
+1107 09:02:42.804  c_mesh.45 disconnected 10.126.5.53:38800 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38800)
+1107 09:02:42.804  d_mesh.42 disconnected 10.126.5.53:51288 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51288)
+1107 09:02:42.804  a_mesh.44 disconnected 10.126.5.53:56528 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56528)
+1107 09:02:42.804  b_mesh.43 disconnected 10.126.5.53:56122 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56122)
+1107 09:02:46.037! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:02:46.037! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:02:46.127! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:02:49.805! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:02:49.805! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:02:50.045! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:02:51.594! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:02:51.594! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:02:51.594! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:02:55.887! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:02:55.887! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:02:55.977! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:02:56.562  d_mesh.16 connect plaintext 10.126.5.53:51320 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:56.562  d_mesh.42 add_mesh_accept from 10.126.5.53:51320
+1107 09:02:56.562  b_mesh.6 connect plaintext 10.126.5.53:56144 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:56.562  b_mesh.43 add_mesh_accept from 10.126.5.53:56144
+1107 09:02:56.562  a_mesh.1 connect plaintext 10.126.5.53:56558 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:56.562  a_mesh.44 add_mesh_accept from 10.126.5.53:56558
+1107 09:02:56.562  c_mesh.11 connect plaintext 10.126.5.53:38834 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:56.562  c_mesh.45 add_mesh_accept from 10.126.5.53:38834
+1107 09:02:56.562  c_mesh.45 disconnected 10.126.5.53:38834 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38834)
+1107 09:02:56.562  d_mesh.42 disconnected 10.126.5.53:51320 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51320)
+1107 09:02:56.562  a_mesh.44 disconnected 10.126.5.53:56558 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56558)
+1107 09:02:56.562  b_mesh.43 disconnected 10.126.5.53:56144 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56144)
+1107 09:02:56.693  d_mesh.16 connect plaintext 10.126.5.53:51352 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:56.693  d_mesh.42 add_mesh_accept from 10.126.5.53:51352
+1107 09:02:56.693  b_mesh.6 connect plaintext 10.126.5.53:56176 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:56.693  b_mesh.43 add_mesh_accept from 10.126.5.53:56176
+1107 09:02:56.693  a_mesh.1 connect plaintext 10.126.5.53:56594 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:56.693  a_mesh.44 add_mesh_accept from 10.126.5.53:56594
+1107 09:02:56.693  c_mesh.11 connect plaintext 10.126.5.53:38866 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:56.693  c_mesh.45 add_mesh_accept from 10.126.5.53:38866
+1107 09:02:56.693  c_mesh.45 disconnected 10.126.5.53:38866 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38866)
+1107 09:02:56.693  d_mesh.42 disconnected 10.126.5.53:51352 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51352)
+1107 09:02:56.693  a_mesh.44 disconnected 10.126.5.53:56594 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56594)
+1107 09:02:56.693  b_mesh.43 disconnected 10.126.5.53:56176 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56176)
+1107 09:02:56.823  d_mesh.16 connect plaintext 10.126.5.53:51384 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:56.823  d_mesh.42 add_mesh_accept from 10.126.5.53:51384
+1107 09:02:56.823  b_mesh.6 connect plaintext 10.126.5.53:56208 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:56.823  b_mesh.43 add_mesh_accept from 10.126.5.53:56208
+1107 09:02:56.823  a_mesh.1 connect plaintext 10.126.5.53:56624 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:56.823  a_mesh.44 add_mesh_accept from 10.126.5.53:56624
+1107 09:02:56.823  c_mesh.11 connect plaintext 10.126.5.53:38896 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:56.823  c_mesh.45 add_mesh_accept from 10.126.5.53:38896
+1107 09:02:56.823  c_mesh.45 disconnected 10.126.5.53:38896 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38896)
+1107 09:02:56.823  d_mesh.42 disconnected 10.126.5.53:51384 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51384)
+1107 09:02:56.823  a_mesh.44 disconnected 10.126.5.53:56624 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56624)
+1107 09:02:56.823  b_mesh.43 disconnected 10.126.5.53:56208 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56208)
+1107 09:02:56.953  d_mesh.16 connect plaintext 10.126.5.53:51414 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:56.953  d_mesh.42 add_mesh_accept from 10.126.5.53:51414
+1107 09:02:56.953  c_mesh.11 connect plaintext 10.126.5.53:38910 ev_tcp_tport using rvd.c_mesh.b fd 49
+1107 09:02:56.953  c_mesh.45 add_mesh_accept from 10.126.5.53:38910
+1107 09:02:56.953  b_mesh.6 connect plaintext 10.126.5.53:56248 ev_tcp_tport using rvd.b_mesh.6 fd 59
+1107 09:02:56.953  b_mesh.43 add_mesh_accept from 10.126.5.53:56248
+1107 09:02:56.953  a_mesh.1 connect plaintext 10.126.5.53:56654 ev_tcp_tport using rvd.a_mesh.1 fd 93
+1107 09:02:56.953  a_mesh.44 add_mesh_accept from 10.126.5.53:56654
+1107 09:02:56.953  c_mesh.45 disconnected 10.126.5.53:38910 (Sock fd=49 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38910)
+1107 09:02:56.953  d_mesh.42 disconnected 10.126.5.53:51414 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51414)
+1107 09:02:56.953  a_mesh.44 disconnected 10.126.5.53:56654 (Sock fd=93 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56654)
+1107 09:02:56.953  b_mesh.43 disconnected 10.126.5.53:56248 (Sock fd=59 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56248)
+1107 09:02:57.082  d_mesh.16 connect plaintext 10.126.5.53:51446 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:02:57.082  d_mesh.42 add_mesh_accept from 10.126.5.53:51446
+1107 09:02:57.082  b_mesh.6 connect plaintext 10.126.5.53:56270 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:02:57.082  b_mesh.43 add_mesh_accept from 10.126.5.53:56270
+1107 09:02:57.082  a_mesh.1 connect plaintext 10.126.5.53:56688 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:02:57.082  a_mesh.44 add_mesh_accept from 10.126.5.53:56688
+1107 09:02:57.082  c_mesh.11 connect plaintext 10.126.5.53:38960 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:02:57.082  c_mesh.45 add_mesh_accept from 10.126.5.53:38960
+1107 09:02:57.082  c_mesh.45 disconnected 10.126.5.53:38960 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38960)
+1107 09:02:57.082  d_mesh.42 disconnected 10.126.5.53:51446 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51446)
+1107 09:02:57.082  a_mesh.44 disconnected 10.126.5.53:56688 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56688)
+1107 09:02:57.082  b_mesh.43 disconnected 10.126.5.53:56270 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56270)
+1107 09:02:59.655! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:02:59.655! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:02:59.895! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:03:01.445! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:03:01.445! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:03:01.445! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:03:05.737! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:03:05.737! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:03:05.827! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:03:09.505! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:03:09.505! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:03:09.745! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:03:11.295! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:03:11.295! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:03:11.295! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:03:15.587! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:03:15.587! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:03:15.677! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:03:19.355! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:03:19.355! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:03:19.595! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:03:20.799  d_mesh.16 connect plaintext 10.126.5.53:51478 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:03:20.799  d_mesh.42 add_mesh_accept from 10.126.5.53:51478
+1107 09:03:20.799  b_mesh.6 connect plaintext 10.126.5.53:56302 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:03:20.799  b_mesh.43 add_mesh_accept from 10.126.5.53:56302
+1107 09:03:20.799  a_mesh.1 connect plaintext 10.126.5.53:56720 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:03:20.799  a_mesh.44 add_mesh_accept from 10.126.5.53:56720
+1107 09:03:20.799  c_mesh.11 connect plaintext 10.126.5.53:38992 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:03:20.799  c_mesh.45 add_mesh_accept from 10.126.5.53:38992
+1107 09:03:20.799  c_mesh.45 disconnected 10.126.5.53:38992 (Sock fd=93 state=0 name=rvd.c_mesh.tcp_acc.11 peer=10.126.5.53:38992)
+1107 09:03:20.799  d_mesh.42 disconnected 10.126.5.53:51478 (Sock fd=35 state=0 name=rvd.d_mesh.tcp_acc.16 peer=10.126.5.53:51478)
+1107 09:03:20.799  a_mesh.44 disconnected 10.126.5.53:56720 (Sock fd=59 state=0 name=rvd.a_mesh.tcp_acc.1 peer=10.126.5.53:56720)
+1107 09:03:20.799  b_mesh.43 disconnected 10.126.5.53:56302 (Sock fd=49 state=0 name=rvd.b_mesh.tcp_acc.6 peer=10.126.5.53:56302)
+1107 09:03:20.929  d_mesh.16 connect plaintext 10.126.5.53:51510 ev_tcp_tport using rvd.d_mesh.10 fd 35
+1107 09:03:20.929  d_mesh.42 add_mesh_accept from 10.126.5.53:51510
+1107 09:03:20.929  b_mesh.6 connect plaintext 10.126.5.53:56334 ev_tcp_tport using rvd.b_mesh.6 fd 49
+1107 09:03:20.929  b_mesh.43 add_mesh_accept from 10.126.5.53:56334
+1107 09:03:20.929  a_mesh.1 connect plaintext 10.126.5.53:56750 ev_tcp_tport using rvd.a_mesh.1 fd 59
+1107 09:03:20.929  a_mesh.44 add_mesh_accept from 10.126.5.53:56750
+1107 09:03:20.929  c_mesh.11 connect plaintext 10.126.5.53:39022 ev_tcp_tport using rvd.c_mesh.b fd 93
+1107 09:03:20.929  c_mesh.45 add_mesh_accept from 10.126.5.53:39022
+1107 09:03:20.944  vxr-pp-tsmqry_7500.10 I am oldest peer
+1107 09:03:20.944  vxr-pp-tsmqry_7500.10 version matches 1.13.0-57
+1107 09:03:20.944  vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] add authentication from sync_result via vxr-pp-strategy_7500 @ rvd.a_mesh.tport.29, state new, count=1
+1107 09:03:20.944  vxr-pp-tsmqry_7500.10 auth msg verified with service rvd public key
+1107 09:03:20.997  network converges 0.052 secs, 6 uids authenticated, adj_change
+1107 09:03:21.012  a_mesh.1 connect plaintext 10.126.5.53:56762 ev_tcp_tport using rvd.a_mesh.1 fd 114
+1107 09:03:21.012  a_mesh.46 add_mesh_accept from 10.126.5.53:56762
+1107 09:03:21.021! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:03:21.077   repeated 1
+1107 09:03:21.077  network converges 0.056 secs, 6 uids authenticated, add_mesh
+1107 09:03:21.145! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:03:21.145! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:03:21.145! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:03:21.147  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 09:03:21.207  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 09:03:24.878! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:03:24.937  network converges 0.058 secs, 6 uids authenticated, add_mesh
+1107 09:03:24.968! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:03:25.027  network converges 0.058 secs, 6 uids authenticated, add_mesh
+1107 09:03:25.087  network converges 0.051 secs, 6 uids authenticated, adj_change
+1107 09:03:25.157  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 09:03:25.217  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 09:03:25.437! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:03:25.437! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:03:25.527! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:03:29.205! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:03:29.205! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:03:29.445! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:03:30.878! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:03:30.995! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:03:30.995! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:03:30.995! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:03:34.727! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:03:34.817! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:03:35.286! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:03:35.286! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:03:35.376! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:03:39.055! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:03:39.055! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:03:39.295! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:03:40.728! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:03:40.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:03:40.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:03:40.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:03:44.578! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:03:44.668! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:03:45.136! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:03:45.136! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:03:45.226! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:03:48.905! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:03:48.905! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:03:49.145! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:03:50.578! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:03:50.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:03:50.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:03:50.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:03:54.428! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:03:54.518! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:03:54.987! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:03:54.987! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:03:55.077! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:03:58.755! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:03:58.755! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:03:58.995! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:04:00.428! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:04:00.545! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:04:00.545! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:04:00.545! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:04:04.278! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:04:04.368! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:04:04.837! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:04:04.837! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:04:04.927! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:04:08.605! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:04:08.605! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:04:08.845! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:04:10.278! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:04:10.395! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:04:10.395! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:04:10.395! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:04:14.128! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:04:14.218! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:04:14.687! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:04:14.687! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:04:14.777! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:04:18.455! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:04:18.455! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:04:18.695! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:04:20.128! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:04:20.245! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:04:20.245! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:04:20.245! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:04:23.978! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:04:24.068! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:04:24.537! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:04:24.537! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:04:24.627! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:04:28.304! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:04:28.304! vxr-pp-strategy_7500.8 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:04:28.544! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.33
+1107 09:04:29.978! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.46
+1107 09:04:30.095! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.35
+1107 09:04:30.095! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.36
+1107 09:04:30.095! vxr-pp-qs_7500.7 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.34
+1107 09:04:33.828! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.30
+1107 09:04:33.918! vxr-pp-tsmqry_7500.10 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,100,1000,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.24
+1107 09:04:34.387! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.22
+1107 09:04:34.387! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:04:34.477! vxr-pp-oms_7500.4 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+=--=--=--=
+Mon Nov  7 09:04:36 2022
+UTC offset: 1:00 (CEST)
+PID: 662473, ms_server version: 1.13.0-57
+=--=--=--=
+1107 09:04:36.453! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 09:04:36.453  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 09:04:36.453  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 09:04:36.453  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 09:04:36.453  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 09:04:36.453  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:04:36.453  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 09:04:36.453  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 09:04:36.453  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 09:04:36.453  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 09:04:36.453  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 09:04:36.453  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 09:04:36.453  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 09:04:36.453  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 09:04:36.453  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 09:04:36.453  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 09:04:36.453  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 09:04:36.453  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 09:04:36.453  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 09:04:36.453  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 09:04:36.453  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 09:04:36.453  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 09:04:36.453  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 09:04:36.453  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 09:04:36.453  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 09:04:36.453  ipc.0 rvd listening on 0.0.0.0:7500
+1107 09:04:36.453  web: web start listening on 0.0.0.0:8080
+1107 09:04:36.453  service rvd key pair loaded
+1107 09:04:36.453  transient user vxr-pp-procs_7500 created
+1107 09:04:36.453  session vxr-pp-procs_7500.rvd[RsVOoE+u/qlgZSJmUyWMxg] started, start time 1667808276.447582124
+1107 09:04:36.453  running background deamon PID: 662475
+1107 09:04:36.453  pub_window_size: 4194304 bytes
+1107 09:04:36.453  sub_window_size: 4194304 bytes
+1107 09:04:36.453  pub_window_time: 10 secs
+1107 09:04:36.453  sub_window_time: 10 secs
+1107 09:04:36.453  heartbeat: 10 secs
+1107 09:04:36.453  reliability: 15 secs
+1107 09:04:36.453  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 09:04:36.453  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 09:04:36.453  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 49
+1107 09:04:36.453  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 35
+1107 09:04:36.453  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 19
+1107 09:04:36.453  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 27
+1107 09:04:36.453  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 47
+1107 09:04:36.453  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 39
+1107 09:04:36.453  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 21
+1107 09:04:36.453  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 25
+1107 09:04:36.453  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 09:04:36.453  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 09:04:36.453  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 17
+1107 09:04:36.453  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 31
+1107 09:04:36.453  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 41
+1107 09:04:36.453  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 37
+=--=--=--=
+Mon Nov  7 09:04:36 2022
+UTC offset: 1:00 (CEST)
+PID: 662485, ms_server version: 1.13.0-57
+=--=--=--=
+1107 09:04:36.584! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 09:04:36.584  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 09:04:36.584  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 09:04:36.584  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 09:04:36.584  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 09:04:36.584  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:04:36.584  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 09:04:36.584  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 09:04:36.584  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 09:04:36.584  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 09:04:36.584  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 09:04:36.584  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 09:04:36.584  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 09:04:36.584  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 09:04:36.584  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 09:04:36.584  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 09:04:36.584  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 09:04:36.584  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 09:04:36.584  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 09:04:36.584  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 09:04:36.584  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 09:04:36.584  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 09:04:36.584  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 09:04:36.584  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 09:04:36.584  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 09:04:36.584  ipc.0 rvd listening on 0.0.0.0:7500
+1107 09:04:36.584  web: web start listening on 0.0.0.0:8080
+1107 09:04:36.584  service rvd key pair loaded
+1107 09:04:36.584  transient user vxr-pp-procs_7500 created
+1107 09:04:36.584  session vxr-pp-procs_7500.rvd[AHtBrpJFwfuR6ogYsw85Kw] started, start time 1667808276.578593766
+1107 09:04:36.584  running background deamon PID: 662487
+1107 09:04:36.584  pub_window_size: 4194304 bytes
+1107 09:04:36.584  sub_window_size: 4194304 bytes
+1107 09:04:36.584  pub_window_time: 10 secs
+1107 09:04:36.584  sub_window_time: 10 secs
+1107 09:04:36.584  heartbeat: 10 secs
+1107 09:04:36.584  reliability: 15 secs
+1107 09:04:36.584  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 09:04:36.584  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 09:04:36.584  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 49
+1107 09:04:36.584  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 47
+1107 09:04:36.584  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 35
+1107 09:04:36.584  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 19
+1107 09:04:36.584  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 27
+1107 09:04:36.584  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 39
+1107 09:04:36.584  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 21
+1107 09:04:36.584  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 25
+1107 09:04:36.584  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 09:04:36.584  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 09:04:36.584  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 17
+1107 09:04:36.584  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 31
+1107 09:04:36.584  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 41
+1107 09:04:36.584  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 37
+=--=--=--=
+Mon Nov  7 09:04:36 2022
+UTC offset: 1:00 (CEST)
+PID: 662497, ms_server version: 1.13.0-57
+=--=--=--=
+1107 09:04:36.715! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 09:04:36.715  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 09:04:36.715  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 09:04:36.715  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 09:04:36.715  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 09:04:36.715  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:04:36.715  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 09:04:36.715  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 09:04:36.715  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 09:04:36.715  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 09:04:36.715  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 09:04:36.715  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 09:04:36.715  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 09:04:36.715  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 09:04:36.715  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 09:04:36.715  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 09:04:36.715  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 09:04:36.715  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 09:04:36.715  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 09:04:36.715  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 09:04:36.715  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 09:04:36.715  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 09:04:36.715  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 09:04:36.715  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 09:04:36.715  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 09:04:36.715  ipc.0 rvd listening on 0.0.0.0:7500
+1107 09:04:36.715  web: web start listening on 0.0.0.0:8080
+1107 09:04:36.715  service rvd key pair loaded
+1107 09:04:36.715  transient user vxr-pp-procs_7500 created
+1107 09:04:36.715  session vxr-pp-procs_7500.rvd[mdpgpwedc84ri1eoPQj9YQ] started, start time 1667808276.709176213
+1107 09:04:36.715  running background deamon PID: 662499
+1107 09:04:36.715  pub_window_size: 4194304 bytes
+1107 09:04:36.715  sub_window_size: 4194304 bytes
+1107 09:04:36.715  pub_window_time: 10 secs
+1107 09:04:36.715  sub_window_time: 10 secs
+1107 09:04:36.715  heartbeat: 10 secs
+1107 09:04:36.715  reliability: 15 secs
+1107 09:04:36.715  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 09:04:36.715  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 09:04:36.715  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 49
+1107 09:04:36.715  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 35
+1107 09:04:36.715  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 19
+1107 09:04:36.715  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 27
+1107 09:04:36.715  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 47
+1107 09:04:36.715  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 39
+1107 09:04:36.715  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 21
+1107 09:04:36.715  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 25
+1107 09:04:36.715  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 09:04:36.715  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 09:04:36.715  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 17
+1107 09:04:36.715  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 31
+1107 09:04:36.715  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 45
+1107 09:04:36.715  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 37
+=--=--=--=
+Mon Nov  7 09:04:36 2022
+UTC offset: 1:00 (CEST)
+PID: 662509, ms_server version: 1.13.0-57
+=--=--=--=
+1107 09:04:36.845! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 09:04:36.845  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 09:04:36.845  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 09:04:36.845  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 09:04:36.845  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 09:04:36.845  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:04:36.845  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 09:04:36.845  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 09:04:36.845  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 09:04:36.845  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 09:04:36.845  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 09:04:36.845  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 09:04:36.845  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 09:04:36.845  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 09:04:36.845  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 09:04:36.845  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 09:04:36.845  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 09:04:36.845  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 09:04:36.845  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 09:04:36.845  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 09:04:36.845  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 09:04:36.845  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 09:04:36.845  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 09:04:36.845  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 09:04:36.845  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 09:04:36.845  ipc.0 rvd listening on 0.0.0.0:7500
+1107 09:04:36.845  web: web start listening on 0.0.0.0:8080
+1107 09:04:36.845  service rvd key pair loaded
+1107 09:04:36.845  transient user vxr-pp-procs_7500 created
+1107 09:04:36.845  session vxr-pp-procs_7500.rvd[Pg5BZBjGaZb7rcyD13GjOA] started, start time 1667808276.839643836
+1107 09:04:36.845  running background deamon PID: 662511
+1107 09:04:36.845  pub_window_size: 4194304 bytes
+1107 09:04:36.845  sub_window_size: 4194304 bytes
+1107 09:04:36.845  pub_window_time: 10 secs
+1107 09:04:36.845  sub_window_time: 10 secs
+1107 09:04:36.845  heartbeat: 10 secs
+1107 09:04:36.845  reliability: 15 secs
+1107 09:04:36.845  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 09:04:36.845  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 09:04:36.845  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 49
+1107 09:04:36.845  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 47
+1107 09:04:36.845  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 35
+1107 09:04:36.845  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 19
+1107 09:04:36.845  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 27
+1107 09:04:36.845  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 39
+1107 09:04:36.845  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 17
+1107 09:04:36.845  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 25
+1107 09:04:36.845  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 09:04:36.845  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 29
+1107 09:04:36.845  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 21
+1107 09:04:36.845  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 31
+1107 09:04:36.845  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 41
+1107 09:04:36.845  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 37
+=--=--=--=
+Mon Nov  7 09:04:36 2022
+UTC offset: 1:00 (CEST)
+PID: 662521, ms_server version: 1.13.0-57
+=--=--=--=
+1107 09:04:36.978! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 09:04:36.978  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 09:04:36.978  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 09:04:36.978  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 09:04:36.978  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 09:04:36.978  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:04:36.978  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 09:04:36.978  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 09:04:36.978  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 09:04:36.978  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 09:04:36.978  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 09:04:36.978  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 09:04:36.978  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 09:04:36.978  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 09:04:36.978  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 09:04:36.978  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 09:04:36.978  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 09:04:36.978  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 09:04:36.978  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 09:04:36.978  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 09:04:36.978  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 09:04:36.978  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 09:04:36.978  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 09:04:36.978  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 09:04:36.978  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 09:04:36.978  ipc.0 rvd listening on 0.0.0.0:7500
+1107 09:04:36.978  web: web start listening on 0.0.0.0:8080
+1107 09:04:36.978  service rvd key pair loaded
+1107 09:04:36.978  transient user vxr-pp-procs_7500 created
+1107 09:04:36.978  session vxr-pp-procs_7500.rvd[aklFDIY3KcbfS7ChiOCymQ] started, start time 1667808276.972189598
+1107 09:04:36.978  running background deamon PID: 662523
+1107 09:04:36.978  pub_window_size: 4194304 bytes
+1107 09:04:36.978  sub_window_size: 4194304 bytes
+1107 09:04:36.978  pub_window_time: 10 secs
+1107 09:04:36.978  sub_window_time: 10 secs
+1107 09:04:36.978  heartbeat: 10 secs
+1107 09:04:36.978  reliability: 15 secs
+1107 09:04:36.978  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 09:04:36.978  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 09:04:36.978  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 49
+1107 09:04:36.978  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 35
+1107 09:04:36.978  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 19
+1107 09:04:36.978  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 25
+1107 09:04:36.978  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 47
+1107 09:04:36.978  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 37
+1107 09:04:36.978  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 21
+1107 09:04:36.978  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 27
+1107 09:04:36.978  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 09:04:36.978  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 09:04:36.978  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 17
+1107 09:04:36.978  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 31
+1107 09:04:36.978  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 41
+1107 09:04:36.978  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 39
+=--=--=--=
+Mon Nov  7 09:04:51 2022
+UTC offset: 1:00 (CEST)
+PID: 662561, ms_server version: 1.13.0-57
+=--=--=--=
+1107 09:04:51.849! unable to mlock() memory, ulimit -l (12/Cannot allocate memory)
+1107 09:04:51.857  a_mesh.1 a_mesh listening on 0.0.0.0:6000
+1107 09:04:51.857  a_mesh.1 not connecting to self (tcp://vxr-pp-procs:6000)
+1107 09:04:51.857  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 09:04:51.857  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 09:04:51.857  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:04:51.857  a_mesh.1 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 09:04:51.857  b_mesh.6 b_mesh listening on 0.0.0.0:6001
+1107 09:04:51.857  b_mesh.6 not connecting to self (tcp://vxr-pp-procs:6001)
+1107 09:04:51.857  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6001 (27829a34)
+1107 09:04:51.857  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6001 (2ce9a775)
+1107 09:04:51.857  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6001 (c7d73fc)
+1107 09:04:51.857  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 09:04:51.857  c_mesh.11 c_mesh listening on 0.0.0.0:6002
+1107 09:04:51.857  c_mesh.11 not connecting to self (tcp://vxr-pp-procs:6002)
+1107 09:04:51.857  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6002 (34d269c0)
+1107 09:04:51.857  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 09:04:51.857  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6002 (1f2d8008)
+1107 09:04:51.857  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6002 (ab39f4be)
+1107 09:04:51.857  d_mesh.16 d_mesh listening on 0.0.0.0:6003
+1107 09:04:51.857  d_mesh.16 not connecting to self (tcp://vxr-pp-procs:6003)
+1107 09:04:51.857  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6003 (c6b9eac3)
+1107 09:04:51.857  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6003 (cdd2d782)
+1107 09:04:51.857  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6003 (ed46030b)
+1107 09:04:51.857  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6003 (595277bd)
+1107 09:04:51.857  ipc.0 rvd listening on 0.0.0.0:7500
+1107 09:04:51.857  web: web start listening on 0.0.0.0:8080
+1107 09:04:51.857  service rvd key pair loaded
+1107 09:04:51.857  transient user vxr-pp-procs_7500 created
+1107 09:04:51.857  session vxr-pp-procs_7500.rvd[6LS7EkhSyY4hHEZF8DDo7g] started, start time 1667808291.843230739
+1107 09:04:51.857  running background deamon PID: 662563
+1107 09:04:51.857  pub_window_size: 4194304 bytes
+1107 09:04:51.857  sub_window_size: 4194304 bytes
+1107 09:04:51.857  pub_window_time: 10 secs
+1107 09:04:51.857  sub_window_time: 10 secs
+1107 09:04:51.857  heartbeat: 10 secs
+1107 09:04:51.857  reliability: 15 secs
+1107 09:04:51.857  d_mesh.20 connect plaintext 10.126.5.53:6003 ev_tcp_tport_client using rvd.d_mesh.10.14 fd 54
+1107 09:04:51.857  d_mesh.19 connect plaintext 10.126.5.52:6003 ev_tcp_tport_client using rvd.d_mesh.10.13 fd 51
+1107 09:04:51.857  d_mesh.18 connect plaintext 10.126.5.51:6003 ev_tcp_tport_client using rvd.d_mesh.10.12 fd 49
+1107 09:04:51.857  c_mesh.12 connect plaintext 10.126.5.50:6002 ev_tcp_tport_client using rvd.c_mesh.b.c fd 47
+1107 09:04:51.857  a_mesh.4 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.a_mesh.1.4 fd 35
+1107 09:04:51.857  b_mesh.8 connect plaintext 10.126.5.51:6001 ev_tcp_tport_client using rvd.b_mesh.6.8 fd 19
+1107 09:04:51.857  c_mesh.14 connect plaintext 10.126.5.52:6002 ev_tcp_tport_client using rvd.c_mesh.b.e fd 27
+1107 09:04:51.857  a_mesh.5 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.a_mesh.1.5 fd 39
+1107 09:04:51.857  b_mesh.7 connect plaintext 10.126.5.50:6001 ev_tcp_tport_client using rvd.b_mesh.6.7 fd 21
+1107 09:04:51.857  a_mesh.2 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.a_mesh.1.2 fd 25
+1107 09:04:51.857  b_mesh.9 connect plaintext 10.126.5.52:6001 ev_tcp_tport_client using rvd.b_mesh.6.9 fd 15
+1107 09:04:51.857  a_mesh.3 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.a_mesh.1.3 fd 29
+1107 09:04:51.857  b_mesh.10 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.b_mesh.6.a fd 17
+1107 09:04:51.857  c_mesh.15 connect plaintext 10.126.5.53:6002 ev_tcp_tport_client using rvd.c_mesh.b.f fd 31
+1107 09:04:51.857  c_mesh.13 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.c_mesh.b.d fd 41
+1107 09:04:51.857  d_mesh.17 connect plaintext 10.126.5.50:6003 ev_tcp_tport_client using rvd.d_mesh.10.11 fd 37
+1107 09:04:51.857  vxr-pp-qs_7500.1 i_am false oldest true
+1107 09:04:51.857  vxr-pp-strategy_7500.2 i_am false oldest true
+1107 09:04:51.857  vxr-pp-oms_7500.3 i_am false oldest true
+1107 09:04:51.867! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] ignore trusted, time not correct
+1107 09:04:51.867   repeated 2
+1107 09:04:51.867  vxr-pp-strategy_7500.2 version matches 1.13.0-57
+1107 09:04:51.867  vxr-pp-strategy_7500.2 auth msg verified with service rvd public key
+1107 09:04:51.867  vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] add authentication from hello via challenge @ rvd.a_mesh.tport.4, state new, count=1
+1107 09:04:51.867  vxr-pp-tsmqry_7500.4 i_am false oldest true
+1107 09:04:51.867  vxr-pp-tsmqry_7500.4 version matches 1.13.0-57
+1107 09:04:51.867  vxr-pp-tsmqry_7500.4 auth msg verified with service rvd public key
+1107 09:04:51.867  vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] add authentication from hello via challenge @ rvd.d_mesh.tport.20, state new, count=1
+1107 09:04:51.867  vxr-pp-oms_7500.3 version matches 1.13.0-57
+1107 09:04:51.867  vxr-pp-oms_7500.3 auth msg verified with service rvd public key
+1107 09:04:51.867  vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] add authentication from hello via challenge @ rvd.b_mesh.tport.7, state new, count=1
+1107 09:04:51.867  vxr-pp-qs_7500.1 version matches 1.13.0-57
+1107 09:04:51.867  vxr-pp-qs_7500.1 auth msg verified with service rvd public key
+1107 09:04:51.867  vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] add authentication from hello via challenge @ rvd.b_mesh.tport.8, state new, count=1
+1107 09:04:51.867  vxr-pp-tsmqry_7500.4 _I.6LS7EkhSyY4hHEZF8DDo7g.adj_req missing inbox seqno 2 -> 6 (rvd.c_mesh.tport.15)
+1107 09:04:51.867  vxr-pp-raicache02_7500.5 [vc3O1HIWfDsobbZmm00yAA] add authentication from sync_result via vxr-pp-tsmqry_7500 @ rvd.d_mesh.tport.20, state new, count=1
+1107 09:04:51.867  vxr-pp-raicache01_7500.6 [bvraWST3GzpPsdZ7+PiNkg] add authentication from sync_result via vxr-pp-tsmqry_7500 @ rvd.d_mesh.tport.20, state new, count=1
+1107 09:04:51.869! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] ignore trusted, time not correct
+1107 09:04:51.869   repeated 1
+1107 09:04:51.869  vxr-pp-strategy_7500.2 _I.6LS7EkhSyY4hHEZF8DDo7g.adj_rpy missing inbox seqno 2 -> 5 (rvd.a_mesh.tport.4)
+1107 09:04:51.928  network converges 0.059 secs, 6 uids authenticated, adj_update
+1107 09:04:51.928  vxr-pp-raicache02_7500.5 old primary route is tport rvd.d_mesh.tport.20(d=2200), using route rvd.a_mesh.tport.2(d=1200)
+1107 09:04:51.928  vxr-pp-raicache01_7500.6 old primary route is tport rvd.d_mesh.tport.20(d=1200), using route rvd.a_mesh.tport.2(d=200)
+1107 09:04:51.941  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6002 (3fb95481)
+1107 09:04:51.941  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-oms:6000 (d5e91937)
+1107 09:04:51.941  b_mesh.6 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-qs:6000 (de822476)
+1107 09:04:51.941  d_mesh.16 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-strategy:6000 (fe16f0ff)
+1107 09:04:51.941  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6000 (4a028449)
+1107 09:04:51.941  c_mesh.11 add_mesh_connect timeout=0 encrypt=false tcp://vxr-pp-tsmqry:6001 (b869074a)
+1107 09:04:51.941  d_mesh.22 connect plaintext 10.126.5.50:6000 ev_tcp_tport_client using rvd.d_mesh.10.16 fd 66
+1107 09:04:51.941  d_mesh.21 connect plaintext 10.126.5.51:6002 ev_tcp_tport_client using rvd.d_mesh.10.15 fd 57
+1107 09:04:51.941  b_mesh.23 connect plaintext 10.126.5.51:6000 ev_tcp_tport_client using rvd.b_mesh.6.17 fd 55
+1107 09:04:51.941  d_mesh.24 connect plaintext 10.126.5.52:6000 ev_tcp_tport_client using rvd.d_mesh.10.18 fd 59
+1107 09:04:51.941  c_mesh.25 connect plaintext 10.126.5.53:6000 ev_tcp_tport_client using rvd.c_mesh.b.19 fd 61
+1107 09:04:51.941  c_mesh.26 connect plaintext 10.126.5.53:6001 ev_tcp_tport_client using rvd.c_mesh.b.1a fd 63
+1107 09:04:51.947! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:04:51.947! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:04:51.947! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:04:51.947! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:04:51.957! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:04:51.957! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:04:51.957! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:04:51.957! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:04:51.957! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:04:51.957! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:04:51.958! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:04:51.958! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:04:52.010  network converges 0.058 secs, 6 uids authenticated, add_mesh
+1107 09:04:52.078  network converges 0.057 secs, 6 uids authenticated, adj_change
+1107 09:04:52.148  network converges 0.058 secs, 6 uids authenticated, adj_change
+1107 09:04:54.011  start_network:        service 9500, ""
+1107 09:04:55.273  stop_network:         service 9500, ""
+1107 09:04:56.426  start_network:        service 9500, ""
+1107 09:04:59.143  a_mesh.1 connect plaintext 10.126.5.53:56836 ev_tcp_tport using rvd.a_mesh.1 fd 93
+1107 09:04:59.143  a_mesh.27 add_mesh_accept from 10.126.5.53:56836
+1107 09:04:59.143  a_mesh.1 connect plaintext 10.126.5.51:56270 ev_tcp_tport using rvd.a_mesh.1 fd 95
+1107 09:04:59.143  a_mesh.28 add_mesh_accept from 10.126.5.51:56270
+1107 09:04:59.143  a_mesh.1 connect plaintext 10.126.5.51:56272 ev_tcp_tport using rvd.a_mesh.1 fd 97
+1107 09:04:59.143  a_mesh.29 add_mesh_accept from 10.126.5.51:56272
+1107 09:04:59.143  b_mesh.6 connect plaintext 10.126.5.51:48408 ev_tcp_tport using rvd.b_mesh.6 fd 99
+1107 09:04:59.143  b_mesh.30 add_mesh_accept from 10.126.5.51:48408
+1107 09:04:59.143  c_mesh.11 connect plaintext 10.126.5.50:50062 ev_tcp_tport using rvd.c_mesh.b fd 101
+1107 09:04:59.143  c_mesh.31 add_mesh_accept from 10.126.5.50:50062
+1107 09:04:59.147! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:04:59.147! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:04:59.147! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:04:59.147! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:04:59.157! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:04:59.157! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:04:59.157! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:04:59.157! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:04:59.157! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:04:59.208  network converges 0.060 secs, 6 uids authenticated, add_mesh
+1107 09:04:59.268  network converges 0.059 secs, 6 uids authenticated, adj_change
+1107 09:04:59.328  network converges 0.053 secs, 6 uids authenticated, adj_change
+1107 09:04:59.388  network converges 0.050 secs, 6 uids authenticated, adj_change
+1107 09:04:59.737  vxr-pp-oms_7500.3 _I.6LS7EkhSyY4hHEZF8DDo7g.ping missing inbox seqno 2 -> 5 (rvd.c_mesh.tport.31)
+1107 09:05:01.807! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:05:01.807! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:05:01.807! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:05:01.807! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:05:01.809! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:05:01.809! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:05:09.007! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:05:09.007! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:05:09.007! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:05:09.007! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:05:09.007! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:05:11.656! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:05:11.656! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:05:11.656! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:05:11.656! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:05:11.657! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:05:11.657! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:05:18.857! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:05:18.857! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:05:18.857! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:05:18.857! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:05:18.857! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:05:21.506! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:05:21.506! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:05:21.506! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:05:21.506! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:05:21.507! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:05:21.507! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:05:28.707! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:05:28.707! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:05:28.707! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:05:28.707! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:05:28.707! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:05:31.357! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:05:31.357! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:05:31.357! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:05:31.357! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:05:31.358! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:05:31.358! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:05:38.557! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:05:38.557! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:05:38.557! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:05:38.557! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:05:38.557! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:05:41.207! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:05:41.207! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:05:41.207! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:05:41.207! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:05:41.208! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:05:41.208! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:05:48.407! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:05:48.407! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:05:48.407! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:05:48.407! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:05:48.407! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:05:51.057! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:05:51.057! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:05:51.057! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:05:51.057! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:05:51.058! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:05:51.058! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:05:58.257! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:05:58.257! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:05:58.257! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:05:58.257! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:05:58.257! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:06:00.907! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:06:00.907! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:06:00.907! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:06:00.907! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:06:00.908! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:06:00.908! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:06:08.107! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:06:08.107! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:06:08.107! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:06:08.107! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:06:08.107! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:06:10.757! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:06:10.757! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:06:10.757! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:06:10.757! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:06:10.758! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:06:10.758! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:06:17.957! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:06:17.957! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:06:17.957! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:06:17.957! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:06:17.957! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:06:20.607! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:06:20.607! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:06:20.607! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:06:20.607! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:06:20.608! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:06:20.608! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:06:27.807! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:06:27.807! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:06:27.807! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:06:27.807! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:06:27.807! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
+1107 09:06:30.457! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[2] [1000,1000,100,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.21
+1107 09:06:30.457! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.23
+1107 09:06:30.457! vxr-pp-strategy_7500.2 [TbLfCs7d8zS1IoD1fhzn+A] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.24
+1107 09:06:30.457! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,1000,100] (config) on rvd.d_mesh.tport.22
+1107 09:06:30.458! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.25
+1107 09:06:30.458! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[1] [1000,100,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.26
+1107 09:06:37.656! vxr-pp-tsmqry_7500.4 [uNmzcqIoGwvuUvFVsOBBwQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.27
+1107 09:06:37.656! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,1000,100] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.29
+1107 09:06:37.656! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[1] [1000,1000,100,1000] (advert) != [1000,100,1000,1000] (config) on rvd.b_mesh.tport.30
+1107 09:06:37.656! vxr-pp-qs_7500.1 [8Iei0ZJjW3o/qszLhk0XEQ] conflicting cost[0] [1000,1000,100,1000] (advert) != [100,1000,1000,1000] (config) on rvd.a_mesh.tport.28
+1107 09:06:37.656! vxr-pp-oms_7500.3 [VjLeGBXF283DTG72Vt7dSQ] conflicting cost[0] [100,1000,1000,1000] (advert) != [1000,1000,100,1000] (config) on rvd.c_mesh.tport.31
