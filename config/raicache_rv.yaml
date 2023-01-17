@@ -1,0 +1,29 @@
+services:
+  - svc: rvd
+    create: 1671060338.717850581
+    pri: qBnki06wJ1kvGxw35z5DQvHbgNQbs7+ATf/VpR9zhMUCItkKAViZJ2PaDvnYg6yJLCa+iA
+    pub: 8U7PI0KrFVi80m8ydCcpmJeoDuUPD9vy1kK70cWwIquWywGRySo57xYvK6ucBeUdNzderw
+parameters:
+  salt_data: Kc9z3miC9MnzOZ1id2i4HqmMPaQomTcV+Pif/fY7v4j0LUtvZ/LnQ8/qzWzKYLrjeUCJ6Rr7IPE8vg5rqnjVcX0ItVFLu6gSgf0dxKcMX3hHkTQInHAB7hAK+vUeGIgOgnjyREPPV9yeOkEsGpdl4JWDUjsOCMjr8SoYSrnDM/GcdK/ewUuIdQ8kq+F6TxfOrAT4Yt5zNq4gdWU1DLIeP5KdazwLfnElzdeM3DZ2Qvh1q7+bPsuJ4lF5LlVv/DTD+4USckx88wQ69y+F/4UNdjP203oDcV+pyQJpuDfevPz82MdItkQAAjzzaFlJXv9aJdjAf8JVw0OEGAnIuqeUSYQNnP5zjdLKI0hOTLn5Qm3g3QeBsj1WBa6cN6ZARlYt0MpwB/1dN2AUhMlV1UA6GKzF9K+42a8ergmsUXivyijIzndT/JV9d7bE8Z7NR3KfdIPu9iGD9UspyxqtI2r9G8B45UNipbFaLnAPYhcn9fyK5kArQa4OjDTbIbhkZNsY+6WwAZeJGD77GLzxc9NMgF81fPzDIiRT4qeHJh2vH2CMhmx/2aRhqmEr0bk3fAL9WJgrxVt6JiV4km1kIFRZ79dFhnhVlffndMZqesiSQ3chB7yuMPfvPsAisq4/OOWcECHzjNB7U30LraBXx+gDwF3TAoCXH0tDgEdcpDPN6dtq6t8cbGqyRppWOM0vboymcwhgMFfL/pxwZ63xuxO2YmdnhpdHJsSIn0Oh2E8pAQKRUA9ijg3ca4Pk4w5E6e17p+rAZ9xG06hm7Olmpv2vCdxc21csW8BWEh5+I6X46C9IdqN5MK2z2kXBpseO8s03Viz0gS7jq2Kf6IMdVpzetA
+  pass_data: tt65YhWcCowgsq5ePaT8WiwbLEuAd58l8XSXNtfh81A
+  
+transports:
+  - tport: raimesh
+    type: mesh
+    route:
+      port: 7200
+      connect: [ vxr-prod-raicache01, vxr-prod-raicache02 ]
+      listen: "*"  
+      noencrypt: true
+  - tport: raitcp
+    type: tcp
+    route:
+      listen: "*" 
+      port: 6200
+      timeout: 0    
+      noencrypt: true
+startup:
+  connect:
+    - raimesh
+  listen:
+    - raitcp
