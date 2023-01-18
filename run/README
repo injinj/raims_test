@@ -1,0 +1,12 @@
+
+0.  Adjust the home env var in all the *.sh files
+
+1.  Make the docker network "anet" with "sh net.sh"
+
+2.  Make the docker image "centos8-vxr" with "sh build.sh"
+
+3.  Start the connected containers with "sh run.sh"
+
+4.  Start the test programs with "sh exec.sh"
+  (this is incomplete, need cache, data, test programs)
+
