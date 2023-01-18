@@ -10,3 +10,5 @@
 4.  Start the test programs with "sh exec.sh"
   (this is incomplete, need cache, data, test programs)
 
+5.  Stop the contains with "sh stop.sh"
+
