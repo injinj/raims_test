@@ -1,0 +1,273 @@
+=--=--=--=
+Sun Feb 12 00:00:00 2023
+UTC offset: 1:00 (CEST)
+PID: 3426887, ms_server version: 1.19.0-76
+=--=--=--=
+0212 00:06:34.537  vxr-prod-rundeck_8500.20 [M5xojJ4p8eRr+x2M3UcC8g] remove auth bye 
+0212 00:06:35.220  network converges 0.678 secs, 17 uids authenticated, adj_change
+0212 00:06:36.737  vxr-prod-rundeck_8500.29 [JZiDXbGa0O333lsQiBOp1Q] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 00:06:38.183  network converges 1.439 secs, 18 uids authenticated, adj_update
+0212 00:06:48.901  network converges 10.686 secs, 18 uids authenticated, adj_change
+0212 00:19:40.503  vxr-prod-rundeck_8500.29 [JZiDXbGa0O333lsQiBOp1Q] remove auth bye 
+0212 00:19:41.180  network converges 0.672 secs, 17 uids authenticated, adj_change
+0212 00:19:42.776  vxr-prod-rundeck_8500.30 [T+IjjlX4MF1IZ9nv1PH83Q] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 00:19:43.663  network converges 0.719 secs, 18 uids authenticated, adj_update
+0212 00:19:54.901  network converges 10.684 secs, 18 uids authenticated, adj_change
+0212 00:20:23.438  vxr-prod-procs01_8500.13 [E4iklHoQs3KuCj+uOYQqUQ] remove auth bye 
+0212 00:20:23.438  raitcp.4 disconnected 10.126.65.36:50056 (Sock fd=20 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.65.36:50056)
+0212 00:20:24.096  network converges 0.664 secs, 17 uids authenticated, adj_change
+0212 00:20:25.535  raitcp.1 connect plaintext 10.126.65.36:60658 ev_tcp_tport using rvd.raitcp.1 fd 20
+0212 00:20:25.535  raitcp.4 add_tcp_accept from 10.126.65.36:60658
+0212 00:20:25.535  vxr-prod-procs01_8500.31 I am oldest peer
+0212 00:20:25.535  vxr-prod-procs01_8500.31 version matches 1.19.0-76
+0212 00:20:25.535  vxr-prod-procs01_8500.31 [fp/N3zhRauFrQ3fPbVXN6g] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 00:20:25.537  vxr-prod-procs01_8500.31 auth msg verified with service rvd public key
+0212 00:20:26.257  network converges 0.717 secs, 18 uids authenticated, adj_update
+0212 00:20:26.977  network converges 0.680 secs, 18 uids authenticated, adj_change
+0212 00:20:35.062  network converges 8.004 secs, 18 uids authenticated, adj_change
+0212 00:20:35.782  network converges 0.691 secs, 18 uids authenticated, adj_change
+0212 00:20:36.542  network converges 0.709 secs, 18 uids authenticated, adj_change
+0212 00:20:37.262  network converges 0.708 secs, 18 uids authenticated, adj_change
+0212 00:20:49.805  vxr-prod-strategy02_8500.17 [4vQ97/1dqFbjl/EPe+Edmg] remove auth bye 
+0212 00:20:50.461  network converges 0.649 secs, 17 uids authenticated, adj_change
+0212 00:20:52.017  vxr-prod-strategy02_8500.32 [wMRl+E/EfmmJbVIWtaahJQ] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 00:20:53.463  network converges 0.718 secs, 18 uids authenticated, adj_update
+0212 00:21:03.181  network converges 9.700 secs, 18 uids authenticated, adj_change
+0212 00:21:13.574  vxr-prod-procs01_8500.31 [fp/N3zhRauFrQ3fPbVXN6g] remove auth bye 
+0212 00:21:13.580  raitcp.4 disconnected 10.126.65.36:60658 (Sock fd=20 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.65.36:60658)
+0212 00:21:14.217  network converges 0.640 secs, 17 uids authenticated, adj_change
+0212 00:21:15.787  raitcp.1 connect plaintext 10.126.65.36:60826 ev_tcp_tport using rvd.raitcp.1 fd 20
+0212 00:21:15.787  raitcp.4 add_tcp_accept from 10.126.65.36:60826
+0212 00:21:15.787  vxr-prod-procs01_8500.33 I am oldest peer
+0212 00:21:15.787  vxr-prod-procs01_8500.33 version matches 1.19.0-76
+0212 00:21:15.787  vxr-prod-procs01_8500.33 [52F1lmKxoAVNl49M0WE8Kg] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 00:21:15.787  vxr-prod-procs01_8500.33 auth msg verified with service rvd public key
+0212 00:21:16.064  vxr-prod-strategy02_8500.32 [wMRl+E/EfmmJbVIWtaahJQ] remove auth bye 
+0212 00:21:18.217  vxr-prod-strategy02_8500.34 [uVAAm45nJoU9o2xf2/EBcw] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 00:21:29.984  network converges 10.437 secs, 18 uids authenticated, adj_change
+0212 00:21:48.815  vxr-prod-raicache01_8500.1 [AMrVTx398CwbxZRe6sCnTw] remove auth bye 
+0212 00:21:49.350  raimesh.3 disconnected 10.126.65.47:7200 (Sock fd=63 state=0 name=rvd.raimesh.tcp_conn.3 peer=10.126.65.47:7200)
+0212 00:21:49.452  raimesh.3 connect plaintext 10.126.65.47:7200 ev_tcp_tport_client using rvd.raimesh.2.3 fd 67
+0212 00:21:49.463  network converges 0.642 secs, 17 uids authenticated, adj_change
+0212 00:21:51.495  raimesh.2 connect plaintext 10.126.65.47:43202 ev_tcp_tport using rvd.raimesh.2 fd 63
+0212 00:21:51.495  raimesh.6 add_mesh_accept from 10.126.65.47:43202
+0212 00:21:51.495  vxr-prod-raicache01_8500.35 I am oldest peer
+0212 00:21:51.495  vxr-prod-raicache01_8500.35 version matches 1.19.0-76
+0212 00:21:51.496  vxr-prod-raicache01_8500.35 auth msg verified with service rvd public key
+0212 00:21:51.496  vxr-prod-raicache01_8500.35 [eepA/5uTmpFXBxeC3lRPyg] add authentication from handshake via challenge @ rvd.raimesh.tport.6, state new, count=1
+0212 00:21:52.186  network converges 0.680 secs, 18 uids authenticated, adj_change
+0212 00:21:55.382  network converges 2.161 secs, 18 uids authenticated, adj_change
+0212 00:21:59.848  vxr-prod-procs01_8500.33 [52F1lmKxoAVNl49M0WE8Kg] remove auth bye 
+0212 00:21:59.871  raitcp.4 disconnected 10.126.65.36:60826 (Sock fd=20 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.65.36:60826)
+0212 00:22:00.496  network converges 0.646 secs, 17 uids authenticated, adj_change
+0212 00:22:01.974  raitcp.1 connect plaintext 10.126.65.36:60932 ev_tcp_tport using rvd.raitcp.1 fd 20
+0212 00:22:01.974  raitcp.4 add_tcp_accept from 10.126.65.36:60932
+0212 00:22:01.974  vxr-prod-procs01_8500.36 I am oldest peer
+0212 00:22:01.974  vxr-prod-procs01_8500.36 version matches 1.19.0-76
+0212 00:22:01.974  vxr-prod-procs01_8500.36 [N4i3LGk5r3rP8mLSGhlQRA] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.6, state new, count=1
+0212 00:22:01.974  vxr-prod-procs01_8500.36 auth msg verified with service rvd public key
+0212 00:22:02.697  network converges 0.717 secs, 18 uids authenticated, adj_change
+0212 00:22:03.418  network converges 0.683 secs, 18 uids authenticated, adj_change
+0212 00:22:11.501  network converges 8.004 secs, 18 uids authenticated, adj_change
+0212 00:22:12.222  network converges 0.691 secs, 18 uids authenticated, adj_change
+0212 00:22:12.981  network converges 0.708 secs, 18 uids authenticated, adj_change
+0212 00:22:13.701  network converges 0.708 secs, 18 uids authenticated, adj_change
+0212 00:22:24.125  vxr-prod-mqscript_8500.24 [IOTHjumkgSAy8FC4ApEO4A] remove auth bye 
+0212 00:22:24.780  network converges 0.650 secs, 17 uids authenticated, adj_change
+0212 00:22:26.337  vxr-prod-mqscript_8500.37 [7+YCLsnLXKWbg0kQYd19dA] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 00:22:27.785  network converges 0.719 secs, 18 uids authenticated, adj_update
+0212 00:22:37.581  network converges 9.705 secs, 18 uids authenticated, adj_change
+0212 00:23:58.204  vxr-prod-procs02_8500.10 [K/MzwN2KIJYF1biPjK3mrA] remove auth bye 
+0212 00:23:58.204  raitcp.5 disconnected 10.126.65.39:41174 (Sock fd=65 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.65.39:41174)
+0212 00:23:58.857  network converges 0.658 secs, 17 uids authenticated, adj_change
+0212 00:24:00.263  raitcp.1 connect plaintext 10.126.65.39:33614 ev_tcp_tport using rvd.raitcp.1 fd 65
+0212 00:24:00.263  raitcp.5 add_tcp_accept from 10.126.65.39:33614
+0212 00:24:00.302  vxr-prod-procs02_8500.38 I am oldest peer
+0212 00:24:00.302  vxr-prod-procs02_8500.38 version matches 1.19.0-76
+0212 00:24:00.302  vxr-prod-procs02_8500.38 auth msg verified with service rvd public key
+0212 00:24:00.302  vxr-prod-procs02_8500.38 [Xp3AQDZFwddtRdDmrXeaQg] add authentication from handshake via challenge @ rvd.raitcp.tport.5, state new, count=1
+0212 00:24:01.019  network converges 0.706 secs, 18 uids authenticated, adj_change
+0212 00:24:11.503  network converges 9.669 secs, 18 uids authenticated, adj_change
+0212 00:24:53.516  vxr-prod-mqscript_8500.37 [7+YCLsnLXKWbg0kQYd19dA] remove auth bye 
+0212 00:24:54.180  network converges 0.659 secs, 17 uids authenticated, adj_change
+0212 00:24:55.817  vxr-prod-mqscript_8500.39 [TzNqX2qUJG99+oqLt9Yv3g] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 00:24:57.265  network converges 0.710 secs, 18 uids authenticated, adj_update
+0212 00:25:06.205  vxr-prod-rundeck_8500.30 [T+IjjlX4MF1IZ9nv1PH83Q] remove auth bye 
+0212 00:25:06.901  network converges 0.676 secs, 17 uids authenticated, adj_change
+0212 00:25:08.498  vxr-prod-rundeck_8500.40 [JW8wgcmsANSVqGbJGTO+Wg] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raimesh.tport.6, state new, count=1
+0212 00:25:08.844  vxr-prod-mqscript_8500.39 [TzNqX2qUJG99+oqLt9Yv3g] remove auth bye 
+0212 00:25:09.508  network converges 0.650 secs, 17 uids authenticated, adj_update
+0212 00:25:11.377  vxr-prod-mqscript_8500.41 [804lOV20yYtLDP5cN5ZC7g] add authentication from sync_result via vxr-prod-procs02_8500 @ rvd.raitcp.tport.5, state new, count=1
+0212 00:25:22.342  network converges 9.635 secs, 18 uids authenticated, adj_change
+0212 00:41:39.413  vxr-prod-procs01_8500.36 [N4i3LGk5r3rP8mLSGhlQRA] remove auth bye 
+0212 00:41:39.419  raitcp.4 disconnected 10.126.65.36:60932 (Sock fd=20 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.65.36:60932)
+0212 00:41:40.057  network converges 0.642 secs, 17 uids authenticated, adj_change
+0212 00:41:41.534  raitcp.1 connect plaintext 10.126.65.36:33074 ev_tcp_tport using rvd.raitcp.1 fd 20
+0212 00:41:41.534  raitcp.4 add_tcp_accept from 10.126.65.36:33074
+0212 00:41:41.534  vxr-prod-procs01_8500.42 I am oldest peer
+0212 00:41:41.534  vxr-prod-procs01_8500.42 version matches 1.19.0-76
+0212 00:41:41.534  vxr-prod-raicache01_8500.35 _I.OwFj4TQ9r6eyvLOES112/Q.sync_rpy missing inbox seqno 49 -> 51 (rvd.raimesh.tport.6)
+0212 00:41:41.534  vxr-prod-procs01_8500.42 [FYTLfwJGeU6BrgkXk1AgUA] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.6, state new, count=1
+0212 00:41:41.537  vxr-prod-procs01_8500.42 auth msg verified with service rvd public key
+0212 00:41:42.258  network converges 0.718 secs, 18 uids authenticated, adj_update
+0212 00:41:42.977  network converges 0.680 secs, 18 uids authenticated, adj_change
+0212 00:41:51.102  network converges 8.040 secs, 18 uids authenticated, adj_change
+0212 00:41:51.822  network converges 0.708 secs, 18 uids authenticated, adj_change
+0212 00:41:52.543  network converges 0.708 secs, 18 uids authenticated, adj_change
+0212 00:41:53.262  network converges 0.691 secs, 18 uids authenticated, adj_change
+0212 04:04:01.306  vxr-prod-raicache01_8500.35 [eepA/5uTmpFXBxeC3lRPyg] remove auth bye 
+0212 04:04:01.848  raimesh.6 disconnected 10.126.65.47:43202 (Sock fd=63 state=0 name=rvd.raimesh.tcp_acc.2 peer=10.126.65.47:43202)
+0212 04:04:01.848  raimesh.3 connect plaintext 10.126.65.47:7200 ev_tcp_tport_client using rvd.raimesh.2.3 fd 68
+0212 04:04:01.863  raimesh.2 connect plaintext 10.126.65.47:43384 ev_tcp_tport using rvd.raimesh.2 fd 63
+0212 04:04:01.863  raimesh.6 add_mesh_accept from 10.126.65.47:43384
+0212 04:04:01.903  vxr-prod-raicache01_8500.43 I am oldest peer
+0212 04:04:01.903  vxr-prod-raicache01_8500.43 version matches 1.19.0-76
+0212 04:04:01.903  vxr-prod-raicache01_8500.43 auth msg verified with service rvd public key
+0212 04:04:01.903  vxr-prod-raicache01_8500.43 [fMl+/sgTCSz81MX6uCD6eA] add authentication from handshake via challenge @ rvd.raimesh.tport.6, state new, count=1
+0212 04:04:02.628  network converges 0.713 secs, 18 uids authenticated, adj_change
+0212 04:04:04.904  network converges 2.195 secs, 18 uids authenticated, adj_change
+0212 04:11:14.661  network converges 2.132 secs, 18 uids authenticated, adj_change
+0212 04:11:18.666  network converges 0.692 secs, 18 uids authenticated, adj_change
+=--=--=--=
+Sun Feb 12 04:17:02 2023
+UTC offset: 1:00 (CEST)
+PID: 3441286, ms_server version: 1.19.0-76
+=--=--=--=
+0212 04:17:02.266  raitcp.1 raitcp listening on 0.0.0.0:6200
+0212 04:17:02.266  raimesh.2 raimesh listening on 0.0.0.0:7200
+0212 04:17:02.266  raimesh.2 not connecting to self (mesh://vxr-prod-raicache02:7200)
+0212 04:17:02.266  raimesh.2 add_mesh_connect timeout=10 encrypt=false mesh://vxr-prod-raicache01:7200 (196e69e2)
+0212 04:17:02.266  ipc.0 rvd listening on 0.0.0.0:8500
+0212 04:17:02.266  web: web start listening on 0.0.0.0:8580
+0212 04:17:02.266  http_url http://vxr-prod-raicache02:8580
+0212 04:17:02.266  unable to mlock() memory, ulimit -l (errno=12/Cannot allocate memory)
+0212 04:17:02.266  service rvd key pair loaded
+0212 04:17:02.266  transient user vxr-prod-raicache02_8500 created
+0212 04:17:02.266  session vxr-prod-raicache02_8500.rvd[vsCR948WEMvCKw8kxpZiDg] started, start time 1676171822.226784436
+0212 04:17:02.266  pub_window_size: 4194304 bytes
+0212 04:17:02.266  sub_window_size: 8388608 bytes
+0212 04:17:02.266  pub_window_time: 10 secs
+0212 04:17:02.266  sub_window_time: 10 secs
+0212 04:17:02.266  heartbeat: 10 secs
+0212 04:17:02.266  reliability: 15 secs
+0212 04:17:02.266  tcp_write_timeout: 10 secs
+0212 04:17:02.266  tcp_write_highwater: 32512 bytes
+0212 04:17:02.266  tcp_ipv4only: false
+0212 04:17:02.266  tcp_ipv6only: false
+0212 04:17:02.266  tcp_noencrypt: false
+0212 04:17:02.266  raimesh.3 connect plaintext 10.126.65.47:7200 ev_tcp_tport_client using rvd.raimesh.2.3 fd 20
+0212 04:17:02.266  start network: service 9301, host BEC091F7 (190.192.145.247), ""
+0212 04:17:02.266  vxr-prod-raicache01_8500.1 i_am false oldest false
+0212 04:17:02.266  raitcp.1 connect plaintext 10.126.65.36:33468 ev_tcp_tport using rvd.raitcp.1 fd 23
+0212 04:17:02.266  raitcp.4 add_tcp_accept from 10.126.65.36:33468
+0212 04:17:02.272  network converges 0.005 secs, 0 uids authenticated, add_mesh
+0212 04:17:02.272  vxr-prod-raicache01_8500.1 version matches 1.19.0-76
+0212 04:17:02.272  vxr-prod-raicache01_8500.1 auth msg verified with service rvd public key
+0212 04:17:02.272  vxr-prod-raicache01_8500.1 [fMl+/sgTCSz81MX6uCD6eA] add authentication from hello via challenge @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-procs01_8500.2 version matches 1.19.0-76
+0212 04:17:02.272  vxr-prod-procs01_8500.2 auth msg verified with service rvd public key
+0212 04:17:02.272  vxr-prod-procs01_8500.2 [FYTLfwJGeU6BrgkXk1AgUA] add authentication from hello via challenge @ rvd.raitcp.tport.4, state new, count=1
+0212 04:17:02.272  vxr-prod-oms02_8500.3 [kCvAqKQxG6TsmRYBwjZ/rg] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-oms01_8500.4 [u2MjkyWXAb3EBhGCY/xn7A] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-lm01_8500.5 [0hfD4b3OYGtW2jP1vdsjPw] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-lm02_8500.6 [W/TKfsXXkuDOD56Thx/2JQ] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-oms03_8500.7 [zFzwLApXuAsQ/cdLzijIjw] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-oms04_8500.8 [WtSgVouACsJLXdMpCeDMLQ] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-qs01_8500.9 [YJRaEXJEkCOVq4ceLXGC4g] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-qs02_8500.10 [/r7scvzGG4cspqJxZh6GxA] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-strategy01_8500.11 [H+7oTEoq/wxgteDoKh1RUg] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-strategy03_8500.12 [XAsp31psynC06+JLQ4jlPg] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-tsm01_8500.13 [8ZuEmYuZ6pryzGc6Mu3uhA] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-tsm02_8500.14 [6U0zpbdxcHABJwbkLOMCPw] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-strategy02_8500.15 [uVAAm45nJoU9o2xf2/EBcw] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-procs02_8500.16 [Xp3AQDZFwddtRdDmrXeaQg] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-rundeck_8500.17 [JW8wgcmsANSVqGbJGTO+Wg] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.272  vxr-prod-mqscript_8500.18 [804lOV20yYtLDP5cN5ZC7g] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:17:02.308  raitcp.1 connect plaintext 10.126.65.39:34168 ev_tcp_tport using rvd.raitcp.1 fd 25
+0212 04:17:02.308  raitcp.5 add_tcp_accept from 10.126.65.39:34168
+0212 04:17:03.036  network converges 0.687 secs, 18 uids authenticated, adv_cost
+0212 04:17:04.518  network converges 0.687 secs, 18 uids authenticated, adj_change
+0212 04:17:04.675  start network: service 7500, host BEC091F7 (190.192.145.247), ""
+0212 04:17:04.714  start network: service 7600, host BEC091F7 (190.192.145.247), ""
+0212 04:17:04.796  start network: service 9103, host BEC091F7 (190.192.145.247), ""
+0212 04:17:04.837  start network: service 8405, host BEC091F7 (190.192.145.247), ""
+0212 04:17:04.878  start network: service 8400, host BEC091F7 (190.192.145.247), ""
+0212 04:17:04.919  start network: service 8206, host BEC091F7 (190.192.145.247), ""
+0212 04:17:04.960  start network: service 8102, host BEC091F7 (190.192.145.247), ""
+0212 04:17:05.001  start network: service 8401, host BEC091F7 (190.192.145.247), ""
+0212 04:17:05.045  start network: service 8204, host BEC091F7 (190.192.145.247), ""
+0212 04:17:05.087  start network: service 8104, host BEC091F7 (190.192.145.247), ""
+0212 04:17:05.125  start network: service 8103, host BEC091F7 (190.192.145.247), ""
+0212 04:17:11.764  start network: service 9351, host BEC091F7 (190.192.145.247), ""
+0212 04:26:01.330  vxr-prod-oms03_8500.7 [zFzwLApXuAsQ/cdLzijIjw] remove auth bye 
+0212 04:26:01.469  vxr-prod-oms03_8500.19 [OiCVflPMUykd40FgnJdSPw] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:26:01.575  vxr-prod-rundeck_8500.17 [JW8wgcmsANSVqGbJGTO+Wg] remove auth bye 
+0212 04:26:01.708  vxr-prod-rundeck_8500.20 [D89JQVVOma3s4wsNPuTV2A] add authentication from sync_result via vxr-prod-procs02_8500 @ rvd.raitcp.tport.5, state new, count=1
+0212 04:26:12.155  network converges 9.669 secs, 18 uids authenticated, adj_change
+0212 04:28:01.140  vxr-prod-qs02_8500.10 [/r7scvzGG4cspqJxZh6GxA] remove auth bye 
+0212 04:28:01.228  vxr-prod-qs02_8500.21 [NwTg1JNcbLWa8L51IJcpSw] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:28:01.956  network converges 0.719 secs, 18 uids authenticated, adj_update
+0212 04:28:02.022  vxr-prod-lm01_8500.5 [0hfD4b3OYGtW2jP1vdsjPw] remove auth bye 
+0212 04:28:02.188  vxr-prod-lm01_8500.22 [4KkqQAY5mNGJrlgFFUf62g] add authentication from sync_result via vxr-prod-raicache01_8500 @ rvd.raimesh.tport.3, state new, count=1
+0212 04:28:05.074  network converges 1.442 secs, 18 uids authenticated, adj_change
+0212 04:28:09.113  network converges 4.024 secs, 18 uids authenticated, adj_change
+0212 04:30:01.560  vxr-prod-mqscript_8500.18 [804lOV20yYtLDP5cN5ZC7g] remove auth bye 
+0212 04:30:01.708  vxr-prod-mqscript_8500.23 [+HSCyokGF47jp7Yd8F3xwQ] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:30:01.845  vxr-prod-qs01_8500.9 [YJRaEXJEkCOVq4ceLXGC4g] remove auth bye 
+0212 04:30:01.989  vxr-prod-qs01_8500.24 [jDJncyXUy3cupCpD10nXoA] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:30:09.952  network converges 7.959 secs, 18 uids authenticated, adj_update
+0212 04:30:13.073  network converges 0.706 secs, 18 uids authenticated, adj_change
+0212 04:32:01.367  vxr-prod-tsm01_8500.13 [8ZuEmYuZ6pryzGc6Mu3uhA] remove auth bye 
+0212 04:32:01.469  vxr-prod-tsm01_8500.25 [MF4CVeurAgcVqkV2SZjN9Q] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:32:13.678  network converges 11.465 secs, 18 uids authenticated, adj_change
+0212 04:37:01.847  vxr-prod-strategy02_8500.15 [uVAAm45nJoU9o2xf2/EBcw] remove auth bye 
+0212 04:37:01.988  vxr-prod-strategy02_8500.26 [bqhMNx7uqmnYfwamb3rU+g] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:37:10.793  network converges 8.062 secs, 18 uids authenticated, adj_change
+0212 04:43:01.892  vxr-prod-procs01_8500.2 [FYTLfwJGeU6BrgkXk1AgUA] remove auth bye 
+0212 04:43:01.921  raitcp.4 disconnected 10.126.65.36:33468 (Sock fd=23 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.65.36:33468)
+0212 04:43:01.948  raitcp.1 connect plaintext 10.126.65.36:33562 ev_tcp_tport using rvd.raitcp.1 fd 23
+0212 04:43:01.948  raitcp.4 add_tcp_accept from 10.126.65.36:33562
+0212 04:43:01.992  vxr-prod-procs01_8500.27 I am oldest peer
+0212 04:43:01.992  vxr-prod-procs01_8500.27 version matches 1.19.0-76
+0212 04:43:01.992  vxr-prod-procs01_8500.27 auth msg verified with service rvd public key
+0212 04:43:01.992  vxr-prod-procs01_8500.27 [Un9jMMQRC/8pOx/Sqr3jUw] add authentication from handshake via challenge @ rvd.raitcp.tport.4, state new, count=1
+0212 04:43:02.708  network converges 0.708 secs, 18 uids authenticated, adj_change
+0212 04:43:03.548  network converges 0.719 secs, 18 uids authenticated, adj_change
+0212 04:43:12.313  network converges 8.756 secs, 18 uids authenticated, adj_change
+0212 04:43:13.036  network converges 0.686 secs, 18 uids authenticated, adj_change
+0212 04:43:13.793  network converges 0.719 secs, 18 uids authenticated, adj_change
+0212 04:45:01.822  vxr-prod-strategy03_8500.12 [XAsp31psynC06+JLQ4jlPg] remove auth bye 
+0212 04:45:01.948  vxr-prod-strategy03_8500.28 [RNFw/mjG9VP+F/7VR6zayg] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:45:09.954  network converges 6.532 secs, 18 uids authenticated, adj_change
+0212 04:46:01.706  vxr-prod-strategy01_8500.11 [H+7oTEoq/wxgteDoKh1RUg] remove auth bye 
+0212 04:46:01.788  vxr-prod-strategy01_8500.29 [vjwvPlaL2VjdX4NTtNnatw] add authentication from sync_result via vxr-prod-procs02_8500 @ rvd.raitcp.tport.5, state new, count=1
+0212 04:46:02.520  network converges 0.719 secs, 18 uids authenticated, adj_update
+0212 04:46:03.994  network converges 1.447 secs, 18 uids authenticated, adj_change
+0212 04:46:12.073  network converges 8.006 secs, 18 uids authenticated, adj_change
+0212 04:47:01.717  vxr-prod-oms02_8500.3 [kCvAqKQxG6TsmRYBwjZ/rg] remove auth bye 
+0212 04:47:02.108  vxr-prod-oms02_8500.30 [ORsDb+fblvCkmcQDrY/T5w] add authentication from sync_result via vxr-prod-procs02_8500 @ rvd.raitcp.tport.5, state new, count=1
+0212 04:47:14.073  network converges 11.477 secs, 18 uids authenticated, adj_change
+0212 04:48:01.881  vxr-prod-tsm02_8500.14 [6U0zpbdxcHABJwbkLOMCPw] remove auth bye 
+0212 04:48:02.028  vxr-prod-tsm02_8500.31 [RZz9+sNVCenQLpWPa1rHCA] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:48:12.393  network converges 9.665 secs, 18 uids authenticated, adj_change
+0212 04:48:13.153  network converges 0.720 secs, 18 uids authenticated, adj_change
+0212 04:49:01.101  vxr-prod-lm02_8500.6 [W/TKfsXXkuDOD56Thx/2JQ] remove auth bye 
+0212 04:49:01.189  vxr-prod-lm02_8500.32 [QCP6wsnLOa/gxTR0uXVQvg] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:49:13.476  network converges 11.492 secs, 18 uids authenticated, adj_change
+0212 04:55:02.015  vxr-prod-procs02_8500.16 [Xp3AQDZFwddtRdDmrXeaQg] remove auth bye 
+0212 04:55:02.050  raitcp.5 disconnected 10.126.65.39:34168 (Sock fd=25 state=0 name=rvd.raitcp.tcp_acc.1 peer=10.126.65.39:34168)
+0212 04:55:02.084  raitcp.1 connect plaintext 10.126.65.39:34396 ev_tcp_tport using rvd.raitcp.1 fd 25
+0212 04:55:02.084  raitcp.5 add_tcp_accept from 10.126.65.39:34396
+0212 04:55:02.122  vxr-prod-procs02_8500.33 I am oldest peer
+0212 04:55:02.122  vxr-prod-procs02_8500.33 version matches 1.19.0-76
+0212 04:55:02.122  vxr-prod-procs02_8500.33 auth msg verified with service rvd public key
+0212 04:55:02.122  vxr-prod-procs02_8500.33 [1GAsY7WRnhAKBT3BlksaaQ] add authentication from handshake via challenge @ rvd.raitcp.tport.5, state new, count=1
+0212 04:55:02.828  network converges 0.701 secs, 18 uids authenticated, adj_change
+0212 04:55:13.316  network converges 9.664 secs, 18 uids authenticated, adj_change
+0212 04:58:01.398  vxr-prod-oms04_8500.8 [WtSgVouACsJLXdMpCeDMLQ] remove auth bye 
+0212 04:58:01.508  vxr-prod-oms04_8500.34 [PJtmtXQAWlCybOYVoKuxyQ] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:58:02.056  vxr-prod-oms01_8500.4 [u2MjkyWXAb3EBhGCY/xn7A] remove auth bye 
+0212 04:58:02.228  vxr-prod-oms01_8500.35 [H6inwfRsfETb+CpkqcIx7g] add authentication from sync_result via vxr-prod-procs01_8500 @ rvd.raitcp.tport.4, state new, count=1
+0212 04:58:12.594  network converges 9.655 secs, 18 uids authenticated, adj_change
+0212 04:58:13.317  network converges 0.689 secs, 18 uids authenticated, adj_change
+0212 04:58:14.077  network converges 0.720 secs, 18 uids authenticated, adj_change
