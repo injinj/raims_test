@@ -1,0 +1,569 @@
+<transform-config>
+
+<!-- ==================================================================
+converte i dati uscenti dal feed Reuters secondo le necessita' Fineco 
+=================================================================== -->
+
+<transform name="fineco-customize">
+    <!-- <debug val="DEBUG: function 'fineco-customize' on subject $_ ...\n"/> -->
+    <let val="%get-cme-scale-factor-by-subject($_)">
+        <set msg-modify="%eq($_,,,customize-cme-prices-by-$_)"/>
+    </let>
+    <print val="$_"/>
+</transform>
+
+<transform name="get-cme-scale-factor-by-subject">
+    <!-- <debug val="DEBUG: function 'get-cme-scale-factor-by-subject' on subject $_ ...\n"/> -->
+    <switch>
+        <case test="REC\./?(.+)([FGHJKMNQUVXZ][0-9])(m?)\.NaE" anchored="true">
+            <let val="$1">
+                <!-- $1: CME ric root; $2: future expire date; $3: market depth (a.k.a. book) ric extension -->
+                <select table="instr_id_prefix,ric_prefix,scale_factor,description" href="cme_prefixes.csv">
+                    <case test="@ric_prefix">
+                        <!-- <debug val="DEBUG: found a CME subject in list: prefix $_ '@description' scale @scale_factor\n"/> -->
+                        <print val="@scale_factor"/>
+                    </case>
+                </select>
+            </let>
+        </case>
+    </switch>
+</transform>
+
+<transform name="customize-cme-prices-by-100">
+    <!-- <debug val="DEBUG: function 'customize-cme-prices' on subject $_ by factor 100\n"/> -->
+    <let val="%customize-cme-prices-by-factor(100)"/>
+</transform>
+
+<transform name="customize-cme-prices-by-1000">
+    <!-- <debug val="DEBUG: function 'customize-cme-prices' on subject $_ by factor 1000\n"/> -->
+    <let val="%customize-cme-prices-by-factor(1000)"/>
+</transform>
+
+<transform name="customize-cme-prices-by-10000">
+    <!-- <debug val="DEBUG: function 'customize-cme-prices' on subject $_ by factor 10000\n"/> -->
+    <let val="%customize-cme-prices-by-factor(10000)"/>
+</transform>
+
+<transform name="customize-cme-prices-by-1.0">
+    <!-- <debug val="DEBUG: function 'customize-cme-prices' on subject $_ by factor 1.0\n"/> -->
+</transform>
+
+<transform name="customize-cme-prices-by-.01">
+    <!-- <debug val="DEBUG: function 'customize-cme-prices' on subject $_ by factor .01\n"/> -->
+    <let val="%customize-cme-prices-by-factor(.01)"/>
+</transform>
+
+<transform name="customize-cme-prices-by-factor">
+    <!-- <debug val="DEBUG: function 'customize-cme-prices' by value $_ ...\n"/> -->
+    <set PRICE_RESCALE_FACTOR="$_"/>
+    <if test="%is-defined(ALT_CLOSE)"><set ALT_CLOSE="%mul(%precision($ALT_CLOSE,9),$_)"/></if>
+    <if test="%is-defined(ALT_SETTLE)"><set ALT_SETTLE="%mul(%precision($ALT_SETTLE,9),$_)"/></if>
+    <if test="%is-defined(ASK)"><set ASK="%mul(%precision($ASK,9),$_)"/></if>
+    <if test="%is-defined(ASK_LOW_1)"><set ASK_LOW_1="%mul(%precision($ASK_LOW_1,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK1)"><set BEST_ASK1="%mul(%precision($BEST_ASK1,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK10)"><set BEST_ASK10="%mul(%precision($BEST_ASK10,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK2)"><set BEST_ASK2="%mul(%precision($BEST_ASK2,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK3)"><set BEST_ASK3="%mul(%precision($BEST_ASK3,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK4)"><set BEST_ASK4="%mul(%precision($BEST_ASK4,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK5)"><set BEST_ASK5="%mul(%precision($BEST_ASK5,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK6)"><set BEST_ASK6="%mul(%precision($BEST_ASK6,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK7)"><set BEST_ASK7="%mul(%precision($BEST_ASK7,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK8)"><set BEST_ASK8="%mul(%precision($BEST_ASK8,9),$_)"/></if>
+    <if test="%is-defined(BEST_ASK9)"><set BEST_ASK9="%mul(%precision($BEST_ASK9,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID1)"><set BEST_BID1="%mul(%precision($BEST_BID1,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID10)"><set BEST_BID10="%mul(%precision($BEST_BID10,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID2)"><set BEST_BID2="%mul(%precision($BEST_BID2,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID3)"><set BEST_BID3="%mul(%precision($BEST_BID3,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID4)"><set BEST_BID4="%mul(%precision($BEST_BID4,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID5)"><set BEST_BID5="%mul(%precision($BEST_BID5,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID6)"><set BEST_BID6="%mul(%precision($BEST_BID6,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID7)"><set BEST_BID7="%mul(%precision($BEST_BID7,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID8)"><set BEST_BID8="%mul(%precision($BEST_BID8,9),$_)"/></if>
+    <if test="%is-defined(BEST_BID9)"><set BEST_BID9="%mul(%precision($BEST_BID9,9),$_)"/></if>
+    <if test="%is-defined(BID)"><set BID="%mul(%precision($BID,9),$_)"/></if>
+    <if test="%is-defined(BID_HIGH_1)"><set BID_HIGH_1="%mul(%precision($BID_HIGH_1,9),$_)"/></if>
+    <if test="%is-defined(BLK_PRC1)"><set BLK_PRC1="%mul(%precision($BLK_PRC1,9),$_)"/></if>
+    <if test="%is-defined(CAN_PRC)"><set CAN_PRC="%mul(%precision($CAN_PRC,9),$_)"/></if>
+    <if test="%is-defined(CLOSE1)"><set CLOSE1="%mul(%precision($CLOSE1,9),$_)"/></if>
+    <if test="%is-defined(CLOSE2)"><set CLOSE2="%mul(%precision($CLOSE2,9),$_)"/></if>
+    <if test="%is-defined(CLOSE_ASK)"><set CLOSE_ASK="%mul(%precision($CLOSE_ASK,9),$_)"/></if>
+    <if test="%is-defined(CLOSE_BID)"><set CLOSE_BID="%mul(%precision($CLOSE_BID,9),$_)"/></if>
+    <if test="%is-defined(FIXING_1)"><set FIXING_1="%mul(%precision($FIXING_1,9),$_)"/></if>
+    <if test="%is-defined(HIGH_1)"><set HIGH_1="%mul(%precision($HIGH_1,9),$_)"/></if>
+    <if test="%is-defined(HST_CLOSE)"><set HST_CLOSE="%mul(%precision($HST_CLOSE,9),$_)"/></if>
+    <if test="%is-defined(HST_CLOSE2)"><set HST_CLOSE2="%mul(%precision($HST_CLOSE2,9),$_)"/></if>
+    <if test="%is-defined(IND_OPEN)"><set IND_OPEN="%mul(%precision($IND_OPEN,9),$_)"/></if>
+    <if test="%is-defined(INSPRC)"><set INSPRC="%mul(%precision($INSPRC,9),$_)"/></if>
+    <if test="%is-defined(IRGPRC)"><set IRGPRC="%mul(%precision($IRGPRC,9),$_)"/></if>
+    <if test="%is-defined(LOCHIGH)"><set LOCHIGH="%mul(%precision($LOCHIGH,9),$_)"/></if>
+    <if test="%is-defined(LOCLOW)"><set LOCLOW="%mul(%precision($LOCLOW,9),$_)"/></if>
+    <if test="%is-defined(LOLIMIT)"><set LOLIMIT="%mul(%precision($LOLIMIT,9),$_)"/></if>
+    <if test="%is-defined(LOW_1)"><set LOW_1="%mul(%precision($LOW_1,9),$_)"/></if>
+    <if test="%is-defined(NETCHNG_1)"><set NETCHNG_1="%mul(%precision($NETCHNG_1,9),$_)"/></if>
+    <if test="%is-defined(OFF_CLOSE)"><set OFF_CLOSE="%mul(%precision($OFF_CLOSE,9),$_)"/></if>
+    <if test="%is-defined(OPEN1)"><set OPEN1="%mul(%precision($OPEN1,9),$_)"/></if>
+    <if test="%is-defined(OPEN2)"><set OPEN2="%mul(%precision($OPEN2,9),$_)"/></if>
+    <if test="%is-defined(OPEN_PRC)"><set OPEN_PRC="%mul(%precision($OPEN_PRC,9),$_)"/></if>
+    <if test="%is-defined(PRC_TICK)"><set PRC_TICK="%mul(%precision($PRC_TICK,9),$_)"/></if>
+    <if test="%is-defined(PRE_SETTLE)"><set PRE_SETTLE="%mul(%precision($PRE_SETTLE,9),$_)"/></if>
+    <if test="%is-defined(PRIMACT_1)"><set PRIMACT_1="%mul(%precision($PRIMACT_1,9),$_)"/></if>
+    <if test="%is-defined(PRIMACT_2)"><set PRIMACT_2="%mul(%precision($PRIMACT_2,9),$_)"/></if>
+    <if test="%is-defined(PRIMACT_3)"><set PRIMACT_3="%mul(%precision($PRIMACT_3,9),$_)"/></if>
+    <if test="%is-defined(PRIMACT_4)"><set PRIMACT_4="%mul(%precision($PRIMACT_4,9),$_)"/></if>
+    <if test="%is-defined(PRIMACT_5)"><set PRIMACT_5="%mul(%precision($PRIMACT_5,9),$_)"/></if>
+    <if test="%is-defined(PRV_HIGH)"><set PRV_HIGH="%mul(%precision($PRV_HIGH,9),$_)"/></if>
+    <if test="%is-defined(PRV_LOW)"><set PRV_LOW="%mul(%precision($PRV_LOW,9),$_)"/></if>
+    <if test="%is-defined(REF_PRICE)"><set REF_PRICE="%mul(%precision($REF_PRICE,9),$_)"/></if>
+    <if test="%is-defined(SETL_NCHNG)"><set SETL_NCHNG="%mul(%precision($SETL_NCHNG,9),$_)"/></if>
+    <if test="%is-defined(SETTLE)"><set SETTLE="%mul(%precision($SETTLE,9),$_)"/></if>
+    <if test="%is-defined(STA_VAR_RG)"><set STA_VAR_RG="%mul(%precision($STA_VAR_RG,9),$_)"/></if>
+    <if test="%is-defined(THEO_OPEN)"><set THEO_OPEN="%mul(%precision($THEO_OPEN,9),$_)"/></if>
+    <if test="%is-defined(TICK_VAL)"><set TICK_VAL="%mul(%precision($TICK_VAL,9),$_)"/></if>
+    <if test="%is-defined(TRADE_HIGH)"><set TRADE_HIGH="%mul(%precision($TRADE_HIGH,9),$_)"/></if>
+    <if test="%is-defined(TRADE_LOW)"><set TRADE_LOW="%mul(%precision($TRADE_LOW,9),$_)"/></if>
+    <if test="%is-defined(TRDPRC_1)"><set TRDPRC_1="%mul(%precision($TRDPRC_1,9),$_)"/></if>
+    <if test="%is-defined(TRDPRC_2)"><set TRDPRC_2="%mul(%precision($TRDPRC_2,9),$_)"/></if>
+    <if test="%is-defined(TRDPRC_3)"><set TRDPRC_3="%mul(%precision($TRDPRC_3,9),$_)"/></if>
+    <if test="%is-defined(TRDPRC_4)"><set TRDPRC_4="%mul(%precision($TRDPRC_4,9),$_)"/></if>
+    <if test="%is-defined(TRDPRC_5)"><set TRDPRC_5="%mul(%precision($TRDPRC_5,9),$_)"/></if>
+    <if test="%is-defined(UPLIMIT)"><set UPLIMIT="%mul(%precision($UPLIMIT,9),$_)"/></if>
+    <if test="%is-defined(VWAP)"><set VWAP="%mul(%precision($VWAP,9),$_)"/></if>
+</transform>
+
+
+<!-- ==================================================================
+converte i messaggi originati dal feed Reuters e contenenti i last price 
+in messaggi per Strategy
+=================================================================== -->
+
+<transform name="strategy-subject-transform-rsf">
+    <!-- <debug val="DEBUG: function 'strategy-subject-transform-rsf' on subject $_ ...\n"/> -->
+    <let val="%get-cme-scale-factor-by-subject($_)">
+        <set msg-set="%eq($_,,strategy-message-transform-rsf-by-1.0,strategy-message-transform-rsf-by-$_)"
+            msg-format="RVMSG" 
+            msg-form="SMALL_RSF" />
+    </let>
+    <print val="$_"/>
+</transform>
+
+<transform name="strategy-message-transform-rsf-by-100">
+    <let val="%strategy-message-transform-rsf(100)"/>
+</transform>
+
+<transform name="strategy-message-transform-rsf-by-1000">
+    <let val="%strategy-message-transform-rsf(1000)"/>
+</transform>
+
+<transform name="strategy-message-transform-rsf-by-10000">
+    <let val="%strategy-message-transform-rsf(10000)"/>
+</transform>
+
+<transform name="strategy-message-transform-rsf-by-1.0">
+    <let val="%strategy-message-transform-rsf(1.0)"/>
+</transform>
+
+<transform name="strategy-message-transform-rsf-by-.01">
+    <let val="%strategy-message-transform-rsf(.01)"/>
+</transform>
+
+<transform name="strategy-message-transform-rsf">
+    <!-- <debug val="DEBUG: function 'strategy-message-transform-rsf' with price scale factor $_\n"/>  -->
+    <let val="%strategy-fields-transform-rsf($_)">
+        <switch>
+            <case test="0">
+                <!-- se non c'è last converte i messaggi in tipo confirm, 
+                per evitare la pubblicazione inutile di un messaggio vuoto -->
+                <set MSG_TYPE="%eq($MSG_TYPE,1,14,$MSG_TYPE)"/>  <!-- 1=update, 14=confirm -->
+            </case>
+            <default>
+                <set REC_TYPE="-22770"/>
+                <set MSG_TYPE="%eq($MSG_TYPE,8,0,$MSG_TYPE)"/>  <!-- 8=initial, 0=verify -->
+                <set TIMESTAMP="%timestamp(0,'%H:%M:%S.%3')"/>
+                <!-- <debug val="DEBUG: function 'strategy-message-transform-rsf' : publish an update\n"/> -->
+            </default>
+        </switch>
+    </let>
+</transform>
+
+<transform name="strategy-fields-transform-rsf">
+    <!-- <debug val="DEBUG: function 'strategy-fields-transform-rsf' with price scale factor $_\n"/> -->
+    <print val="0"/>
+    <if test="%is-defined(TRDPRC_1)">
+        <set LAST="%mul(%precision($TRDPRC_1,9),$_)"/>
+        <print val="1"/>
+    </if>
+    <if test="%is-defined(PRC_TICK)">
+        <set MINIMUM_TICK="%mul(%precision($PRC_TICK,9),$_)"/>
+        <print val="1"/>
+    </if>
+</transform>
+
+
+<!-- ==================================================================
+converte i messaggi DDM.*.*.* in messaggi DDM.ANY.*.* strutturati 
+in maniera omogenea, a favore di RTCE 
+=================================================================== -->
+
+<transform name="field_rtce">
+    <!--debug val="in field_rtce the current input string is &quot;{$_}&quot;\n"/-->
+    <switch>
+      <case test="(MTA)\.([^.]+)\.([^.]+)">
+        <set msg-set="set-fields-ddm-rtce" msg-form="RTCE" />
+        <print val="ANY.$2.$3"/>
+      </case>
+      <case test="(EURONEXT)\.([^.]+)\.([^.]+)">
+        <set msg-set="set-fields-ddm-rtce" msg-form="RTCE" />
+        <print val="ANY.$2.$3"/>
+      </case>
+      <case test="(EURONEXTP)\.([^.]+)\.([^.]+)">
+        <set msg-set="set-fields-ddm-rtce" msg-form="RTCE" />
+        <print val="ANY.$2.$3"/>
+      </case>
+      <case test="(EURONEXTNL)\.([^.]+)\.([^.]+)">
+        <set msg-set="set-fields-ddm-rtce" msg-form="RTCE" />
+        <print val="ANY.$2.$3"/>
+      </case>
+      <case test="(HIMTF)\.([^.]+)\.([^.]+)">
+        <set msg-set="set-fields-ddm-rtce" msg-form="RTCE" />
+        <print val="ANY.$2.$3"/>
+      </case>
+      <case test="(CFD)\.([^.]+)\.([^.]+)">
+        <set msg-set="set-fields-ddm-rtce" msg-form="RTCE" />
+        <print val="ANY.$2.$3"/>
+      </case>
+      <case test="(EQUIDUCT)\.([^.]+)\.([^.]+)">
+        <set msg-set="set-fields-ddm-rtce" msg-form="RTCE" />
+        <print val="ANY.$2.$3"/>
+      </case>
+      <default>
+        <print val="0"/>
+      </default>
+    </switch>
+</transform>
+
+<transform name="set-fields-ddm-rtce">
+    <!--debug val="    normal DDM field transforms rtce\n"/-->
+    <let val="%test-fields-rtce()">
+    <switch>
+      <case test="0">
+         <set MSG_TYPE="14"/>
+      </case>
+    </switch>
+    </let>
+</transform>
+
+
+<transform name="test-fields-rtce">
+    <!--debug val="    test-fields-rtce rtce\n"/-->
+   <print val="0"/>
+   <if test="%is-defined(DDMLAST)">
+      <set TRDPRC_1="$DDMLAST"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMQTLAST)">
+      <set TRDVOL_1="$DDMQTLAST"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMBID)">
+      <set BID="$DDMBID"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMQTBID)">
+      <set BIDSIZE="$DDMQTBID"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(RDN_EXCHID)">
+      <set RDN_EXCHID="$RDN_EXCHID"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(RDN_EXCHD2)">
+      <set RDN_EXCHD2="$RDN_EXCHD2"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(RECORDTYPE)">
+      <set RECORDTYPE="$RECORDTYPE"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMASK)">
+      <set ASK="$DDMASK"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMQTASK)">
+      <set ASKSIZE="$DDMQTASK"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMHIGH)">
+      <set HIGH_1="$DDMHIGH"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMLOW)">
+      <set LOW_1="$DDMLOW"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMPRZRIF)">
+      <set HST_CLOSE="$DDMPRZRIF"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMQTPROG)">
+      <set ACVOL_1="$DDMQTPROG"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMFASE)">
+      <set NEWS="$DDMFASE"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMPRZAP)">
+      <set OPEN_PRC="$DDMPRZAP"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMORALAST)">
+      <set EXCHTIM="$DDMORALAST"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMORAAGG)">
+      <set SALTIM="$DDMORAAGG"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMNCONTPROG)">
+      <set SEQNUM="$DDMNCONTPROG"/>
+      <print val="1"/>
+   </if>
+</transform>
+
+
+<!-- ==================================================================
+converte i messaggi DDM.*.*.* e contenenti i last price 
+in messaggi per Strategy
+=================================================================== -->
+
+  <transform name="field_filter_transform_ddm">
+    <print val="$_"/>
+    <!--debug val="in field_filter_transform_ddm the current input string is &quot;{$_}&quot;\n"/-->
+    <switch>     
+      <case test="CFD\.[^.]+\.[^.]+">
+        <set msg-set="set-fields-ddm-bidask" msg-form="SMALL" />
+      </case>
+      <case test="HIMTF\.[^.]+\.[^.]+">
+        <set msg-set="set-fields-ddm-bidask" msg-form="SMALL" />
+      </case>
+      <case test="((OPFIN)|(OPFINUK))\.[^.]+\.[^.]+">
+        <set msg-set="set-fields-ddm-bidask" msg-form="SMALL" />
+      </case>
+      <case test="((KNOPT)|(KNOPTUK))\.[^.]+\.[^.]+">
+        <set msg-set="set-fields-ddm-bidask" msg-form="SMALL" />
+      </case>
+      <default>
+        <set msg-set="set-fields-ddm" msg-form="SMALL" />
+      </default>
+    </switch>
+  </transform>
+
+  <transform name="set-fields-ddm">
+    <!--debug val="    normal DDM field transforms\n"/-->
+    <let val="%test-fields-ddm()">
+    <switch>     
+      <case test="0">
+         <set MSG_TYPE="14"/>
+      </case>
+      <default>
+        <set TIMESTAMP="%timestamp(0,'%H:%M:%S.%3')"/>
+      </default>
+    </switch>
+    </let>
+  </transform>
+
+<transform name="test-fields-ddm">
+   <print val="0"/>
+   <if test="%is-defined(DDMLAST)">
+      <set LAST="$DDMLAST"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMTICK)">
+      <set MINIMUM_TICK="$DDMTICK"/>
+      <print val="1"/>
+   </if>
+</transform>
+
+  <transform name="set-fields-ddm-bidask">
+    <!--debug val="    special DDM.CFD field transforms\n"/-->
+    <let val="%test-fields-ddm-bidask()">
+    <switch>     
+      <case test="0">
+         <set MSG_TYPE="14"/>
+      </case>
+      <default>
+        <set TIMESTAMP="%timestamp(0,'%H:%M:%S.%3')"/>
+      </default>
+    </switch>
+    </let>
+  </transform>
+
+<transform name="test-fields-ddm-bidask">
+   <print val="0"/>
+   <if test="%is-defined(DDMLAST)">
+      <set LAST="$DDMLAST"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMTICK)">
+      <set MINIMUM_TICK="$DDMTICK"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMBID)">
+      <set BID="$DDMBID"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(DDMASK)">
+      <set ASK="$DDMASK"/>
+      <print val="1"/>
+   </if>
+</transform>
+
+
+
+
+<!-- ==================================================================
+converte i messaggi GL.*.*.* e contenenti i last price 
+in messaggi per Strategy
+=================================================================== -->
+
+<transform name="field_filter_transform_gl">
+  <print val="$_"/>
+  <set msg-set="set-fields-gl"
+       msg-form="SMALL" />
+</transform>
+
+<transform name="set-fields-gl">
+  <let val="%test-fields-gl()">
+    <switch>
+      <case test="0">
+         <set MSG_TYPE="14"/>
+      </case>
+      <default>
+        <set TIMESTAMP="%timestamp(0,'%H:%M:%S.%3')"/>
+      </default>
+    </switch>
+  </let>
+</transform>
+
+<transform name="test-fields-gl">
+   <print val="0"/>
+   <if test="%is-defined(GLLAST)">
+      <set LAST="$GLLAST"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(GLTICK)">
+      <set MINIMUM_TICK="$GLTICK"/>
+      <print val="1"/>
+   </if>
+</transform>
+
+
+
+<!-- ==================================================================
+converte i messaggi SH.*.*.* e contenenti i last price 
+in messaggi per Strategy
+=================================================================== -->
+
+<transform name="field_filter_transform_sh">
+  <print val="$_"/>
+  <set msg-set="set-fields-sh"
+       msg-form="SMALL" />
+</transform>
+
+<transform name="set-fields-sh">
+  <let val="%test-fields-sh()">
+    <switch>
+      <case test="0">
+         <set MSG_TYPE="14"/>
+      </case>
+      <default>
+        <set TIMESTAMP="%timestamp(0,'%H:%M:%S.%3')"/>
+      </default>
+    </switch>
+  </let>
+</transform>
+
+<transform name="test-fields-sh">
+   <print val="0"/>
+   <if test="%is-defined(TRDPRC_1)">
+      <set LAST="$TRDPRC_1"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(NUMBER_3)">
+      <set MINIMUM_TICK="$NUMBER_3"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(BID)">
+      <set BID="$BID"/>
+      <print val="1"/>
+   </if>
+   <if test="%is-defined(ASK)">
+      <set ASK="$ASK"/>
+      <print val="1"/>
+   </if>
+</transform> 
+
+<!-- ==================================================================
+A partire da un subject Reuters produce il subject corrispondente
+per accedere al book multilivello
+=================================================================== -->
+ 
+<transform name="build-market-depth-ric">
+    <!-- <debug val="DEBUG: function 'build-market-depth-ric' on subject $_ ...\n"/> -->
+    <let val="%build-market-depth-ric-2($_)">
+        <!-- <debug val="DEBUG: function 'build-market-depth-ric' produced: $_ .\n"/> -->
+        <print val="$_"/>
+    </let>
+</transform>
+
+<transform name="build-market-depth-ric-2">
+    <switch>
+        <case test="([^.]+)\.([^.]+)\.(NaE)">
+            <print val="$1.{$2}m.$3"/>
+        </case>
+        <case test="([^.]+)\.([^.]+)\.(AS|PA|LS)">
+            <print val="$1.0{$2}.$3"/>
+        </case>
+        <case test="([^.]+)\.([^.]+)\.(DE|F)">
+            <print val="$1.1{$2}.$3"/>
+        </case>
+        <case test="([^.]+)\.([^.]+)\.(L)">
+            <print val="$1.{$2}.$3O"/>
+        </case>
+    </switch>
+</transform>
+
+<!-- ==================================================================
+Segmentazione dei subject per applicare conflation diverse ai subject 
+STRATEGY_RSF, ovvero una conflation per NB personalizzata
+originale era:   <case test="([^.]+)\.([^.]+)\.((NB)|(PA))">
+=================================================================== -->
+  <transform name="match_rsf1">
+    <switch>
+      <case test="([^.]+)\.([^.]+)\.(NB)">
+        <!-- eat this match -->
+      </case>
+      <default>
+        <!-- all others are ok -->
+        <print val="$_"/>
+      </default>
+    </switch>
+  </transform>
+
+<!-- ==================================================================
+          Segmentazione dei subject per applicare conflation diverse ai subject 
+RSF, per applicare conflation personalizzate
+=================================================================== -->
+  <transform name="match_cboe_nb">
+    <switch>
+      <case test="([^.]+)\.([^.]+)\.((U)|(NB))">
+        <!-- eat this match -->
+      </case>
+      <default>
+        <!-- all others are ok -->
+        <print val="$_"/>
+      </default>
+    </switch>
+  </transform>
+
+</transform-config>
