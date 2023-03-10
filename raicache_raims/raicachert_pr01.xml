@@ -1,0 +1,1147 @@
+<?xml version="1.0"?>
+<raicache-config>
+<!--
+     ft-protocol-rv7  
+Definisce il servizio RV su cui le diverse istanze di cache comunicano 
+per decidere quale sia l'istanza attiva.
+
+log-config
+Parametri del log: dimensione, percorso, verbosita'....
+
+sass-config
+File di configurazione relativi ai messaggi in formato SASS e SASS2 
+
+cache-config
+Parametri di funzionamento della cache. 
+Dimensione max del file su disco: Se si eccede questa dimensione i nuovi subject non vengono salvati 
+creando problemi in caso di restart della cache.
+commit-time: alle 2:30 di ogni notte viene consolidato su disco il file, recuperando lo spazio occupato dai subject droppati.
+
+servizi utilizzati:
+9351 -> Fault Tollerance tra istanze
+8206 -> Informativa per LIST
+8400 -> Informativa per MAD
+8104 -> Informativa per MSP 
+8204 -> Informativa per MSP 
+9103 -> Informativa per Strategy
+8103 -> Informativa per OMS
+8102 -> Informativa per OMS (?)
+7600 -> Informativa per CASSANDRA
+
+
+porte utilizzate:
+38000 -> interrogazioni cacheadmin
+38100 -> interrogazioni cacheadmin
+
+-->
+  <cluster cluster-name="REALTIME-PROD"
+           sync-timeout="30 seconds"
+           replay-msg-rate="1000">
+      <server server-name="vxr-prod-raicache01"
+              default-active="false"/>
+      <server server-name="vxr-prod-raicache02"
+              default-active="false"/>
+  </cluster>
+  <ft-protocol-rv7 service="9351"
+                   network=""
+                   daemon="tcp:127.0.0.1:8500"
+                   description="ft_transport"/>
+  <log-config log-file="/home/mercury/log/raicache_realtime.log"
+              log-level="minor"
+              log-verbosity="5"
+              log-xml="false"
+              log-size-limit="100000000b"/>
+  <sass-config tss-records="tss_records.cf"
+               tss-fields="tss_fields.cf"
+               appendix-a="RDMFieldDictionary"
+               enumtype-def="enumtype.def"
+               cfile-path="/home/mercury/config/cfile"
+               cfile-separator=";"/>
+  <cache-config ram-limit="6 Gb"
+                disk-limit="12 Gb"
+                msg-store-partition="/home/mercury/data/realtime/msgdb1.dat"
+                msg-store-txlog="/home/mercury/data/realtime/msglog.dat"
+                commit-time="2:30 am"
+                commit-interval="10 minutes"
+                vcommit-interval="24 hours"
+                drop-user-if-inactive="8 minutes"/>
+  <rwf-msg-config rwf-add-symbol-field="true"/>
+
+  <!--
+         admin-http
+  Porta utilizzata per default dal cacheadmin per le interrogazioni alla cache
+  -->
+  <protocol-tcp address="tcp:38000">
+     <source subject="&gt;" 
+             subscriber-listen="&gt;"
+             wildcard-initial="true"
+             send-drop="true"
+             is-entitled="true"
+             msg-format="TIBMSG"/>
+     <source subject="&gt;" broadcast-feed="&gt;"/>
+  </protocol-tcp>
+  
+  <!--
+         servizio alternativo utilizzato tramite cacheadmin -a tcp/:38000 per caricare i dati sulla cache
+  utilizzato per rimettere i dati pre trading after hour alle 20:30 
+  -->
+  <protocol-tcp address="tcp/:38100"
+                description="admin2">
+    <source subject="&gt;"
+            subscriber-listen="&gt;"
+            broadcast-feed="&gt;"
+            wildcard-initial="true"
+            send-drop="true"
+            msg-format="TIBMSG"/>
+  </protocol-tcp>
+  
+  <!--
+         Parametri di funzionamento della cache.
+  allow-new-formclass-*  : Il record viene inserito in memoria e propagato anche se il feed non manda prima un INITIAL
+  drop-invalid-fids : vengono scartati eventuali field_id non previsti ma il resto del messaggio viene considerato.
+  timestamp-field : The field name where a timestamp will be added by raicache, as a 64 bit integer representing nanoseconds resolution UTC
+  -->
+  <msg-config force-cache="true"
+              allow-new-formclass-update="true"
+              allow-new-formclass-verify="true"
+              merge-initials="true"
+              drop-invalid-fids="true"/>          
+  <!--
+         File di configurazione delle trasformazioni DNE (Data NormalizationEngine)
+  -->
+  <dne-config href="transforms.xml"/>
+
+<!--
+      Informativa in USCITA, protocollo TIBMSG (SASS).
+ Utilizzato dalla piattaforma LIST
+-->
+  <protocol  transport="RV" service="8206" network="" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true" description="LIST 8206" >
+    <source subject="RSF.REC.&gt;"
+       subscriber-listen="RSF.REC.&gt;"
+       snapshot-listen="_SNAP.RSF.REC.&gt;"
+       msg-format="TIBMSG" />
+  </protocol>
+
+
+  <protocol  transport="RV" service="8400" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true" description="MAD 8400" >
+    <source subject="DDM.&gt;"
+       subscriber-listen="DDM.&gt;"
+       snapshot-listen="_SNAP.DDM.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="GL.&gt;"
+       subscriber-listen="GL.&gt;"
+       snapshot-listen="_SNAP.GL.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="RSF.&gt;"
+       subscriber-listen="RSF.&gt;"
+       snapshot-listen="_SNAP.RSF.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="TLX.&gt;"
+       subscriber-listen="TLX.&gt;"
+       snapshot-listen="_SNAP.TLX.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="SH.&gt;"
+       subscriber-listen="SH.&gt;"
+       snapshot-listen="_SNAP.SH.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="RSF"
+            subscriber-listen="MAD.&gt;"
+            snapshot-listen="_SNAP.MAD.&gt;"
+            msg-format="TIBMSG" />
+    <source subject="RSF"
+            subscriber-listen="MAD.%build-market-depth-ric(&gt;)"
+            snapshot-listen="_SNAP.MAD.%build-market-depth-ric(&gt;)"
+            msg-format="TIBMSG" />
+  </protocol>
+
+
+
+<!--
+    Informativa in USCITA, protocollo TIBMSG (SASS).
+    Utilizzato dagli MSP
+-->
+  <protocol  transport="RV" service="8104" network="" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true"
+   rvd-arguments="rvd -reliability 10 -no-permanent" description="MSP 8104" >
+    <source subject="SH.&gt;"
+       subject-conflate="true"
+       update-msg-rate="400"
+       subscriber-listen="SH.&gt;"
+       snapshot-listen="_SNAP.SH.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="GL.*.*.CME"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="GL.*.*.CME"
+       snapshot-listen="_SNAP.GL.*.*.CME"
+       msg-format="TIBMSG" />
+    <source subject="GL.*.*.NaE"
+       subject-conflate="true"
+       update-msg-rate="200"
+       subscriber-listen="GL.*.*.NaE"
+       snapshot-listen="_SNAP.GL.*.*.NaE"
+       msg-format="TIBMSG" />
+    <source subject="GL.*.*.IDEMOPT"
+       subject-conflate="true"
+       update-msg-rate="300"
+       subscriber-listen="GL.*.*.IDEMOPT"
+       snapshot-listen="_SNAP.GL.*.*.IDEMOPT"
+       msg-format="TIBMSG" />
+    <source subject="GL.*.*.IDEMFUT"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.IDEMFUT"
+       snapshot-listen="_SNAP.GL.*.*.IDEMFUT"
+       msg-format="TIBMSG" />
+    <source subject="GL.*.*.EUREXOPT"
+       subject-conflate="true"
+       update-msg-rate="700"
+       subscriber-listen="GL.*.*.EUREXOPT"
+       snapshot-listen="_SNAP.GL.*.*.EUREXOPT"
+       msg-format="TIBMSG" />
+    <source subject="GL.*.*.EUREXFUT"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="GL.*.*.EUREXFUT"
+       snapshot-listen="_SNAP.GL.*.*.EUREXFUT"
+       msg-format="TIBMSG" />
+
+    <source subject="RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="1500"
+       snap-timeout="15 secs"
+       subscriber-listen="RSF.%match_cboe_nb(&gt;)"
+       snapshot-listen="_SNAP.RSF.%match_cboe_nb(&gt;)"
+       msg-format="TIBMSG" />
+
+    <source subject="RSF.*.*.NB"
+       subject-conflate="true"
+       update-msg-rate="2100"
+       snap-timeout="15 secs"
+       subscriber-listen="RSF.*.*.NB"
+       snapshot-listen="_SNAP.RSF.*.*.NB"
+       msg-format="TIBMSG" />
+
+    <source subject="RSF.*.*.U"
+       subject-conflate="true"
+       update-msg-rate="1000"
+       snap-timeout="15 secs"
+       subscriber-listen="RSF.*.*.U"
+       snapshot-listen="_SNAP.RSF.*.*.U"
+       msg-format="TIBMSG" />
+
+    <source subject="TLX.&gt;"
+       subject-conflate="true"
+       update-msg-rate="250"
+       subscriber-listen="TLX.&gt;"
+       snapshot-listen="_SNAP.TLX.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="FIN_RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="350"
+       snap-timeout="15 secs"
+       subscriber-listen="FIN_RSF.&gt;"
+       snapshot-listen="_SNAP.FIN_RSF.&gt;"
+       msg-format="TIBMSG" />
+  </protocol>
+
+
+
+<!--
+    Informativa in USCITA, protocollo TIBMSG (SASS).
+    Utilizzato dagli MSP
+-->
+  <protocol  transport="RV" service="8204" network="" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true"
+   rvd-arguments="rvd -reliability 10 -no-permanent" description="MSP 48/8204">
+    <source subject="DDM.MTA.&gt;"
+       subject-conflate="true"
+       update-msg-rate="3000"
+       subscriber-listen="DDM.MTA.&gt;"
+       snapshot-listen="_SNAP.DDM.MTA.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.CFD.&gt;"
+       subject-conflate="true"
+       update-msg-rate="200"
+       subscriber-listen="DDM.CFD.&gt;"
+       snapshot-listen="_SNAP.DDM.CFD.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDI.KNOPT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="500"
+       subscriber-listen="DDI.KNOPT.&gt;"
+       snapshot-listen="_SNAP.DDI.KNOPT.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.HIMTF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="DDM.HIMTF.&gt;"
+       snapshot-listen="_SNAP.DDM.HIMTF.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.TURBO.&gt;"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="DDM.TURBO.&gt;"
+       snapshot-listen="_SNAP.DDM.TURBO.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.HICERT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="DDM.HICERT.&gt;"
+       snapshot-listen="_SNAP.DDM.HICERT.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.MOT.&gt;"
+       subscriber-listen="DDM.MOT.&gt;"
+       update-msg-rate="300"
+       snapshot-listen="_SNAP.DDM.MOT.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.XETRA.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.XETRA.&gt;"
+       snapshot-listen="_SNAP.DDM.XETRA.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.EQUIDUCT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="300"
+       subscriber-listen="DDM.EQUIDUCT.&gt;"
+       snapshot-listen="_SNAP.DDM.EQUIDUCT.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.EURONEXT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="DDM.EURONEXT.&gt;"
+       snapshot-listen="_SNAP.DDM.EURONEXT.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.SSO.&gt;"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="DDM.SSO.&gt;"
+       snapshot-listen="_SNAP.DDM.SSO.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.INDICI.&gt;"
+       subscriber-listen="DDM.INDICI.&gt;"
+       snapshot-listen="_SNAP.DDM.INDICI.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.OPFIN.&gt;"
+       subject-conflate="true"
+       update-msg-rate="500"
+       subscriber-listen="DDM.OPFIN.&gt;"
+       snapshot-listen="_SNAP.DDM.OPFIN.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.OPFINUK.&gt;"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="DDM.OPFINUK.&gt;"
+       snapshot-listen="_SNAP.DDM.OPFINUK.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.YIELD.&gt;"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="DDM.YIELD.&gt;"
+       snapshot-listen="_SNAP.DDM.YIELD.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.FASEOPT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="DDM.FASEOPT.&gt;"
+       snapshot-listen="_SNAP.DDM.FASEOPT.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="DDM.FASEMERCATO.>"
+       subject-conflate="false"
+       update-msg-rate="150"
+       subscriber-listen="DDM.FASEMERCATO.>"
+       snapshot-listen="_SNAP.DDM.FASEMERCATO.>"
+       msg-format="TIBMSG" />
+  </protocol>
+
+
+
+
+
+
+<!--
+    Informativa in USCITA, protocollo RVMSG (rv piatto).
+    Utilizzato dai server automatici (STRATEGY) ed OMS
+-->
+  <protocol  transport="RV" service="9103" network="" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true" description="mercury 9103">
+     <source subject="STRATEGY_RSF.&gt;"
+       description="strategy-match"
+       subject-conflate="true"
+       update-msg-rate="500"
+       subscriber-listen="STRATEGY_RSF.%match_rsf1(&gt;)"
+       snapshot-listen="_SNAP.STRATEGY_RSF.%match_rsf1(&gt;)"
+       interactive-notify="true"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_RSF.&gt;"
+       description="strategy-nasdaq-basic"
+       subject-conflate="true"
+       update-msg-rate="350"
+       subscriber-listen="STRATEGY_RSF.*.*.NB"
+       snapshot-listen="_SNAP.STRATEGY_RSF.*.*.NB"
+       interactive-notify="true"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_DDI.&gt;"
+       subject-conflate="true"
+       update-msg-rate="200"
+       subscriber-listen="STRATEGY_DDI.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_DDI.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_DDM.&gt;"
+       subject-conflate="false"
+       subscriber-listen="STRATEGY_DDM.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_DDM.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_FIN.&gt;"
+       subject-conflate="false"
+       subscriber-listen="STRATEGY_FIN.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_FIN.&gt;"
+       interactive-notify="true"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_GL.&gt;"
+       subject-conflate="false"
+       subscriber-listen="STRATEGY_GL.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_GL.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_SH.&gt;"
+       subject-conflate="false"
+       subscriber-listen="STRATEGY_SH.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_SH.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_TLX.&gt;"
+       subject-conflate="false"
+       subscriber-listen="STRATEGY_TLX.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_TLX.&gt;"
+       msg-format="RVMSG" />
+  </protocol>
+
+
+
+<!--
+             Informativa in USCITA, protocollo RVMSG (rv piatto).
+        Utilizzato dai server automatici (STRATEGY) ed OMS
+-->
+  <protocol  transport="RV" service="8103" network="" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true" description="mercury 8103">
+    <source subject="DDM.MTA.&gt;"
+       subject-conflate="true"
+       update-msg-rate="500"
+       subscriber-listen="DDM.MTA.&gt;"
+       snapshot-listen="_SNAP.DDM.MTA.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDI.KNOPT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="300"
+       subscriber-listen="DDI.KNOPT.&gt;"
+       snapshot-listen="_SNAP.DDI.KNOPT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.CFD.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.CFD.&gt;"
+       snapshot-listen="_SNAP.DDM.CFD.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.HIMTF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.HIMTF.&gt;"
+       snapshot-listen="_SNAP.DDM.HIMTF.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.TURBO.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.TURBO.&gt;"
+       snapshot-listen="_SNAP.DDM.TURBO.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.HICERT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.HICERT.&gt;"
+       snapshot-listen="_SNAP.DDM.HICERT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.MOT.&gt;"
+       subscriber-listen="DDM.MOT.&gt;"
+       update-msg-rate="100"
+       snapshot-listen="_SNAP.DDM.MOT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.XETRA.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.XETRA.&gt;"
+       snapshot-listen="_SNAP.DDM.XETRA.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.EQUIDUCT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.EQUIDUCT.&gt;"
+       snapshot-listen="_SNAP.DDM.EQUIDUCT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.ANAG.&gt;"
+       subscriber-listen="DDM.ANAG.&gt;"
+       snapshot-listen="_SNAP.DDM.ANAG.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.EURONEXT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.EURONEXT.&gt;"
+       snapshot-listen="_SNAP.DDM.EURONEXT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="SH.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="SH.&gt;"
+       snapshot-listen="_SNAP.SH.&gt;"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.CME"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="GL.*.*.CME"
+       snapshot-listen="_SNAP.GL.*.*.CME"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.NaE"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.NaE"
+       snapshot-listen="_SNAP.GL.*.*.NaE"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.IDEMOPT"
+       subject-conflate="true"
+       update-msg-rate="300"
+       subscriber-listen="GL.*.*.IDEMOPT"
+       snapshot-listen="_SNAP.GL.*.*.IDEMOPT"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.IDEMFUT"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.IDEMFUT"
+       snapshot-listen="_SNAP.GL.*.*.IDEMFUT"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.EUREXOPT"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.EUREXOPT"
+       snapshot-listen="_SNAP.GL.*.*.EUREXOPT"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.EUREXFUT"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.EUREXFUT"
+       snapshot-listen="_SNAP.GL.*.*.EUREXFUT"
+       msg-format="RVMSG" />
+    <source subject="RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="300"
+       subscriber-listen="RSF.&gt;"
+       snapshot-listen="_SNAP.RSF.&gt;"
+       msg-format="RVMSG" />
+    <source subject="FIN_RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="FIN_RSF.&gt;"
+       snapshot-listen="_SNAP.FIN_RSF.&gt;"
+       msg-format="RVMSG" />
+    <source subject="TLX.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="TLX.&gt;"
+       snapshot-listen="_SNAP.TLX.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.OPFIN.&gt;"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="DDM.OPFIN.&gt;"
+       snapshot-listen="_SNAP.DDM.OPFIN.&gt;"
+       msg-format="RVMSG"/>
+    <source subject="DDM.OPFINUK.&gt;"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="DDM.OPFINUK.&gt;"
+       snapshot-listen="_SNAP.DDM.OPFINUK.&gt;"
+       msg-format="RVMSG"/>
+     <source subject="STRATEGY_DDM.&gt;"
+       subject-conflate="true"
+       update-msg-rate="250"
+       subscriber-listen="STRATEGY_DDM.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_DDM.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_DDI.&gt;"
+       subject-conflate="true"
+       update-msg-rate="200"
+       subscriber-listen="STRATEGY_DDI.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_DDI.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="STRATEGY_RSF.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_RSF.&gt;"
+       interactive-notify="true"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_FIN.&gt;"
+       subject-conflate="true"
+       update-msg-rate="250"
+       subscriber-listen="STRATEGY_FIN.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_FIN.&gt;"
+       interactive-notify="true"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_GL.&gt;"
+       subscriber-listen="STRATEGY_GL.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_GL.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_SH.&gt;"
+       subscriber-listen="STRATEGY_SH.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_SH.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_TLX.&gt;"
+       subscriber-listen="STRATEGY_TLX.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_TLX.&gt;"
+       msg-format="RVMSG" />
+    <source subject="NEWS.&gt;"
+       subscriber-listen="NEWS.&gt;"
+       snapshot-listen="_SNAP.NEWS.&gt;"
+       msg-format="RVMSG" />
+  </protocol>
+
+
+<!--
+    Informativa in USCITA, protocollo RVMSG (rv piatto).
+    Utilizzato dai server automatici (STRATEGY) ed OMS
+-->
+  <protocol  transport="RV" service="8102" network="" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true" description="MQ6 44/8102">
+    <source subject="DDM.MTA.&gt;"
+       subject-conflate="true"
+       update-msg-rate="500"
+       subscriber-listen="DDM.MTA.&gt;"
+       snapshot-listen="_SNAP.DDM.MTA.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDI.KNOPT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="300"
+       subscriber-listen="DDI.KNOPT.&gt;"
+       snapshot-listen="_SNAP.DDI.KNOPT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.CFD.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.CFD.&gt;"
+       snapshot-listen="_SNAP.DDM.CFD.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.HIMTF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.HIMTF.&gt;"
+       snapshot-listen="_SNAP.DDM.HIMTF.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.TURBO.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.TURBO.&gt;"
+       snapshot-listen="_SNAP.DDM.TURBO.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.HICERT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.HICERT.&gt;"
+       snapshot-listen="_SNAP.DDM.HICERT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.MOT.&gt;"
+       subscriber-listen="DDM.MOT.&gt;"
+       update-msg-rate="100"
+       snapshot-listen="_SNAP.DDM.MOT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.XETRA.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.XETRA.&gt;"
+       snapshot-listen="_SNAP.DDM.XETRA.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.EQUIDUCT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.EQUIDUCT.&gt;"
+       snapshot-listen="_SNAP.DDM.EQUIDUCT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.ANAG.&gt;"
+       subscriber-listen="DDM.ANAG.&gt;"
+       snapshot-listen="_SNAP.DDM.ANAG.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.EURONEXT.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="DDM.EURONEXT.&gt;"
+       snapshot-listen="_SNAP.DDM.EURONEXT.&gt;"
+       msg-format="RVMSG" />
+    <source subject="SH.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="SH.&gt;"
+       snapshot-listen="_SNAP.SH.&gt;"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.CME"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="GL.*.*.CME"
+       snapshot-listen="_SNAP.GL.*.*.CME"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.NaE"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.NaE"
+       snapshot-listen="_SNAP.GL.*.*.NaE"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.IDEMOPT"
+       subject-conflate="true"
+       update-msg-rate="300"
+       subscriber-listen="GL.*.*.IDEMOPT"
+       snapshot-listen="_SNAP.GL.*.*.IDEMOPT"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.IDEMFUT"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.IDEMFUT"
+       snapshot-listen="_SNAP.GL.*.*.IDEMFUT"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.EUREXOPT"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.EUREXOPT"
+       snapshot-listen="_SNAP.GL.*.*.EUREXOPT"
+       msg-format="RVMSG" />
+    <source subject="GL.*.*.EUREXFUT"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="GL.*.*.EUREXFUT"
+       snapshot-listen="_SNAP.GL.*.*.EUREXFUT"
+       msg-format="RVMSG" />
+    <source subject="RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="1500"
+       subscriber-listen="RSF.&gt;"
+       snapshot-listen="_SNAP.RSF.&gt;"
+       msg-format="RVMSG" />
+    <source subject="FIN_RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="FIN_RSF.&gt;"
+       snapshot-listen="_SNAP.FIN_RSF.&gt;"
+       msg-format="RVMSG" />
+    <source subject="TLX.&gt;"
+       subject-conflate="true"
+       update-msg-rate="100"
+       subscriber-listen="TLX.&gt;"
+       snapshot-listen="_SNAP.TLX.&gt;"
+       msg-format="RVMSG" />
+    <source subject="DDM.OPFIN.&gt;"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="DDM.OPFIN.&gt;"
+       snapshot-listen="_SNAP.DDM.OPFIN.&gt;"
+       msg-format="RVMSG"/>
+    <source subject="DDM.OPFINUK.&gt;"
+       subject-conflate="true"
+       update-msg-rate="50"
+       subscriber-listen="DDM.OPFINUK.&gt;"
+       snapshot-listen="_SNAP.DDM.OPFINUK.&gt;"
+       msg-format="RVMSG"/>
+     <source subject="STRATEGY_DDM.&gt;"
+       subject-conflate="true"
+       update-msg-rate="250"
+       subscriber-listen="STRATEGY_DDM.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_DDM.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_DDI.&gt;"
+       subject-conflate="true"
+       update-msg-rate="200"
+       subscriber-listen="STRATEGY_DDI.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_DDI.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_RSF.&gt;"
+       subject-conflate="true"
+       update-msg-rate="150"
+       subscriber-listen="STRATEGY_RSF.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_RSF.&gt;"
+       interactive-notify="true"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_FIN.&gt;"
+       subject-conflate="true"
+       update-msg-rate="250"
+       subscriber-listen="STRATEGY_FIN.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_FIN.&gt;"
+       interactive-notify="true"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_GL.&gt;"
+       subscriber-listen="STRATEGY_GL.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_GL.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_SH.&gt;"
+       subscriber-listen="STRATEGY_SH.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_SH.&gt;"
+       msg-format="RVMSG" />
+     <source subject="STRATEGY_TLX.&gt;"
+       subscriber-listen="STRATEGY_TLX.&gt;"
+       snapshot-listen="_SNAP.STRATEGY_TLX.&gt;"
+       msg-format="RVMSG" />
+    <source subject="NEWS.&gt;"
+       subscriber-listen="NEWS.&gt;"
+       snapshot-listen="_SNAP.NEWS.&gt;"
+       msg-format="RVMSG" />
+  </protocol>
+
+
+  <!-- ================================================================================
+       Informativa in USCITA, protocollo TIBMSG
+       Subject DDM|SH|GL|RSF|TLX, senza conflation
+       ================================================================================
+  -->
+ <protocol-rv service="7600" network="" daemon="tcp:127.0.0.1:8500" listen-sass-dict="true" description="CASSANDRA 7600">
+    <source subject="DDM.&gt;"
+       subscriber-listen="DDM.&gt;"
+       snapshot-listen="_SNAP.DDM.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="SH.&gt;"
+       subscriber-listen="SH.&gt;"
+       snapshot-listen="_SNAP.SH.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="GL.&gt;"
+       subscriber-listen="GL.&gt;"
+       snapshot-listen="_SNAP.GL.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="RSF.&gt;"
+       subscriber-listen="RSF.&gt;"
+       snapshot-listen="_SNAP.RSF.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="TLX.&gt;"
+       subscriber-listen="TLX.&gt;"
+       snapshot-listen="_SNAP.TLX.&gt;"
+       msg-format="TIBMSG" />
+    <source subject="FIN_RSF.&gt;"
+       subscriber-listen="FIN_RSF.&gt;"
+       snapshot-listen="_SNAP.FIN_RSF.&gt;"
+       msg-format="TIBMSG" />
+ </protocol-rv>
+
+
+<!--
+    #################
+    ##  INGRESSI   ##
+    #################
+-->
+
+    
+<!--
+================================================================================
+Informativa Reuters in INGRESSO, protocollo UPA piattaforma Reuters TREP.
+Configurazione in load balancing.
+Configurazione solo routing ("no-cache") per i subject NEWS.>
+================================================================================
+-->
+<!--
+    COPPIA TITOLI "NORMALI"
+-->
+    <protocol-upa description="RSF tr-ads-pr01 vxr01"
+            rssl-hostname="tr-ads-pr01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxr01"
+            rssl-password="vxr01" >
+            <!-- NB: sembra che in un protocol-upa solo il primo source-upa venga effettivamente attivato -->
+            <!-- NB: il DNE in un source-upa funziona solo se subject contiene solo il segmento e NON la wildcard &gt; -->
+        <source-upa subject="RSF"
+                description="RDF data from Reuters for RSF.REC..."
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.&gt;"
+                load-balance="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+
+    <protocol-upa description="RSF tr-ads-sv01 vxr02"
+            rssl-hostname="tr-ads-sv01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxr02"
+            rssl-password="vxr02" >
+            <!-- NB: sembra che in un protocol-upa solo il primo source-upa venga effettivamente attivato -->
+            <!-- NB: il DNE in un source-upa funziona solo se subject contiene solo il segmento e NON la wildcard &gt; -->
+        <source-upa subject="RSF"
+                description="RDF data from Reuters for RSF.REC..."
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.&gt;"
+                load-balance="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+
+<!--
+    COPPIA TITOLI "STRATEGY"
+-->
+    <protocol-upa description="STRATEGY tr-ads-pr01 vxr03"
+            rssl-hostname="tr-ads-pr01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxr03"
+            rssl-password="vxr03" >
+        <source-upa subject="STRATEGY_RSF"
+                description="RDF data from Reuters for STRATEGY_RSF.REC..."
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.%strategy-subject-transform-rsf(&gt;)"
+                load-balance="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+
+    <protocol-upa description="STRATEGY tr-ads-sv01 vxr04"
+            rssl-hostname="tr-ads-sv01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxr04"
+            rssl-password="vxr04" >
+        <source-upa subject="STRATEGY_RSF"
+                description="RDF data from Reuters for STRATEGY_RSF.REC..."
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.%strategy-subject-transform-rsf(&gt;)"
+                load-balance="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+
+<!--
+    COPPIA TITOLI "FIN_RSF"
+-->
+    <protocol-upa description="FIN_RSF CME tr-ads-sv01 vxr05"
+            rssl-hostname="tr-ads-sv01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxr05"
+            rssl-password="vxr05" >
+        <source-upa subject="FIN_RSF"
+                description="RDF data from Reuters for FIN_RSF.REC..."
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.%fineco-customize(&gt;)"
+                load-balance="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+
+     <protocol-upa description="Reuters CME tr-ads-pr01 vxr06"
+            rssl-hostname="tr-ads-pr01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxr06"
+            rssl-password="vxr06" >
+        <source-upa subject="FIN_RSF"
+                description="RDF data from Reuters for FIN_RSF.REC..."
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.%fineco-customize(&gt;)"
+                load-balance="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+       
+<!--
+    COPPIA NEWS
+-->
+    <protocol-upa description="NEWS tr-ads-pr01 vxrnews01"
+            rssl-hostname="tr-ads-pr01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxrnews01"
+            rssl-password="vxrnews01" >
+    <source-upa subject="NEWS"
+                description="RDF data from Reuters for NEWS"
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.&gt;"
+                load-balance="true"
+                subj2ric="false"
+                subjNaE="true"
+                no-cache="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+
+    <protocol-upa description="NEWS tr-ads-sv01 vxrnews02"
+            rssl-hostname="tr-ads-sv01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="vxrnews02"
+            rssl-password="vxrnews02" >
+    <source-upa subject="NEWS"
+                description="RDF data from Reuters for NEWS"
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.&gt;"
+                load-balance="true"
+                subj2ric="false"
+                subjNaE="true"
+                no-cache="true"
+                snap-decay-time="30 secs" />
+    </protocol-upa>
+
+<!--
+    NUOVE NEWS
+-->
+    <protocol-upa description=" NEWS2 tr-ads-pr01 news03"
+            rssl-hostname="tr-ads-pr01"
+            rssl-serviceName="14002"
+            rssl-dacs-app-id="150"
+            rssl-username="news03"
+            rssl-password="news03" >
+    <source-upa subject="NEWS2"
+                description="RDF data from Reuters for NEWS2"
+                rmds-service="IDN_SELECTFEED"
+                interactive-feed="IDN_SELECTFEED.&gt;"
+                interactive-notify = "true"
+                snap-decay-time="30 secs"             
+                rssl-domain = "33:MRN"
+                process-mrn-fragments = "2" />
+    </protocol-upa>
+
+
+<!--
+        Informativa in INGRESSO, protocollo RV formato TIBMSG.
+        I feed custom utilizzano uno dei seguenti servizi (5000, 5100, 5200, 5300) per pubblicare i dati
+        Il servizio 5400 e' riservato al feed eurex
+-->
+<protocol-rv transport="RV" service="5000" network=";239.192.37.53" daemon="tcp:raicachedelay-pr01.fineco.it:5000" listen-sass-dict="false" description="feed 5000 DDM/GL/TLX/SH">
+   <source subject="DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.&gt;" />
+   <source subject="GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.&gt;" />
+   <source subject="TLX.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.TLX.&gt;" />
+   <source subject="SH.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.SH.&gt;" />          
+   <source subject="STRATEGY_DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.%field_filter_transform_ddm(&gt;)" />
+   <source subject="STRATEGY_GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.%field_filter_transform_gl(&gt;)" />
+   <source subject="STRATEGY_TLX.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.TLX.%field_filter_transform_ddm(&gt;)" />
+   <source subject="STRATEGY_SH.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.SH.%field_filter_transform_sh(&gt;)" />
+</protocol-rv>
+<protocol-rv transport="RV" service="5100" network=";239.192.37.54" daemon="tcp:raicachedelay-sv01.fineco.it:5000" listen-sass-dict="false" description="feed 5100 DDM/GL/TLX/SH">
+   <source subject="DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.&gt;" />
+   <source subject="GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.&gt;" />
+   <source subject="TLX.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.TLX.&gt;" />
+   <source subject="SH.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.SH.&gt;" />
+   <source subject="STRATEGY_DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.%field_filter_transform_ddm(&gt;)" />
+   <source subject="STRATEGY_GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.%field_filter_transform_gl(&gt;)" />
+   <source subject="STRATEGY_TLX.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.TLX.%field_filter_transform_ddm(&gt;)" />
+   <source subject="STRATEGY_SH.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.SH.%field_filter_transform_sh(&gt;)" />   
+</protocol-rv>
+<protocol-rv transport="RV" service="5200" network=";239.192.37.55" daemon="tcp:raicachedelay-pr01.fineco.it:5000" listen-sass-dict="false" description="feed 5200 DDM/GL/TLX/SH">
+   <source subject="DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.&gt;" />
+   <source subject="GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.&gt;" />
+   <source subject="TLX.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.TLX.&gt;" />
+   <source subject="SH.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.SH.&gt;" />
+   <source subject="STRATEGY_DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.%field_filter_transform_ddm(&gt;)" />
+   <source subject="STRATEGY_GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.%field_filter_transform_gl(&gt;)" />
+   <source subject="STRATEGY_TLX.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.TLX.%field_filter_transform_ddm(&gt;)" />
+   <source subject="STRATEGY_SH.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.SH.%field_filter_transform_sh(&gt;)" />             
+</protocol-rv>
+<!-- 
+    FEED MTA su demone 5300 pr/sv[02]
+ -->   
+<protocol-rv transport="RV" service="5300" network=";239.192.37.56"  daemon="tcp:raicachedelay-sv01.fineco.it:5300" listen-sass-dict="false" description="feed 5300 DDM">
+   <source subject="DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.&gt;" />
+   <source subject="STRATEGY_DDM.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.DDM.%field_filter_transform_ddm(&gt;)" />             
+</protocol-rv>
+<!-- 
+    FEED EUREX su demone 5400 pr/sv[02]
+ -->   
+<protocol-rv transport="RV" service="5400" network=";239.192.37.57" daemon="tcp:raicachedelay-pr01.fineco.it:5400" listen-sass-dict="false" description="feed 5400 GL">
+   <source subject="GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.&gt;" />
+   <source subject="STRATEGY_GL.&gt;"
+             msg-format="TIB"
+             broadcast-feed="_TIC.GL.%field_filter_transform_gl(&gt;)" />             
+</protocol-rv>
+
+
+<!-- 
+================================================================================
+FEED INTERATTIVO KNOPT
+================================================================================
+-->
+
+  <protocol-rv transport="RV"
+               service="6000"
+               network=""
+               daemon="tcp:127.0.0.1:8500"
+               description="ingresso 6000 54 INTERACTIVE"
+               restart-subject="_TIC.RESTART.INTERACTIVE._TIC.DDI.KNOPT.&gt;"
+               listen-sass-dict="true"
+               listen-restart="true"
+               pub-feed-down="true"
+               auto-restart="true"
+               heartbeat-subject="HEARTBEAT.primary"
+               heartbeat-interval="5 seconds"
+               heartbeat-initial-state="down">
+
+    <source subject="DDI.KNOPT.&gt;"
+            msg-format="TIB"
+            interactive-feed="_TIC.DDI.KNOPT.&gt;"
+            snap-timeout="5"
+            snap-decay-time="120"
+            subsc-decay-time="480" 
+            bcast-initial="true" />
+    <source subject="STRATEGY_DDI.&gt;"
+            msg-format="TIB"
+            interactive-feed="_TIC.DDI.%field_filter_transform_ddm(&gt;)"
+            snap-timeout="5"
+            snap-decay-time="120"
+            subsc-decay-time="480" 
+            bcast-initial="false" />
+   </protocol-rv>
+
+<!-- 
+================================================================================
+INGRESSO RV/RAIMS PER PUBBLICAZIONI DA SCRIPT O SIMILI
+================================================================================
+-->
+  <protocol-rv transport="RV"
+               service="7500"
+               daemon="tcp:127.0.0.1:8500"
+               description="ingresso flusso via raims/rv 7500"
+               listen-sass-dict="true">
+    <source subject="DDM.&gt;"
+            msg-format="RV"
+            broadcast-feed="_TIC.DDM.&gt;"/>
+  </protocol-rv>
+
+</raicache-config>
